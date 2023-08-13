@@ -6,6 +6,9 @@ All notable changes to the "lsl" extension will be documented in this file.
 ## [Unreleased]
 - Added Code Snippets for LSL All Constants Description.
 
+## [1.3.0] - 2023-08-13
+### Added
+- hover extension to have tooltips for lsl functions
 
 ## [1.2.1] - 2019-04-19
 ### Fixed
