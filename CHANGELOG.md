@@ -6,6 +6,10 @@ All notable changes to the "lsl" extension will be documented in this file.
 ## [Unreleased]
 - Added Code Snippets for LSL All Constants Description.
 
+## [1.3.1] - 2023-08-13
+### Changed
+- - modified snippets so its better formatted - snippets dont have spaces between brackets now
+
 ## [1.3.0] - 2023-08-13
 ### Added
 - hover extension to have tooltips for lsl functions
