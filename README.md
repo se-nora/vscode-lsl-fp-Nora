@@ -20,6 +20,14 @@ Image Sample:
 5. Open 'External Script Editor' in Firestorm Viewer
 6. Enjoy Scripting
 
+## Firestorm compile diagnostics in VS Code
+
+The Nora LSL-FP extension can receive compile results from a Firestorm build containing the matching viewer change. Open a script with Firestorm's External Script Editor configured to launch VS Code, then compile it in Firestorm. Errors are published as VS Code diagnostics on that external-editor file; a successful compile clears the previous diagnostics.
+
+The extension listens only on `127.0.0.1:39097`. Firestorm sends the compile result to that loopback address only when the script is open in an external editor. Keep the external editor file open in VS Code so diagnostics refer to the right script. Preprocessor-generated line numbers may not correspond to the original source file.
+
+The Firestorm bridge change is in `indra/newview/llpreviewscript.cpp`; rebuild Firestorm from that checkout to enable the viewer side. If the bridge port is already in use, check the **Noras LSL-FP** output channel for the startup error.
+
 
 ## Known Issues
 

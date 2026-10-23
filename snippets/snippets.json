@@ -5372,7 +5372,7 @@
         "body": [
            "INVENTORY_OBJECT$0"
         ],
-        "description": "INVENTORY_OBJECT"
+        "description": "INVENTORY_OBJECT = 6"
     },
     "INVENTORY_SCRIPT": {
         "prefix": "INVENTORY_SCRIPT",
@@ -5807,6 +5807,13 @@
            "OBJECT_DESC$0"
         ],
         "description": "OBJECT_DESC"
+    },
+    "OBJECT_SCALE": {
+        "prefix": "OBJECT_SCALE",
+        "body": [
+           "OBJECT_SCALE$0"
+        ],
+        "description": "OBJECT_SCALE"
     },
     "OBJECT_GROUP": {
         "prefix": "OBJECT_GROUP",
@@ -6780,6 +6787,87 @@
            "PRIM_GLOW$0"
         ],
         "description": "PRIM_GLOW"
+    },
+    "PRIM_GLTF_ALPHA_MODE_OPAQUE": {
+        "prefix": "PRIM_GLTF_ALPHA_MODE_OPAQUE",
+        "body": [
+           "PRIM_GLTF_ALPHA_MODE_OPAQUE, $0"
+        ],
+        "description": "0 - Ignore the alpha value and render the material as opaque."
+    },
+    "PRIM_GLTF_ALPHA_MODE_BLEND": {
+        "prefix": "PRIM_GLTF_ALPHA_MODE_BLEND",
+        "body": [
+           "PRIM_GLTF_ALPHA_MODE_BLEND, $0"
+        ],
+        "description": "1 - Render the material with transparency determined by the alpha value. Blending is done in linear color space. As is the case for Blinn-Phong as well, this mode suffers from depth sorting and performance issues. Use alpha mask instead when possible."
+    },
+    "PRIM_GLTF_ALPHA_MODE_MASK": {
+        "prefix": "PRIM_GLTF_ALPHA_MODE_MASK",
+        "body": [
+           "PRIM_GLTF_ALPHA_MODE_MASK, $0"
+        ],
+        "description": "2 - Render the material as fully opaque where the alpha value is greater than the alpha cutoff, and otherwise render the material as fully transparent."
+    },
+    "PRIM_GLTF_BASE_COLOR": {
+        "prefix": "PRIM_GLTF_BASE_COLOR",
+        "body": 
+        [
+            "PRIM_GLTF_BASE_COLOR,",
+            "\t${face:0}, $LINE_COMMENT integer face",
+            "\t${texture:\"\"}, $LINE_COMMENT string texture",
+            "\t${repeats:<1,1,0>}, $LINE_COMMENT vector repeats",
+            "\t${offsets:<0,0,0>}, $LINE_COMMENT vector offsets",
+            "\t${rotation_in_radians:0}, $LINE_COMMENT float rotation_in_radians",
+            "\t${linear_color:<1,1,1>}, $LINE_COMMENT vector linear_color",
+            "\t${alpha:0}, $LINE_COMMENT float alpha",
+            "\t${gltf_alpha_mode:PRIM_GLTF_ALPHA_MODE_MASK}, $LINE_COMMENT integer gltf_alpha_mode (PRIM_GLTF_ALPHA_MODE_OPAQUE, PRIM_GLTF_ALPHA_MODE_BLEND, PRIM_GLTF_ALPHA_MODE_MASK)",
+            "\t${alpha_mask_cutoff:0}, $LINE_COMMENT float alpha_mask_cutoff",
+            "\t${double_sided:0} $LINE_COMMENT bool double_sided"
+        ],
+        "description": "48 - [PRIM_GLTF_BASE_COLOR, integer face, string texture, vector repeats, vector offsets, float rotation_in_radians, vector linear_color, float alpha, integer gltf_alpha_mode, float alpha_mask_cutoff, integer double_sided]\nSets the prim's GLTF Material Base Color map attributes.\nThis parameter's arguments are GLTF overrides.\nWarning: Setting an argument to the empty string (\"\") will clear the respective override. GLTF texture transforms are always overrides, so setting them to the empty string (\"\") will clear them. See this example for a workaround. The SL team is open to feedback on LSL improvements for GLTF."
+    },
+    "PRIM_GLTF_NORMAL": {
+        "prefix": "PRIM_GLTF_NORMAL",
+        "body": 
+        [
+            "PRIM_GLTF_NORMAL,",
+            "\t${face:0}, $LINE_COMMENT integer face",
+            "\t${texture:\"\"}, $LINE_COMMENT string texture",
+            "\t${repeats:<1,1,0>}, $LINE_COMMENT vector repeats",
+            "\t${offsets:<0,0,0>}, $LINE_COMMENT vector offsets",
+            "\t${rotation_in_radians:ZERO_ROTATION}, $LINE_COMMENT float rotation_in_radians"
+        ],
+        "description": "47 - [PRIM_GLTF_NORMAL, integer face, string texture, vector repeats, vector offsets, float rotation_in_radians]\nSets the prim's GLTF ORM map attributes (Occlusion, Roughness, Metallic).\nThis parameter's arguments are GLTF overrides.\nWarning: Setting an argument to the empty string (\"\") will clear the respective override. GLTF texture transforms are always overrides, so setting them to the empty string (\"\") will clear them. See this example for a workaround. The SL team is open to feedback on LSL improvements for GLTF."
+    },
+    "PRIM_GLTF_METALLIC_ROUGHNESS": {
+        "prefix": "PRIM_GLTF_METALLIC_ROUGHNESS",
+        "body": 
+        [
+            "PRIM_GLTF_METALLIC_ROUGHNESS,",
+            "\t${face:0}, $LINE_COMMENT integer face",
+            "\t${texture:\"\"}, $LINE_COMMENT string texture",
+            "\t${repeats:<1,1,0>}, $LINE_COMMENT vector repeats",
+            "\t${offsets:<0,0,0>}, $LINE_COMMENT vector offsets",
+            "\t${rotation_in_radians:0}, $LINE_COMMENT float rotation_in_radians",
+            "\t${metallic_factor:0}, $LINE_COMMENT float metallic_factor",
+            "\t${roughness_facto:0}, $LINE_COMMENT float roughness_factor"
+        ],
+        "description": "47 - [PRIM_GLTF_METALLIC_ROUGHNESS, integer face, string texture, vector repeats, vector offsets, float rotation_in_radians, float metallic_factor, float roughness_factor]\nSets the prim's GLTF Material Normal map attributes.\nThis parameter's arguments are GLTF overrides.\nWarning: Setting an argument to the empty string (\"\") will clear the respective override. GLTF texture transforms are always overrides, so setting them to the empty string (\"\") will clear them. See this example for a workaround. The SL team is open to feedback on LSL improvements for GLTF."
+    },
+    "PRIM_GLTF_EMISSIVE": {
+        "prefix": "PRIM_GLTF_EMISSIVE",
+        "body": 
+        [ 
+            "PRIM_GLTF_EMISSIVE,",
+            "\t${face:0}, $LIN_COMMENT integer face",
+            "\t${texture:\"\"}, $LIN_COMMENT string texture",
+            "\t${repeats:<0,0,0>}, $LIN_COMMENT vector repeats",
+            "\t${offsets:<0,0,0>}, $LIN_COMMENT vector offsets",
+            "\t${rotation_in_radians:0}, $LIN_COMMENT float rotation_in_radians",
+            "\t${linear_emissive_tint:<0,0,0>}, $LIN_COMMENT vector linear_emissive_tint"
+        ],
+        "description": "46 - [PRIM_GLTF_EMISSIVE, integer face, string texture, vector repeats, vector offsets, float rotation_in_radians, vector linear_emissive_tint]\nSets the prim's GLTF Material Emissive map attributes.\nThis parameter's arguments are GLTF overrides.\nWarning: Setting an argument to the empty string (\"\") will clear the respective override. GLTF texture transforms are always overrides, so setting them to the empty string (\"\") will clear them. See this example for a workaround. The SL team is open to feedback on LSL improvements for GLTF."
     },
     "PRIM_HOLE_CIRCLE": {
         "prefix": "PRIM_HOLE_CIRCLE",

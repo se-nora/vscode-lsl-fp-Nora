@@ -3,7 +3,11 @@
   "publisher": "Nora",
   "displayName": "Noras LSL-FP",
   "description": "Support for Linden Scripting Language(LSL) with Firestorm Preprocessor and Code Snippeis",
-  "version": "1.3.1",
+  "version": "1.4.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/se-nora/vscode-lsl-fp-Nora.git"
+	},
   "engines": {
     "vscode": "^1.81.0"
   },
@@ -12,7 +16,10 @@
     "Programming Languages",
     "Snippets"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onStartupFinished",
+    "onLanguage:lsl"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
@@ -52,7 +59,8 @@
     "vscode:prepublish": "yarn run package",
     "compile": "webpack",
     "watch": "webpack --watch",
-    "package": "webpack --mode production --devtool hidden-source-map",`n    "create-vsix": "npx @vscode/vsce package",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "create-vsix": "npx @vscode/vsce package",
     "compile-tests": "tsc -p . --outDir out",
     "watch-tests": "tsc -p . -w --outDir out",
     "pretest": "yarn run compile-tests && yarn run compile && yarn run lint",

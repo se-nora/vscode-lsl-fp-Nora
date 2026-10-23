@@ -1,8 +1,159 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
+import * as http from 'http';
 import * as path from 'path';
 import * as fs from 'fs';
+
+const FIRESTORM_BRIDGE_PORT = 39097;
+const MAX_BRIDGE_REQUEST_BYTES = 1024 * 1024;
+
+interface FirestormCompileResult {
+	file: string;
+	success: boolean;
+	errors: string[];
+}
+
+function decodeXmlText(value: string): string {
+	return value
+		.replace(/&#x([0-9a-f]+);/gi, (entity, hex: string) => {
+			const codePoint = parseInt(hex, 16);
+			return codePoint <= 0x10ffff ? String.fromCodePoint(codePoint) : entity;
+		})
+		.replace(/&#([0-9]+);/g, (entity, decimal: string) => {
+			const codePoint = parseInt(decimal, 10);
+			return codePoint <= 0x10ffff ? String.fromCodePoint(codePoint) : entity;
+		})
+		.replace(/&lt;/g, '<')
+		.replace(/&gt;/g, '>')
+		.replace(/&quot;/g, '"')
+		.replace(/&apos;/g, '\'')
+		.replace(/&amp;/g, '&');
+}
+
+function readXmlString(xml: string, key: string): string | undefined {
+	const match = new RegExp(`<key>${key}</key>\\s*<string>([\\s\\S]*?)</string>`).exec(xml);
+	return match ? decodeXmlText(match[1]) : undefined;
+}
+
+export function parseFirestormResult(xml: string): FirestormCompileResult | undefined {
+	const file = readXmlString(xml, 'file');
+	const successMatch = /<key>success<\/key>\s*<boolean>(1|0|true|false)<\/boolean>/i.exec(xml);
+	const errorsMatch = /<key>errors<\/key>\s*<array>([\s\S]*?)<\/array>/.exec(xml);
+
+	if (!file || !successMatch || !errorsMatch) {
+		return undefined;
+	}
+
+	const errors: string[] = [];
+	const errorPattern = /<string>([\s\S]*?)<\/string>/g;
+	let errorMatch: RegExpExecArray | null;
+	while ((errorMatch = errorPattern.exec(errorsMatch[1])) !== null) {
+		errors.push(decodeXmlText(errorMatch[1]));
+	}
+
+	return {
+		file,
+		success: successMatch[1] === '1' || successMatch[1].toLowerCase() === 'true',
+		errors
+	};
+}
+
+function sendLlsdResponse(response: http.ServerResponse, statusCode: number): void {
+	response.setHeader('Content-Type', 'application/llsd+xml');
+	response.statusCode = statusCode;
+	response.end('<?xml version="1.0"?><llsd><map/></llsd>');
+}
+
+function startFirestormBridge(
+	context: vscode.ExtensionContext,
+	diagnostics: vscode.DiagnosticCollection,
+	outputChannel: vscode.OutputChannel
+): void {
+	const server = http.createServer((request, response) => {
+		if (request.method !== 'POST' || request.url !== '/compile') {
+			sendLlsdResponse(response, 404);
+			return;
+		}
+
+		let requestSize = 0;
+		let tooLarge = false;
+		const chunks: Buffer[] = [];
+		request.on('data', (chunk: Buffer) => {
+			if (tooLarge) {
+				return;
+			}
+			requestSize += chunk.length;
+			if (requestSize > MAX_BRIDGE_REQUEST_BYTES) {
+				tooLarge = true;
+				sendLlsdResponse(response, 413);
+				return;
+			}
+			chunks.push(chunk);
+		});
+
+		request.on('end', () => {
+			if (tooLarge) {
+				return;
+			}
+			const result = parseFirestormResult(Buffer.concat(chunks).toString('utf8'));
+			if (!result || !path.isAbsolute(result.file)) {
+				outputChannel.appendLine('Rejected malformed Firestorm compile result.');
+				sendLlsdResponse(response, 400);
+				return;
+			}
+
+			const uri = vscode.Uri.file(result.file);
+			if (result.success) {
+				diagnostics.delete(uri);
+				outputChannel.appendLine(`Firestorm compile succeeded: ${result.file}`);
+			} else {
+				const document = vscode.workspace.textDocuments.find(
+					openDocument => path.resolve(openDocument.uri.fsPath) === path.resolve(result.file)
+				);
+				const errors = result.errors.length > 0
+					? result.errors
+					: ['Firestorm reported a compile failure without diagnostic text.'];
+				const entries = errors.map(message => {
+					const location = /^\s*\((\d+)\s*,\s*(\d+)\)\s*:?\s*(.*)$/.exec(message);
+					let position = new vscode.Position(0, 0);
+					if (location) {
+						let line = Math.max(0, Number(location[1]) - 1);
+						let character = Math.max(0, Number(location[2]) - 1);
+						if (document) {
+							line = Math.min(line, document.lineCount - 1);
+							character = Math.min(character, document.lineAt(line).text.length);
+						}
+						position = new vscode.Position(line, character);
+					}
+					const diagnostic = new vscode.Diagnostic(
+						new vscode.Range(position, position),
+						message,
+						vscode.DiagnosticSeverity.Error
+					);
+					diagnostic.source = 'Firestorm';
+					return diagnostic;
+				});
+				diagnostics.set(uri, entries);
+				outputChannel.appendLine(`Firestorm compile failed (${entries.length} error(s)): ${result.file}`);
+			}
+
+			sendLlsdResponse(response, 200);
+		});
+	});
+
+	server.on('error', error => {
+		outputChannel.appendLine(`Firestorm diagnostics bridge failed: ${error.message}`);
+		vscode.window.showErrorMessage(`Could not start the Firestorm diagnostics bridge: ${error.message}`);
+	});
+	server.listen(FIRESTORM_BRIDGE_PORT, '127.0.0.1', () => {
+		outputChannel.appendLine(`Firestorm diagnostics bridge listening on 127.0.0.1:${FIRESTORM_BRIDGE_PORT}`);
+	});
+	context.subscriptions.push({ dispose: () => server.close() });
+	context.subscriptions.push(vscode.workspace.onDidCloseTextDocument(document => {
+		diagnostics.delete(document.uri);
+	}));
+}
 
 class SnippetHoverProvider implements vscode.HoverProvider {
 	snippets: any;
@@ -60,12 +211,11 @@ class SnippetHoverProvider implements vscode.HoverProvider {
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
-	let outputChannel = vscode.window.createOutputChannel('Noras LSL-FP Debug Output');
+	let outputChannel = vscode.window.createOutputChannel('Noras LSL-FP');
 	context.subscriptions.push(outputChannel);
-	outputChannel.show();
-	outputChannel.appendLine("Noras LSL-FP instantiated");
-	console.log('Congratulations, your extension "star-rod" is now active!');
-	vscode.window.showInformationMessage('Hello World from Noras LSL-FP!');
+	const diagnostics = vscode.languages.createDiagnosticCollection('firestorm-lsl');
+	context.subscriptions.push(diagnostics);
+	startFirestormBridge(context, diagnostics, outputChannel);
 
 	const hoverProvider = new SnippetHoverProvider(outputChannel);
 	context.subscriptions.push(
@@ -74,10 +224,6 @@ export function activate(context: vscode.ExtensionContext) {
 			hoverProvider
 		)
 	);
-
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "noras-lsl-fp" is now active!');
 
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with registerCommand

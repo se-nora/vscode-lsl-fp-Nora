@@ -48,6 +48,12 @@
 			"include": "#numbers"
 		},
 		{
+		  "include": "#functions"
+		},
+		{
+		  "include": "#constants"
+		},
+		{
 			"include": "#strings"
 		},
 		{
@@ -1816,6 +1822,12 @@
 					"include": "#operators"
 				},
 				{
+					"include": "#constants"
+				},
+				{
+					"include": "#functions"
+				},
+				{
 					"include": "#vararg_ellipses"
 				},
 				{
@@ -1883,6 +1895,12 @@
 					"include": "#access-member"
 				},
 				{
+					"include": "#constants"
+				},
+				{
+					"include": "#functions"
+				},
+				{
 					"include": "#operators"
 				},
 				{
@@ -1929,6 +1947,47 @@
 				{
 					"include": "#block_innards"
 				}
+			]
+		},
+		"functions": {
+			"patterns": [
+			  {
+				"begin": "\\bllAbs\\b\\s*\\(",
+				"beginCaptures": {
+				  "0": { "name": "support.function.lsl" }
+				},
+				"end": "\\)",
+				"patterns": [
+				  {
+					"match": "\\b(number)\\b",
+					"name": "variable.parameter.lsl"
+				  }
+				],
+				"comment": "Returns the absolute value of a number."
+			  },
+			  {
+				"begin": "\\bllAcos\\b\\s*\\(",
+				"beginCaptures": {
+				  "0": { "name": "support.function.lsl" }
+				},
+				"end": "\\)",
+				"patterns": [
+				  {
+					"match": "\\b(number)\\b",
+					"name": "variable.parameter.lsl"
+				  }
+				],
+				"comment": "Returns the arccosine of a number."
+			  }
+			]
+		  },
+		  "constants":{
+			"patterns": [
+			  {
+				"name": "constant.fictive.lsl",
+				"match": "\\b(NORA_MADE_UP)\\b",
+				"comment":"6"
+			  }
 			]
 		}
 	}
