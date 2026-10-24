@@ -3,7 +3,7 @@ import * as assert from 'assert';
 // You can import and use all API from the 'vscode' module
 // as well as import your extension to test it
 import * as vscode from 'vscode';
-import { parseFirestormResult } from '../../extension';
+import { parseFirestormDiagnosticLocation, parseFirestormResult } from '../../extension';
 
 suite('Extension Test Suite', () => {
 	vscode.window.showInformationMessage('Start all tests.');
@@ -29,7 +29,19 @@ suite('Extension Test Suite', () => {
 		});
 	});
 
+	test('parses Firestorm one-based error line and column', () => {
+		assert.deepStrictEqual(
+			parseFirestormDiagnosticLocation('(23, 4) : ERROR : Syntax error'),
+			{ line: 22, character: 3 }
+		);
+	});
+
 	test('rejects malformed Firestorm compile results', () => {
 		assert.strictEqual(parseFirestormResult('<llsd><map/></llsd>'), undefined);
+	});
+
+	test('rejects invalid Firestorm diagnostic locations', () => {
+		assert.strictEqual(parseFirestormDiagnosticLocation('ERROR : Syntax error'), undefined);
+		assert.strictEqual(parseFirestormDiagnosticLocation('(0, 4) : ERROR : Syntax error'), undefined);
 	});
 });

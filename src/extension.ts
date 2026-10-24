@@ -14,6 +14,26 @@ interface FirestormCompileResult {
 	errors: string[];
 }
 
+interface FirestormDiagnosticLocation {
+	line: number;
+	character: number;
+}
+
+export function parseFirestormDiagnosticLocation(message: string): FirestormDiagnosticLocation | undefined {
+	const match = /^\s*\((\d+)\s*,\s*(\d+)\)\s*:\s*(.*)$/.exec(message);
+	if (!match) {
+		return undefined;
+	}
+
+	const line = Number(match[1]);
+	const column = Number(match[2]);
+	if (!Number.isSafeInteger(line) || !Number.isSafeInteger(column) || line < 1 || column < 1) {
+		return undefined;
+	}
+
+	return { line: line - 1, character: column - 1 };
+}
+
 function decodeXmlText(value: string): string {
 	return value
 		.replace(/&#x([0-9a-f]+);/gi, (entity, hex: string) => {
@@ -68,7 +88,8 @@ function sendLlsdResponse(response: http.ServerResponse, statusCode: number): vo
 function startFirestormBridge(
 	context: vscode.ExtensionContext,
 	diagnostics: vscode.DiagnosticCollection,
-	outputChannel: vscode.OutputChannel
+	outputChannel: vscode.OutputChannel,
+	bridgeOutputChannel: vscode.OutputChannel
 ): void {
 	const server = http.createServer((request, response) => {
 		if (request.method !== 'POST' || request.url !== '/compile') {
@@ -78,14 +99,18 @@ function startFirestormBridge(
 
 		let requestSize = 0;
 		let tooLarge = false;
-		const chunks: Buffer[] = [];
-		request.on('data', (chunk: Buffer) => {
+		const chunks: string[] = [];
+		request.setEncoding('utf8');
+		request.on('data', (chunk: string) => {
 			if (tooLarge) {
 				return;
 			}
-			requestSize += chunk.length;
+			requestSize += Buffer.byteLength(chunk, 'utf8');
 			if (requestSize > MAX_BRIDGE_REQUEST_BYTES) {
 				tooLarge = true;
+				bridgeOutputChannel.appendLine(
+					`Rejected Firestorm bridge request larger than ${MAX_BRIDGE_REQUEST_BYTES} bytes.`
+				);
 				sendLlsdResponse(response, 413);
 				return;
 			}
@@ -96,7 +121,11 @@ function startFirestormBridge(
 			if (tooLarge) {
 				return;
 			}
-			const result = parseFirestormResult(Buffer.concat(chunks).toString('utf8'));
+			const rawMessage = chunks.join('');
+			bridgeOutputChannel.appendLine('Received Firestorm bridge message:');
+			bridgeOutputChannel.append(rawMessage);
+			bridgeOutputChannel.appendLine('\n--- End Firestorm bridge message ---');
+			const result = parseFirestormResult(rawMessage);
 			if (!result || !path.isAbsolute(result.file)) {
 				outputChannel.appendLine('Rejected malformed Firestorm compile result.');
 				sendLlsdResponse(response, 400);
@@ -108,26 +137,20 @@ function startFirestormBridge(
 				diagnostics.delete(uri);
 				outputChannel.appendLine(`Firestorm compile succeeded: ${result.file}`);
 			} else {
-				const document = vscode.workspace.textDocuments.find(
-					openDocument => path.resolve(openDocument.uri.fsPath) === path.resolve(result.file)
-				);
 				const errors = result.errors.length > 0
 					? result.errors
 					: ['Firestorm reported a compile failure without diagnostic text.'];
 				const entries = errors.map(message => {
-					const location = /^\s*\((\d+)\s*,\s*(\d+)\)\s*:?\s*(.*)$/.exec(message);
-					let position = new vscode.Position(0, 0);
+					const location = parseFirestormDiagnosticLocation(message);
+					let line = 0;
+					let character = 0;
 					if (location) {
-						let line = Math.max(0, Number(location[1]) - 1);
-						let character = Math.max(0, Number(location[2]) - 1);
-						if (document) {
-							line = Math.min(line, document.lineCount - 1);
-							character = Math.min(character, document.lineAt(line).text.length);
-						}
-						position = new vscode.Position(line, character);
+						line = location.line;
+						character = location.character;
 					}
+					const position = new vscode.Position(line, character);
 					const diagnostic = new vscode.Diagnostic(
-						new vscode.Range(position, position),
+						new vscode.Range(position, new vscode.Position(line, character + 1)),
 						message,
 						vscode.DiagnosticSeverity.Error
 					);
@@ -135,7 +158,9 @@ function startFirestormBridge(
 					return diagnostic;
 				});
 				diagnostics.set(uri, entries);
-				outputChannel.appendLine(`Firestorm compile failed (${entries.length} error(s)): ${result.file}`);
+				outputChannel.appendLine(
+					`Firestorm compile failed (${entries.length} error(s)): ${result.file}`
+				);
 			}
 
 			sendLlsdResponse(response, 200);
@@ -180,7 +205,7 @@ class SnippetHoverProvider implements vscode.HoverProvider {
 				snippetText =snippetText.replaceAll('\\n', '  \\n');
 				this.outputChannel.appendLine(String(snippetText.length));
 				this.snippets = JSON.parse(snippetText);
-				this.outputChannel.appendLine("Loaded " + String(Object.keys(this.snippets).length) + " snippets.")
+				this.outputChannel.appendLine("Loaded " + String(Object.keys(this.snippets).length) + " snippets.");
 			});
 		} catch (error) {
 			console.error('Error reading snippets.json:', error);
@@ -215,7 +240,12 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(outputChannel);
 	const diagnostics = vscode.languages.createDiagnosticCollection('firestorm-lsl');
 	context.subscriptions.push(diagnostics);
-	startFirestormBridge(context, diagnostics, outputChannel);
+	const bridgeOutputChannel = vscode.window.createOutputChannel('Firestorm Bridge');
+	context.subscriptions.push(bridgeOutputChannel);
+	startFirestormBridge(context, diagnostics, outputChannel, bridgeOutputChannel);
+	context.subscriptions.push(vscode.commands.registerCommand('noras-lsl-fp.showFirestormBridgeOutput', () => {
+		bridgeOutputChannel.show();
+	}));
 
 	const hoverProvider = new SnippetHoverProvider(outputChannel);
 	context.subscriptions.push(

@@ -6,6 +6,10 @@ All notable changes to the "lsl" extension will be documented in this file.
 ## [Unreleased]
 - Added Code Snippets for LSL All Constants Description.
 
+## [1.4.1] - 2026-10-24
+### Fixed
+- fix: improve Firestorm diagnostics and bridge logging
+
 ## [1.4.0] - 2026-10-23
 ### Added
 - feat: add LSL extension support with syntax, snippets, and docs
