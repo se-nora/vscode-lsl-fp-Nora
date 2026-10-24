@@ -88,7 +88,7 @@ function readXmlInteger(xml: string, key: string): number | undefined {
 export function parseFirestormResult(xml: string): FirestormCompileResult | undefined {
 	const file = readXmlString(xml, 'file');
 	const successMatch = /<key>success<\/key>\s*<boolean>(1|0|true|false)<\/boolean>/i.exec(xml);
-	const errorsMatch = /<key>errors<\/key>\s*<array>([\s\S]*?)<\/array>/.exec(xml);
+	const errorsMatch = /<key>errors<\/key>\s*(?:<array>([\s\S]*?)<\/array>|<array\s*\/>)/.exec(xml);
 
 	if (!file || !successMatch || !errorsMatch) {
 		return undefined;
@@ -97,7 +97,7 @@ export function parseFirestormResult(xml: string): FirestormCompileResult | unde
 	const errors: string[] = [];
 	const errorPattern = /<string>([\s\S]*?)<\/string>/g;
 	let errorMatch: RegExpExecArray | null;
-	while ((errorMatch = errorPattern.exec(errorsMatch[1])) !== null) {
+	while ((errorMatch = errorPattern.exec(errorsMatch[1] ?? '')) !== null) {
 		errors.push(decodeXmlText(errorMatch[1]));
 	}
 

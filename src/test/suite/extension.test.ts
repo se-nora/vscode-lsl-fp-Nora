@@ -41,6 +41,25 @@ suite('Extension Test Suite', () => {
 		});
 	});
 
+	test('parses successful Firestorm results with an empty self-closing errors array', () => {
+		assert.deepStrictEqual(
+			parseFirestormResult(
+				'<llsd><map>' +
+				'<key>errors</key><array />' +
+				'<key>file</key><string>C:\\Scripts\\sample.lsl</string>' +
+				'<key>success</key><boolean>1</boolean>' +
+				'</map></llsd>'
+			),
+			{
+				file: 'C:\\Scripts\\sample.lsl',
+				success: true,
+				errors: [],
+				sourceMap: [],
+				sourceMapComplete: false
+			}
+		);
+	});
+
 	test('parses Firestorm one-based error line and column', () => {
 		assert.deepStrictEqual(
 			parseFirestormDiagnosticLocation('(23, 4) : ERROR : Syntax error'),
