@@ -3,6 +3,7 @@
 import * as vscode from 'vscode';
 import * as http from 'http';
 import * as path from 'path';
+import * as fs from 'fs';
 
 const FIRESTORM_BRIDGE_PORT = 39097;
 const MAX_BRIDGE_REQUEST_BYTES = 1024 * 1024;
@@ -14,6 +15,7 @@ interface FirestormMappedError {
 
 interface FirestormCompileResult {
 	file: string;
+	diagnosticFile?: string;
 	success: boolean;
 	errors: string[];
 	mappedErrors: FirestormMappedError[];
@@ -24,7 +26,10 @@ interface FirestormDiagnosticLocation {
 	character: number;
 }
 
-export function parseFirestormDiagnosticLocation(message: string): FirestormDiagnosticLocation | undefined {
+export function parseFirestormDiagnosticLocation(
+	message: string,
+	lineIsZeroBased = false
+): FirestormDiagnosticLocation | undefined {
 	const match = /^\s*\((\d+)\s*,\s*(\d+)\)\s*:\s*(.*)$/.exec(message.trim());
 	if (!match) {
 		return undefined;
@@ -32,11 +37,12 @@ export function parseFirestormDiagnosticLocation(message: string): FirestormDiag
 
 	const line = Number(match[1]);
 	const column = Number(match[2]);
-	if (!Number.isSafeInteger(line) || !Number.isSafeInteger(column) || line < 1 || column < 1) {
+	if (!Number.isSafeInteger(line) || !Number.isSafeInteger(column) ||
+		line < (lineIsZeroBased ? 0 : 1) || column < 1) {
 		return undefined;
 	}
 
-	return { line: line - 1, character: column - 1 };
+	return { line: lineIsZeroBased ? line : line - 1, character: column - 1 };
 }
 
 function decodeXmlText(value: string): string {
@@ -63,6 +69,7 @@ function readXmlString(xml: string, key: string): string | undefined {
 
 export function parseFirestormResult(xml: string): FirestormCompileResult | undefined {
 	const file = readXmlString(xml, 'file');
+	const diagnosticFile = readXmlString(xml, 'diagnostic_file');
 	const successMatch = /<key>success<\/key>\s*<boolean>(1|0|true|false)<\/boolean>/i.exec(xml);
 	const errorsMatch = /<key>errors<\/key>\s*(?:<array>([\s\S]*?)<\/array>|<array\s*\/>)/.exec(xml);
 
@@ -93,6 +100,7 @@ export function parseFirestormResult(xml: string): FirestormCompileResult | unde
 
 	return {
 		file,
+		...(diagnosticFile ? { diagnosticFile } : {}),
 		success: successMatch[1] === '1' || successMatch[1].toLowerCase() === 'true',
 		errors,
 		mappedErrors
@@ -103,6 +111,20 @@ function sendLlsdResponse(response: http.ServerResponse, statusCode: number): vo
 	response.setHeader('Content-Type', 'application/llsd+xml');
 	response.statusCode = statusCode;
 	response.end('<?xml version="1.0"?><llsd><map/></llsd>');
+}
+
+function getOriginalDiagnosticUri(result: FirestormCompileResult): vscode.Uri {
+	if (result.diagnosticFile && path.isAbsolute(result.diagnosticFile)) {
+		return vscode.Uri.file(result.diagnosticFile);
+	}
+
+	const originalPath = path.parse(result.file);
+	const preprocessedPath = path.join(originalPath.dir, `${originalPath.name}.preprocessed.lsl`);
+	if (fs.existsSync(preprocessedPath)) {
+		return vscode.Uri.file(preprocessedPath);
+	}
+
+	return vscode.Uri.file(result.file);
 }
 
 function startFirestormBridge(
@@ -166,8 +188,16 @@ function startFirestormBridge(
 					? result.errors
 					: ['Firestorm reported a compile failure without diagnostic text.'];
 				const entriesByUri = new Map<string, { uri: vscode.Uri; entries: vscode.Diagnostic[] }>();
-				const addDiagnostic = (message: string, diagnosticUri: vscode.Uri): void => {
-					const location = parseFirestormDiagnosticLocation(message);
+				const originalDiagnosticUri = getOriginalDiagnosticUri(result);
+				bridgeOutputChannel.appendLine(
+					`Original compiler diagnostics target: ${originalDiagnosticUri.fsPath}`
+				);
+				const addDiagnostic = (
+					message: string,
+					diagnosticUri: vscode.Uri,
+					lineIsZeroBased = false
+				): void => {
+					const location = parseFirestormDiagnosticLocation(message, lineIsZeroBased);
 					bridgeOutputChannel.appendLine(`Translating Firestorm diagnostic: ${message}`);
 					let line = 0;
 					let character = 0;
@@ -200,7 +230,7 @@ function startFirestormBridge(
 					grouped.entries.push(diagnostic);
 				};
 				for (const message of errors) {
-					addDiagnostic(message, uri);
+					addDiagnostic(message, originalDiagnosticUri, Boolean(result.diagnosticFile));
 				}
 				for (const mappedError of result.mappedErrors) {
 					if (!path.isAbsolute(mappedError.file)) {

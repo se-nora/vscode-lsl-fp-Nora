@@ -17,6 +17,7 @@ suite('Extension Test Suite', () => {
 		const result = parseFirestormResult(
 			'<llsd><map>' +
 			'<key>file</key><string>C:\\Scripts\\sample&amp;test.lsl</string>' +
+			'<key>diagnostic_file</key><string>C:\\Scripts\\sample.preprocessed.lsl</string>' +
 			'<key>success</key><boolean>0</boolean>' +
 			'<key>errors</key><array><string>(2, 3) : bad &lt;token&gt;</string></array>' +
 			'<key>mapped_errors</key><array><map>' +
@@ -28,6 +29,7 @@ suite('Extension Test Suite', () => {
 
 		assert.deepStrictEqual(result, {
 			file: 'C:\\Scripts\\sample&test.lsl',
+			diagnosticFile: 'C:\\Scripts\\sample.preprocessed.lsl',
 			success: false,
 			errors: ['(2, 3) : bad <token>'],
 			mappedErrors: [{
@@ -59,6 +61,17 @@ suite('Extension Test Suite', () => {
 		assert.deepStrictEqual(
 			parseFirestormDiagnosticLocation('(23, 4) : ERROR : Syntax error'),
 			{ line: 22, character: 3 }
+		);
+	});
+
+	test('preserves zero-based Firestorm lines for preprocessed diagnostics', () => {
+		assert.deepStrictEqual(
+			parseFirestormDiagnosticLocation('(22, 22) : ERROR : Name not defined within scope', true),
+			{ line: 22, character: 21 }
+		);
+		assert.deepStrictEqual(
+			parseFirestormDiagnosticLocation('(0, 1) : ERROR : Syntax error', true),
+			{ line: 0, character: 0 }
 		);
 	});
 
