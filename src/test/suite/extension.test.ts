@@ -19,11 +19,9 @@ suite('Extension Test Suite', () => {
 			'<key>file</key><string>C:\\Scripts\\sample&amp;test.lsl</string>' +
 			'<key>success</key><boolean>0</boolean>' +
 			'<key>errors</key><array><string>(2, 3) : bad &lt;token&gt;</string></array>' +
-			'<key>source_map_complete</key><boolean>true</boolean>' +
-			'<key>source_map</key><array><map>' +
-			'<key>generated_line</key><integer>2</integer>' +
-			'<key>source_file</key><string>C:\\Scripts\\source.lsl</string>' +
-			'<key>source_line</key><integer>17</integer>' +
+			'<key>mapped_errors</key><array><map>' +
+			'<key>file</key><string>C:\\Scripts\\source&amp;test.lsl</string>' +
+			'<key>message</key><string>(17, 3) : bad &lt;token&gt;</string>' +
 			'</map></array>' +
 			'</map></llsd>'
 		);
@@ -32,12 +30,10 @@ suite('Extension Test Suite', () => {
 			file: 'C:\\Scripts\\sample&test.lsl',
 			success: false,
 			errors: ['(2, 3) : bad <token>'],
-			sourceMap: [{
-				generatedLine: 2,
-				sourceFile: 'C:\\Scripts\\source.lsl',
-				sourceLine: 17
-			}],
-			sourceMapComplete: true
+			mappedErrors: [{
+				file: 'C:\\Scripts\\source&test.lsl',
+				message: '(17, 3) : bad <token>'
+			}]
 		});
 	});
 
@@ -54,8 +50,7 @@ suite('Extension Test Suite', () => {
 				file: 'C:\\Scripts\\sample.lsl',
 				success: true,
 				errors: [],
-				sourceMap: [],
-				sourceMapComplete: false
+				mappedErrors: []
 			}
 		);
 	});

@@ -6,6 +6,10 @@ All notable changes to the "lsl" extension will be documented in this file.
 ## [Unreleased]
 - Added Code Snippets for LSL All Constants Description.
 
+## [1.5.0] - 2026-10-25
+### Added
+- Accept viewer-resolved diagnostics
+
 ## [1.4.4] - 2026-10-24
 ### Fixed
 - fix: correct snippet placeholder syntax

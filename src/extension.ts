@@ -3,23 +3,20 @@
 import * as vscode from 'vscode';
 import * as http from 'http';
 import * as path from 'path';
-import * as fs from 'fs';
 
 const FIRESTORM_BRIDGE_PORT = 39097;
 const MAX_BRIDGE_REQUEST_BYTES = 1024 * 1024;
+
+interface FirestormMappedError {
+	file: string;
+	message: string;
+}
 
 interface FirestormCompileResult {
 	file: string;
 	success: boolean;
 	errors: string[];
-	sourceMap: FirestormSourceLocation[];
-	sourceMapComplete: boolean;
-}
-
-interface FirestormSourceLocation {
-	generatedLine: number;
-	sourceFile: string;
-	sourceLine: number;
+	mappedErrors: FirestormMappedError[];
 }
 
 interface FirestormDiagnosticLocation {
@@ -40,22 +37,6 @@ export function parseFirestormDiagnosticLocation(message: string): FirestormDiag
 	}
 
 	return { line: line - 1, character: column - 1 };
-}
-
-function resolveFirestormSourceUri(sourceFile: string, generatedFile: string): vscode.Uri | undefined {
-	if (path.isAbsolute(sourceFile)) {
-		return vscode.Uri.file(sourceFile);
-	}
-
-	const matchingDocuments = vscode.workspace.textDocuments.filter(
-		document => path.basename(document.uri.fsPath).toLowerCase() === path.basename(sourceFile).toLowerCase()
-	);
-	if (matchingDocuments.length === 1) {
-		return matchingDocuments[0].uri;
-	}
-
-	const resolvedPath = path.resolve(path.dirname(generatedFile), sourceFile);
-	return fs.existsSync(resolvedPath) ? vscode.Uri.file(resolvedPath) : undefined;
 }
 
 function decodeXmlText(value: string): string {
@@ -80,11 +61,6 @@ function readXmlString(xml: string, key: string): string | undefined {
 	return match ? decodeXmlText(match[1]) : undefined;
 }
 
-function readXmlInteger(xml: string, key: string): number | undefined {
-	const match = new RegExp(`<key>${key}</key>\\s*<integer>(\\d+)</integer>`).exec(xml);
-	return match ? Number(match[1]) : undefined;
-}
-
 export function parseFirestormResult(xml: string): FirestormCompileResult | undefined {
 	const file = readXmlString(xml, 'file');
 	const successMatch = /<key>success<\/key>\s*<boolean>(1|0|true|false)<\/boolean>/i.exec(xml);
@@ -101,30 +77,25 @@ export function parseFirestormResult(xml: string): FirestormCompileResult | unde
 		errors.push(decodeXmlText(errorMatch[1]));
 	}
 
-	const sourceMapMatch = /<key>source_map<\/key>\s*<array>([\s\S]*?)<\/array>/.exec(xml);
-	const sourceMap: FirestormSourceLocation[] = [];
-	if (sourceMapMatch) {
+	const mappedErrorsMatch = /<key>mapped_errors<\/key>\s*<array>([\s\S]*?)<\/array>/.exec(xml);
+	const mappedErrors: FirestormMappedError[] = [];
+	if (mappedErrorsMatch) {
 		const mapPattern = /<map>([\s\S]*?)<\/map>/g;
 		let mapMatch: RegExpExecArray | null;
-		while ((mapMatch = mapPattern.exec(sourceMapMatch[1])) !== null) {
-			const generatedLine = readXmlInteger(mapMatch[1], 'generated_line');
-			const sourceFile = readXmlString(mapMatch[1], 'source_file');
-			const sourceLine = readXmlInteger(mapMatch[1], 'source_line');
-			if (generatedLine && generatedLine > 0 && sourceFile && sourceLine && sourceLine > 0) {
-				sourceMap.push({ generatedLine, sourceFile, sourceLine });
+		while ((mapMatch = mapPattern.exec(mappedErrorsMatch[1])) !== null) {
+			const mappedFile = readXmlString(mapMatch[1], 'file');
+			const messageMatch = /<key>message<\/key>\s*<string>([\s\S]*?)<\/string>/.exec(mapMatch[1]);
+			if (mappedFile && messageMatch) {
+				mappedErrors.push({ file: mappedFile, message: decodeXmlText(messageMatch[1]) });
 			}
 		}
 	}
-	const sourceMapCompleteMatch =
-		/<key>source_map_complete<\/key>\s*<boolean>(1|0|true|false)<\/boolean>/i.exec(xml);
 
 	return {
 		file,
 		success: successMatch[1] === '1' || successMatch[1].toLowerCase() === 'true',
 		errors,
-		sourceMap,
-		sourceMapComplete: sourceMapCompleteMatch !== null &&
-			(sourceMapCompleteMatch[1] === '1' || sourceMapCompleteMatch[1].toLowerCase() === 'true')
+		mappedErrors
 	};
 }
 
@@ -195,56 +166,16 @@ function startFirestormBridge(
 					? result.errors
 					: ['Firestorm reported a compile failure without diagnostic text.'];
 				const entriesByUri = new Map<string, { uri: vscode.Uri; entries: vscode.Diagnostic[] }>();
-				for (const message of errors) {
+				const addDiagnostic = (message: string, diagnosticUri: vscode.Uri): void => {
 					const location = parseFirestormDiagnosticLocation(message);
 					bridgeOutputChannel.appendLine(`Translating Firestorm diagnostic: ${message}`);
 					let line = 0;
 					let character = 0;
-					let diagnosticUri = uri;
-					let hasSourceMapping = false;
 					if (!location) {
 						bridgeOutputChannel.appendLine(
-							'Could not parse a line and column; using the start of the generated file.'
+							'Could not parse a line and column; using the start of the target file.'
 						);
 					} else {
-						bridgeOutputChannel.appendLine(
-							`Parsed generated location: line ${location.line + 1}, column ${location.character + 1}.`
-						);
-					}
-					bridgeOutputChannel.appendLine(
-						`Source map complete: ${result.sourceMapComplete}; entries: ${result.sourceMap.length}.`
-					);
-					if (location) {
-						const sourceLocation = result.sourceMap.find(
-							entry => entry.generatedLine === location.line + 1
-						);
-						if (sourceLocation) {
-							bridgeOutputChannel.appendLine(
-								`Matched source-map entry: generated line ${sourceLocation.generatedLine} -> ` +
-								`${sourceLocation.sourceFile}:${sourceLocation.sourceLine} ` +
-								`(map complete: ${result.sourceMapComplete}).`
-							);
-							const sourceUri = resolveFirestormSourceUri(sourceLocation.sourceFile, result.file);
-							if (sourceUri) {
-								diagnosticUri = sourceUri;
-								line = sourceLocation.sourceLine - 1;
-								character = location.character;
-								hasSourceMapping = true;
-								bridgeOutputChannel.appendLine(`Resolved mapped source URI: ${diagnosticUri.toString()}`);
-							} else {
-								bridgeOutputChannel.appendLine(
-									`Could not resolve mapped source file "${sourceLocation.sourceFile}"; ` +
-									'keeping the generated-file location.'
-								);
-							}
-						} else {
-							bridgeOutputChannel.appendLine(
-								`No source-map entry found for generated line ${location.line + 1}; ` +
-								`keeping the generated-file location (map complete: ${result.sourceMapComplete}).`
-							);
-						}
-					}
-					if (location && !hasSourceMapping) {
 						line = location.line;
 						character = location.character;
 					}
@@ -267,6 +198,18 @@ function startFirestormBridge(
 						entriesByUri.set(key, grouped);
 					}
 					grouped.entries.push(diagnostic);
+				};
+				for (const message of errors) {
+					addDiagnostic(message, uri);
+				}
+				for (const mappedError of result.mappedErrors) {
+					if (!path.isAbsolute(mappedError.file)) {
+						bridgeOutputChannel.appendLine(
+							`Rejected mapped Firestorm diagnostic with non-absolute path "${mappedError.file}".`
+						);
+						continue;
+					}
+					addDiagnostic(mappedError.message, vscode.Uri.file(mappedError.file));
 				}
 				const diagnosticUris: vscode.Uri[] = [];
 				for (const { uri: targetUri, entries } of entriesByUri.values()) {
@@ -275,7 +218,7 @@ function startFirestormBridge(
 				}
 				diagnosticUrisByGeneratedFile.set(result.file, diagnosticUris);
 				outputChannel.appendLine(
-					`Firestorm compile failed (${errors.length} error(s)): ${result.file}`
+					`Firestorm compile failed (${errors.length} original, ${result.mappedErrors.length} mapped): ${result.file}`
 				);
 			}
 
