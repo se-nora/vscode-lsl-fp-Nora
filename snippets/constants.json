@@ -4,161 +4,161 @@
         "body": [
             "ACTIVE$0"
         ],
-        "description": "ACTIVE"
+        "description": "If returned by llDetectedType(), indicates a physical object or agent. When used with llSensor() or llSensorRepeat(), searches for moving physical objects or objects containing an active script."
     },
     "AGENT": {
         "prefix": "AGENT",
         "body": [
             "AGENT$0"
         ],
-        "description": "AGENT"
+        "description": "If returned by llDetectedType, indicates an avatar. When used with llSensor or llSensorRepeat, searches for avatars by legacy name; AGENT_BY_LEGACY_NAME is more informative."
     },
     "AGENT_ALWAYS_RUN": {
         "prefix": "AGENT_ALWAYS_RUN",
         "body": [
             "AGENT_ALWAYS_RUN$0"
         ],
-        "description": "AGENT_ALWAYS_RUN"
+        "description": "Used with llGetAgentInfo to determine if the queried avatar has 'always running' set."
     },
     "AGENT_ATTACHMENTS": {
         "prefix": "AGENT_ATTACHMENTS",
         "body": [
             "AGENT_ATTACHMENTS$0"
         ],
-        "description": "AGENT_ATTACHMENTS"
+        "description": "Indicates that the agent has attachments."
     },
     "AGENT_AUTOPILOT": {
         "prefix": "AGENT_AUTOPILOT",
         "body": [
             "AGENT_AUTOPILOT$0"
         ],
-        "description": "AGENT_AUTOPILOT"
+        "description": "This value is set when the user selects \"Go Here\" on the ground, or uses the optional Double-Click Auto-Pilot feature."
     },
     "AGENT_AWAY": {
         "prefix": "AGENT_AWAY",
         "body": [
             "AGENT_AWAY$0"
         ],
-        "description": "AGENT_AWAY"
+        "description": "Indicates that the agent has either toggled away or has been inactive for too long."
     },
     "AGENT_BUSY": {
         "prefix": "AGENT_BUSY",
         "body": [
             "AGENT_BUSY$0"
         ],
-        "description": "AGENT_BUSY"
+        "description": "Indicates that the agent has enabled busy mode."
     },
     "AGENT_BY_LEGACY_NAME": {
         "prefix": "AGENT_BY_LEGACY_NAME",
         "body": [
             "AGENT_BY_LEGACY_NAME$0"
         ],
-        "description": "AGENT_BY_LEGACY_NAME"
+        "description": "If it is contained in the result of llDetectedType, it means it is avatar. If it is used as an filter of llSensor or llSensorRepeat, it will search for avatars by legacy name."
     },
     "AGENT_BY_USERNAME": {
         "prefix": "AGENT_BY_USERNAME",
         "body": [
             "AGENT_BY_USERNAME$0"
         ],
-        "description": "AGENT_BY_USERNAME"
+        "description": "See Avatar Names"
     },
     "AGENT_CROUCHING": {
         "prefix": "AGENT_CROUCHING",
         "body": [
             "AGENT_CROUCHING$0"
         ],
-        "description": "AGENT_CROUCHING"
+        "description": "Indicates that the agent is crouching."
     },
     "AGENT_FLYING": {
         "prefix": "AGENT_FLYING",
         "body": [
             "AGENT_FLYING$0"
         ],
-        "description": "AGENT_FLYING"
+        "description": "Used with llGetAgentInfo to determine if the queried avatar is flying."
     },
     "AGENT_IN_AIR": {
         "prefix": "AGENT_IN_AIR",
         "body": [
             "AGENT_IN_AIR$0"
         ],
-        "description": "AGENT_IN_AIR"
+        "description": "Indicates that the agent is airborne."
     },
     "AGENT_LIST_PARCEL": {
         "prefix": "AGENT_LIST_PARCEL",
         "body": [
             "AGENT_LIST_PARCEL$0"
         ],
-        "description": "returns only agents on the same parcel where the script is running."
+        "description": "Agents on the same parcel where the script is running."
     },
     "AGENT_LIST_PARCEL_OWNER": {
         "prefix": "AGENT_LIST_PARCEL_OWNER",
         "body": [
             "AGENT_LIST_PARCEL_OWNER$0"
         ],
-        "description": "returns only agents on any parcel in the region where the parcel owner is the same as the owner of the parcel under the scripted object."
+        "description": "Agents on any parcel in the region where the parcel owner is the same as the owner of the parcel under the scripted object."
     },
     "AGENT_LIST_REGION": {
         "prefix": "AGENT_LIST_REGION",
         "body": [
             "AGENT_LIST_REGION$0"
         ],
-        "description": "returns any/all agents in the region."
+        "description": "Returns any/all agents in the region."
     },
     "AGENT_MOUSELOOK": {
         "prefix": "AGENT_MOUSELOOK",
         "body": [
             "AGENT_MOUSELOOK$0"
         ],
-        "description": "AGENT_MOUSELOOK"
+        "description": "Indicates that the agent is in mouselook."
     },
     "AGENT_ON_OBJECT": {
         "prefix": "AGENT_ON_OBJECT",
         "body": [
             "AGENT_ON_OBJECT$0"
         ],
-        "description": "AGENT_ON_OBJECT"
+        "description": "Indicates that the agent is sitting on an object."
     },
     "AGENT_SCRIPTED": {
         "prefix": "AGENT_SCRIPTED",
         "body": [
             "AGENT_SCRIPTED$0"
         ],
-        "description": "AGENT_SCRIPTED"
+        "description": "Carrying scripted objects"
     },
     "AGENT_SITTING": {
         "prefix": "AGENT_SITTING",
         "body": [
             "AGENT_SITTING$0"
         ],
-        "description": "AGENT_SITTING"
+        "description": "Indicates that the agent is sitting."
     },
     "AGENT_TYPING": {
         "prefix": "AGENT_TYPING",
         "body": [
             "AGENT_TYPING$0"
         ],
-        "description": "AGENT_TYPING"
+        "description": "Indicates that the agent is typing."
     },
     "AGENT_WALKING": {
         "prefix": "AGENT_WALKING",
         "body": [
             "AGENT_WALKING$0"
         ],
-        "description": "AGENT_WALKING"
+        "description": "Used with llGetAgentInfo to determine if the queried avatar is walking."
     },
     "ALL_SIDES": {
         "prefix": "ALL_SIDES",
         "body": [
             "ALL_SIDES$0"
         ],
-        "description": "ALL_SIDES"
+        "description": "Selects all sides of an object in an applicable function."
     },
     "ANIM_ON": {
         "prefix": "ANIM_ON",
         "body": [
             "ANIM_ON$0"
         ],
-        "description": "ANIM_ON"
+        "description": "Enables a texture animation."
     },
     "ATTACH_AVATAR_CENTER": {
         "prefix": "ATTACH_AVATAR_CENTER",
@@ -193,7 +193,7 @@
         "body": [
             "ATTACH_CHIN$0"
         ],
-        "description": "Chin: chin"
+        "description": "This constant is returned when the attachment point is the chin."
     },
     "ATTACH_FACE_JAW": {
         "prefix": "ATTACH_FACE_JAW",
@@ -326,7 +326,7 @@
         "body": [
             "ATTACH_LEAR$0"
         ],
-        "description": "Left Ear: left ear"
+        "description": "Left ear"
     },
     "ATTACH_LEFT_PEC": {
         "prefix": "ATTACH_LEFT_PEC",
@@ -368,21 +368,21 @@
         "body": [
             "ATTACH_LHIP$0"
         ],
-        "description": "Left Hip: left hip"
+        "description": "Left Hip"
     },
     "ATTACH_LLARM": {
         "prefix": "ATTACH_LLARM",
         "body": [
             "ATTACH_LLARM$0"
         ],
-        "description": "L Lower Arm: left lower arm"
+        "description": "Lower Left Arm"
     },
     "ATTACH_LLLEG": {
         "prefix": "ATTACH_LLLEG",
         "body": [
             "ATTACH_LLLEG$0"
         ],
-        "description": "L Lower Leg: left lower leg"
+        "description": "Left lower leg"
     },
     "ATTACH_LSHOULDER": {
         "prefix": "ATTACH_LSHOULDER",
@@ -396,14 +396,14 @@
         "body": [
             "ATTACH_LUARM$0"
         ],
-        "description": "L Upper Arm: left upper arm"
+        "description": "Left Upper Arm"
     },
     "ATTACH_LULEG": {
         "prefix": "ATTACH_LULEG",
         "body": [
             "ATTACH_LULEG$0"
         ],
-        "description": "L Upper Leg: left upper leg"
+        "description": "Left Upper Leg"
     },
     "ATTACH_LWING": {
         "prefix": "ATTACH_LWING",
@@ -445,7 +445,7 @@
         "body": [
             "ATTACH_REAR$0"
         ],
-        "description": "Right Ear: right ear"
+        "description": "Right ear"
     },
     "ATTACH_REYE": {
         "prefix": "ATTACH_REYE",
@@ -466,7 +466,7 @@
         "body": [
             "ATTACH_RHAND$0"
         ],
-        "description": "Right Hand: right hand"
+        "description": "Indicates the right hand attach point, which just so happens to be the default attach point."
     },
     "ATTACH_RHAND_RING1": {
         "prefix": "ATTACH_RHAND_RING1",
@@ -494,7 +494,7 @@
         "body": [
             "ATTACH_RLARM$0"
         ],
-        "description": "R Lower Arm: right lower arm"
+        "description": "Right lower arm"
     },
     "ATTACH_RLLEG": {
         "prefix": "ATTACH_RLLEG",
@@ -515,14 +515,14 @@
         "body": [
             "ATTACH_RUARM$0"
         ],
-        "description": "R Upper Arm: right upper arm"
+        "description": "Right upper arm"
     },
     "ATTACH_RULEG": {
         "prefix": "ATTACH_RULEG",
         "body": [
             "ATTACH_RULEG$0"
         ],
-        "description": "R Upper Leg: right upper leg"
+        "description": "Right upper leg"
     },
     "ATTACH_RWING": {
         "prefix": "ATTACH_RWING",
@@ -550,182 +550,182 @@
         "body": [
             "CAMERA_ACTIVE$0"
         ],
-        "description": "CAMERA_ACTIVE"
+        "description": "Enables or disables the scripted camera."
     },
     "CAMERA_BEHINDNESS_ANGLE": {
         "prefix": "CAMERA_BEHINDNESS_ANGLE",
         "body": [
             "CAMERA_BEHINDNESS_ANGLE$0"
         ],
-        "description": "CAMERA_BEHINDNESS_ANGLE"
+        "description": "Sets the camera angle behind the avatar."
     },
     "CAMERA_BEHINDNESS_LAG": {
         "prefix": "CAMERA_BEHINDNESS_LAG",
         "body": [
             "CAMERA_BEHINDNESS_LAG$0"
         ],
-        "description": "CAMERA_BEHINDNESS_LAG"
+        "description": "Controls how quickly the camera reaches its behindness angle."
     },
     "CAMERA_DISTANCE": {
         "prefix": "CAMERA_DISTANCE",
         "body": [
             "CAMERA_DISTANCE$0"
         ],
-        "description": "CAMERA_DISTANCE"
+        "description": "Sets the distance between the camera and its focus point."
     },
     "CAMERA_FOCUS": {
         "prefix": "CAMERA_FOCUS",
         "body": [
             "CAMERA_FOCUS$0"
         ],
-        "description": "CAMERA_FOCUS"
+        "description": "Sets the camera focus point."
     },
     "CAMERA_FOCUS_LAG": {
         "prefix": "CAMERA_FOCUS_LAG",
         "body": [
             "CAMERA_FOCUS_LAG$0"
         ],
-        "description": "CAMERA_FOCUS_LAG"
+        "description": "Controls how quickly the camera reaches its focus point."
     },
     "CAMERA_FOCUS_LOCKED": {
         "prefix": "CAMERA_FOCUS_LOCKED",
         "body": [
             "CAMERA_FOCUS_LOCKED$0"
         ],
-        "description": "CAMERA_FOCUS_LOCKED"
+        "description": "Locks the camera focus to the specified point."
     },
     "CAMERA_FOCUS_OFFSET": {
         "prefix": "CAMERA_FOCUS_OFFSET",
         "body": [
             "CAMERA_FOCUS_OFFSET$0"
         ],
-        "description": "CAMERA_FOCUS_OFFSET"
+        "description": "Sets the camera focus offset from the avatar."
     },
     "CAMERA_FOCUS_THRESHOLD": {
         "prefix": "CAMERA_FOCUS_THRESHOLD",
         "body": [
             "CAMERA_FOCUS_THRESHOLD$0"
         ],
-        "description": "CAMERA_FOCUS_THRESHOLD"
+        "description": "Sets the movement threshold for camera focus updates."
     },
     "CAMERA_PITCH": {
         "prefix": "CAMERA_PITCH",
         "body": [
             "CAMERA_PITCH$0"
         ],
-        "description": "CAMERA_PITCH"
+        "description": "Sets the camera pitch angle."
     },
     "CAMERA_POSITION": {
         "prefix": "CAMERA_POSITION",
         "body": [
             "CAMERA_POSITION$0"
         ],
-        "description": "CAMERA_POSITION"
+        "description": "Sets the camera position."
     },
     "CAMERA_POSITION_LAG": {
         "prefix": "CAMERA_POSITION_LAG",
         "body": [
             "CAMERA_POSITION_LAG$0"
         ],
-        "description": "CAMERA_POSITION_LAG"
+        "description": "Controls how quickly the camera moves to its position."
     },
     "CAMERA_POSITION_LOCKED": {
         "prefix": "CAMERA_POSITION_LOCKED",
         "body": [
             "CAMERA_POSITION_LOCKED$0"
         ],
-        "description": "CAMERA_POSITION_LOCKED"
+        "description": "Locks the camera to the specified position."
     },
     "CAMERA_POSITION_THRESHOLD": {
         "prefix": "CAMERA_POSITION_THRESHOLD",
         "body": [
             "CAMERA_POSITION_THRESHOLD$0"
         ],
-        "description": "CAMERA_POSITION_THRESHOLD"
+        "description": "Sets the movement threshold for camera position updates."
     },
     "CHANGED_ALLOWED_DROP": {
         "prefix": "CHANGED_ALLOWED_DROP",
         "body": [
             "CHANGED_ALLOWED_DROP$0"
         ],
-        "description": "CHANGED_ALLOWED_DROP"
+        "description": "A user other then the owner (or the owner if the object is no-mod) has added inventory to the prim. This is only possible if enabled with llAllowInventoryDrop."
     },
     "CHANGED_COLOR": {
         "prefix": "CHANGED_COLOR",
         "body": [
             "CHANGED_COLOR$0"
         ],
-        "description": "CHANGED_COLOR"
+        "description": "Prim Blinn-Phong color or alpha parameters have changed"
     },
     "CHANGED_INVENTORY": {
         "prefix": "CHANGED_INVENTORY",
         "body": [
             "CHANGED_INVENTORY$0"
         ],
-        "description": "CHANGED_INVENTORY"
+        "description": "Prim inventory has changed by someone who has modification rights to a prim."
     },
     "CHANGED_LINK": {
         "prefix": "CHANGED_LINK",
         "body": [
             "CHANGED_LINK$0"
         ],
-        "description": "CHANGED_LINK"
+        "description": "The number of prims making up the object or avatars seated on the object have changed. This event also occurs when duplicating a linked object or when a prim in an object changes type or shape."
     },
     "CHANGED_MEDIA": {
         "prefix": "CHANGED_MEDIA",
         "body": [
             "CHANGED_MEDIA$0"
         ],
-        "description": "CHANGED_MEDIA"
+        "description": "Prim Media on the prim has changed."
     },
     "CHANGED_OWNER": {
         "prefix": "CHANGED_OWNER",
         "body": [
             "CHANGED_OWNER$0"
         ],
-        "description": "CHANGED_OWNER"
+        "description": "The object has changed owners. This event occurs in the original object when a user takes it or takes a copy of it or when the owner deeds it to a group. The event occurs in the new object when it is first rezzed."
     },
     "CHANGED_REGION": {
         "prefix": "CHANGED_REGION",
         "body": [
             "CHANGED_REGION$0"
         ],
-        "description": "CHANGED_REGION"
+        "description": "The object has changed region by crossing a region boundary (or by teleporting, if attached). This event only occurs in the root prim of a linkset. This event does not occur in child prims of objects when they cross a region boundary."
     },
     "CHANGED_REGION_START": {
         "prefix": "CHANGED_REGION_START",
         "body": [
             "CHANGED_REGION_START$0"
         ],
-        "description": "CHANGED_REGION_START"
+        "description": "The region containing the object has just come online."
     },
     "CHANGED_SCALE": {
         "prefix": "CHANGED_SCALE",
         "body": [
             "CHANGED_SCALE$0"
         ],
-        "description": "CHANGED_SCALE"
+        "description": "The prim scale of at least one prim in the linked object has changed. Only the root prim will receive this event."
     },
     "CHANGED_SHAPE": {
         "prefix": "CHANGED_SHAPE",
         "body": [
             "CHANGED_SHAPE$0"
         ],
-        "description": "CHANGED_SHAPE"
+        "description": "PRIM_TYPE (box, prism, torus, taper, twist, cut &hellip;) has changed."
     },
     "CHANGED_TELEPORT": {
         "prefix": "CHANGED_TELEPORT",
         "body": [
             "CHANGED_TELEPORT$0"
         ],
-        "description": "CHANGED_TELEPORT"
+        "description": "The avatar this object is attached to has teleported. This event only occurs in the root prim of an attachment when the user has teleported. This event does not occur in child prims of attachments, nor does it occur due to a \"sit teleport\"."
     },
     "CHANGED_TEXTURE": {
         "prefix": "CHANGED_TEXTURE",
         "body": [
             "CHANGED_TEXTURE$0"
         ],
-        "description": "CHANGED_TEXTURE"
+        "description": "Prim texture parameters (shine/bump setting, repeats, flip, rotation, or offset) have changed."
     },
     "CHARACTER_ACCOUNT_FOR_SKIPPED_FRAMES": {
         "prefix": "CHARACTER_ACCOUNT_FOR_SKIPPED_FRAMES",
@@ -739,245 +739,245 @@
         "body": [
             "CHARACTER_AVOIDANCE_MODE$0"
         ],
-        "description": "Allows you to specify that a character should not try to avoid other characters, should not try to avoid dynamic obstacles (relatively fast moving objects and avatars), or both. This is framed in the positive sense ([CHARACTER_AVOIDANCE_MODE, AVOID_CHARACTERS] would create a character that avoided other characters but not agents or moving vehicles). Setting this parameter to AVOID_NONE causes the character to not avoid either category.\n- Default: AVOID_CHARACTERS | AVOID_DYNAMIC_OBSTACLES\n- Range / Values: Combinable Flags: AVOID_CHARACTERS, AVOID_DYNAMIC_OBSTACLES, AVOID_NONE"
+        "description": "Used in the functions of pathfinding . Is combined with a mask bit flags. The default is AVOID_CHARACTERS with AVOID_DYNAMIC_OBSTACLES. Allows you to specify that a character should not try to avoid other characters, should not try to avoid dynamic obstacles (relatively fast moving objects and avatars), or both."
     },
     "CHARACTER_DESIRED_SPEED": {
         "prefix": "CHARACTER_DESIRED_SPEED",
         "body": [
             "CHARACTER_DESIRED_SPEED$0"
         ],
-        "description": "Speed of pursuit in meters per second.\n- Default: 6\n- Range / Values: [0.2, 40.0]"
+        "description": "Constant used to indicate that the following argument is the desired speed for a Pathfinding character."
     },
     "CHARACTER_DESIRED_TURN_SPEED": {
         "prefix": "CHARACTER_DESIRED_TURN_SPEED",
         "body": [
             "CHARACTER_DESIRED_TURN_SPEED$0"
         ],
-        "description": "The character's maximum speed while turning--note that this is only loosely enforced (i.e., a character may turn at higher speeds under certain conditions)\n- Default: 6\n- Range / Values: [0.02, 40.0]"
+        "description": "Used in the functions of pathfinding . Is combined with a float. The default 6 meters/second Specifies the character's maximum speed while turning"
     },
     "CHARACTER_LENGTH": {
         "prefix": "CHARACTER_LENGTH",
         "body": [
             "CHARACTER_LENGTH$0"
         ],
-        "description": "Set collision capsule length\nIf the value is less than twice the radius plus 0.1m, it will be set to twice the radius plus 0.1m\n- Default: \n- Range / Values: (0.0, 10.0]"
+        "description": "Constant used to indicate that the following argument is the length of the capsule for a Pathfinding character. This is used to help denote the size of the character."
     },
     "CHARACTER_MAX_ACCEL": {
         "prefix": "CHARACTER_MAX_ACCEL",
         "body": [
             "CHARACTER_MAX_ACCEL$0"
         ],
-        "description": "The character's maximum acceleration rate.\n- Default: 20\n- Range / Values: [0.5, 40.0]"
+        "description": "Used in the functions of pathfinding . Is combined with a float. The default 20 meters/s(-2). Specifies the character's maximum acceleration rate."
     },
     "CHARACTER_MAX_DECEL": {
         "prefix": "CHARACTER_MAX_DECEL",
         "body": [
             "CHARACTER_MAX_DECEL$0"
         ],
-        "description": "The character's maximum deceleration rate.\n- Default: 30\n- Range / Values: [0.5, 60.0]"
+        "description": "Used in the functions of pathfinding . Is combined with a float. The default 30 meters/s(-2). Specifies the character's maximum deceleration rate."
     },
     "CHARACTER_MAX_SPEED": {
         "prefix": "CHARACTER_MAX_SPEED",
         "body": [
             "CHARACTER_MAX_SPEED$0"
         ],
-        "description": "The character's maximum speed. Affects speed when avoiding dynamic obstacles and when traversing low-walkability objects in TRAVERSAL_TYPE_FAST mode.\n- Default: 20\n- Range / Values: [1, 40.0]"
+        "description": "Used in the functions of pathfinding . Is combined with a float. The default is 20 meters/second Specifies the character's maximum speed . Can t be inferior to 0.2 meters/second and can't be superior to 50 meters/second"
     },
     "CHARACTER_MAX_TURN_RADIUS": {
         "prefix": "CHARACTER_MAX_TURN_RADIUS",
         "body": [
             "CHARACTER_MAX_TURN_RADIUS$0"
         ],
-        "description": "The character's turn radius when traveling at CHARACTER_DESIRED_TURN_SPEED\n- Default: 1.25\n- Range / Values: [0.1, 10.0]"
+        "description": "Used in the functions of pathfinding . Is combined with a float. The default 1.25 meter. Specifies the character's radius when the characters turns at the speed CHARACTER_DESIRED_TURN_SPEED"
     },
     "CHARACTER_ORIENTATION": {
         "prefix": "CHARACTER_ORIENTATION",
         "body": [
             "CHARACTER_ORIENTATION$0"
         ],
-        "description": "Set the character orientation.\n- Default: VERTICAL\n- Range / Values: VERTICAL, HORIZONTAL"
+        "description": "Constant used to indicate that the following argument is the orientation of the capsule for a Pathfinding character. This is used to help denote how to interpret the size of a character."
     },
     "CHARACTER_RADIUS": {
         "prefix": "CHARACTER_RADIUS",
         "body": [
             "CHARACTER_RADIUS$0"
         ],
-        "description": "Set collision capsule radius.\n- Default: \n- Range / Values: [0.125, 5.0]"
+        "description": "Constant used to indicate that the following argument is the radius of the capsule for a Pathfinding character. This is used to help denote the size of the character."
     },
     "CHARACTER_STAY_WITHIN_PARCEL": {
         "prefix": "CHARACTER_STAY_WITHIN_PARCEL",
         "body": [
             "CHARACTER_STAY_WITHIN_PARCEL$0"
         ],
-        "description": "FALSE matches traditional behavior. If set to TRUE, treat the parcel boundaries as one-way obstacles (will re-enter but can't leave on it's own).\n- Default: Depends*\n- Range / Values: TRUE or FALSE"
+        "description": "Default setting is FALSE, leading to traditional pathfinding behavior. If a parcel allows scripts and objects and the character does not have the CHARACTER_STAY_WITHIN_PARCEL option enabled, it can freely cross the parcel boundary in both directions."
     },
     "CHARACTER_TYPE": {
         "prefix": "CHARACTER_TYPE",
         "body": [
             "CHARACTER_TYPE$0"
         ],
-        "description": "Specifies which walkability coefficient will be used by this character.\n- Default: CHARACTER_TYPE_NONE\n- Range / Values: CHARACTER_TYPE_A, CHARACTER_TYPE_B, CHARACTER_TYPE_C, CHARACTER_TYPE_D, CHARACTER_TYPE_NONE"
+        "description": "Used in combination with one of the character type flags. The default is CHARACTER_TYPE_NONE, other options are CHARACTER_TYPE_A, CHARACTER_TYPE_B, CHARACTER_TYPE_C and CHARACTER_TYPE_D. Note that the character type is not used to describe the behavior of the Pathfinding object but is used to describe the kind of surface and terrain that it prefers to travel."
     },
     "CHARACTER_TYPE_A": {
         "prefix": "CHARACTER_TYPE_A",
         "body": [
             "CHARACTER_TYPE_A$0"
         ],
-        "description": "CHARACTER_TYPE_A"
+        "description": "Used for character types that you prefer move in a way consistent with humanoids."
     },
     "CHARACTER_TYPE_B": {
         "prefix": "CHARACTER_TYPE_B",
         "body": [
             "CHARACTER_TYPE_B$0"
         ],
-        "description": "CHARACTER_TYPE_B"
+        "description": "Used for character types that you prefer move in a way consistent with wild animals or off road vehicles."
     },
     "CHARACTER_TYPE_C": {
         "prefix": "CHARACTER_TYPE_C",
         "body": [
             "CHARACTER_TYPE_C$0"
         ],
-        "description": "CHARACTER_TYPE_C"
+        "description": "Used for mechanical character types or road going vehicles."
     },
     "CHARACTER_TYPE_D": {
         "prefix": "CHARACTER_TYPE_D",
         "body": [
             "CHARACTER_TYPE_D$0"
         ],
-        "description": "CHARACTER_TYPE_D"
+        "description": "Used for character types that are not consistent with the A, B, or C type."
     },
     "CHARACTER_TYPE_NONE": {
         "prefix": "CHARACTER_TYPE_NONE",
         "body": [
             "CHARACTER_TYPE_NONE$0"
         ],
-        "description": "CHARACTER_TYPE_NONE"
+        "description": "Used to set no specific character type."
     },
     "CLICK_ACTION_BUY": {
         "prefix": "CLICK_ACTION_BUY",
         "body": [
             "CLICK_ACTION_BUY$0"
         ],
-        "description": "CLICK_ACTION_BUY"
+        "description": "Sets clicking the object to buy it."
     },
     "CLICK_ACTION_NONE": {
         "prefix": "CLICK_ACTION_NONE",
         "body": [
             "CLICK_ACTION_NONE$0"
         ],
-        "description": "CLICK_ACTION_NONE"
+        "description": "Sets clicking the object to perform no action."
     },
     "CLICK_ACTION_OPEN": {
         "prefix": "CLICK_ACTION_OPEN",
         "body": [
             "CLICK_ACTION_OPEN$0"
         ],
-        "description": "CLICK_ACTION_OPEN"
+        "description": "Sets clicking the object to open it."
     },
     "CLICK_ACTION_OPEN_MEDIA": {
         "prefix": "CLICK_ACTION_OPEN_MEDIA",
         "body": [
             "CLICK_ACTION_OPEN_MEDIA$0"
         ],
-        "description": "CLICK_ACTION_OPEN_MEDIA"
+        "description": "Sets clicking the object to open its media."
     },
     "CLICK_ACTION_PAY": {
         "prefix": "CLICK_ACTION_PAY",
         "body": [
             "CLICK_ACTION_PAY$0"
         ],
-        "description": "CLICK_ACTION_PAY"
+        "description": "Sets clicking the object to pay it."
     },
     "CLICK_ACTION_PLAY": {
         "prefix": "CLICK_ACTION_PLAY",
         "body": [
             "CLICK_ACTION_PLAY$0"
         ],
-        "description": "CLICK_ACTION_PLAY"
+        "description": "Sets clicking the object to play its media."
     },
     "CLICK_ACTION_SIT": {
         "prefix": "CLICK_ACTION_SIT",
         "body": [
             "CLICK_ACTION_SIT$0"
         ],
-        "description": "CLICK_ACTION_SIT"
+        "description": "Sets clicking the object to sit on it."
     },
     "CLICK_ACTION_TOUCH": {
         "prefix": "CLICK_ACTION_TOUCH",
         "body": [
             "CLICK_ACTION_TOUCH$0"
         ],
-        "description": "CLICK_ACTION_TOUCH"
+        "description": "Sets clicking the object to trigger a touch event."
     },
     "CLICK_ACTION_ZOOM": {
         "prefix": "CLICK_ACTION_ZOOM",
         "body": [
             "CLICK_ACTION_ZOOM$0"
         ],
-        "description": "CLICK_ACTION_ZOOM"
+        "description": "Sets clicking the object to zoom in on it."
     },
     "CONTENT_TYPE_ATOM": {
         "prefix": "CONTENT_TYPE_ATOM",
         "body": [
             "CONTENT_TYPE_ATOM$0"
         ],
-        "description": "application/atom+xml"
+        "description": "Sets the Internet media type Content-Type header of any subsequent LSL HTTP server response via llHTTPResponse to application/atom+xml ."
     },
     "CONTENT_TYPE_FORM": {
         "prefix": "CONTENT_TYPE_FORM",
         "body": [
             "CONTENT_TYPE_FORM$0"
         ],
-        "description": "application/x-www-form-urlencoded"
+        "description": "Sets the Internet media type Content-Type header of any subsequent LSL HTTP server response via llHTTPResponse to application/x-www-form-urlencoded ."
     },
     "CONTENT_TYPE_HTML": {
         "prefix": "CONTENT_TYPE_HTML",
         "body": [
             "CONTENT_TYPE_HTML$0"
         ],
-        "description": "text/html"
+        "description": "Sets the Internet media type Content-Type header of any subsequent LSL HTTP server response via llHTTPResponse to text/html ."
     },
     "CONTENT_TYPE_JSON": {
         "prefix": "CONTENT_TYPE_JSON",
         "body": [
             "CONTENT_TYPE_JSON$0"
         ],
-        "description": "application/json"
+        "description": "Sets the Internet media type Content-Type header of any subsequent LSL HTTP server response via llHTTPResponse to application/json ."
     },
     "CONTENT_TYPE_LLSD": {
         "prefix": "CONTENT_TYPE_LLSD",
         "body": [
             "CONTENT_TYPE_LLSD$0"
         ],
-        "description": "application/llsd+xml"
+        "description": "Sets the Internet media type Content-Type header of any subsequent LSL HTTP server response via llHTTPResponse to application/llsd+xml (Linden Lab Structured Data)."
     },
     "CONTENT_TYPE_RSS": {
         "prefix": "CONTENT_TYPE_RSS",
         "body": [
             "CONTENT_TYPE_RSS$0"
         ],
-        "description": "application/rss+xml"
+        "description": "Sets the Internet media type Content-Type header of any subsequent LSL HTTP server response via llHTTPResponse to application/rss+xml ."
     },
     "CONTENT_TYPE_TEXT": {
         "prefix": "CONTENT_TYPE_TEXT",
         "body": [
             "CONTENT_TYPE_TEXT$0"
         ],
-        "description": "text/plain"
+        "description": "Sets the Internet media type Content-Type header of any subsequent LSL HTTP server response via llHTTPResponse to text/plain ."
     },
     "CONTENT_TYPE_XHTML": {
         "prefix": "CONTENT_TYPE_XHTML",
         "body": [
             "CONTENT_TYPE_XHTML$0"
         ],
-        "description": "application/xhtml+xml"
+        "description": "Sets the Internet media type Content-Type header of any subsequent LSL HTTP server response via llHTTPResponse to application/xhtml+xml ."
     },
     "CONTENT_TYPE_XML": {
         "prefix": "CONTENT_TYPE_XML",
         "body": [
             "CONTENT_TYPE_XML$0"
         ],
-        "description": "application/xml"
+        "description": "Sets the Internet media type Content-Type header of any subsequent LSL HTTP server response via llHTTPResponse to application/xml ."
     },
     "CONTROL_BACK": {
         "prefix": "CONTROL_BACK",
@@ -1054,161 +1054,161 @@
         "body": [
             "DATA_BORN$0"
         ],
-        "description": "DATA_BORN"
+        "description": "Used with llRequestAgentData to return a string that contains the date the user joined SL, it is the ISO 8601 format of \"YYYY-MM-DD\". It is based on Pacific Time, not UTC."
     },
     "DATA_NAME": {
         "prefix": "DATA_NAME",
         "body": [
             "DATA_NAME$0"
         ],
-        "description": "DATA_NAME"
+        "description": "Used with llRequestAgentData to return a string containing the avatars legacy name."
     },
     "DATA_ONLINE": {
         "prefix": "DATA_ONLINE",
         "body": [
             "DATA_ONLINE$0"
         ],
-        "description": "DATA_ONLINE"
+        "description": "Used with llRequestAgentData to return a string that contains the integer boolean for if the user is online (or not). TRUE if online, FALSE if offline."
     },
     "DATA_PAYINFO": {
         "prefix": "DATA_PAYINFO",
         "body": [
             "DATA_PAYINFO$0"
         ],
-        "description": "DATA_PAYINFO"
+        "description": "Used with llRequestAgentData to return a string that contains the integer mask that can contain either of these two constants: PAYMENT_INFO_ON_FILE, PAYMENT_INFO_USED"
     },
     "DATA_RATING": {
         "prefix": "DATA_RATING",
         "body": [
             "DATA_RATING$0"
         ],
-        "description": "DATA_RATING"
+        "description": "Used with llRequestAgentData to return the string \"0, 0, 0, 0, 0, 0\". The CSV list returned used to contain the positive and negative ratings the user has acquired before ratings were removed from SL."
     },
     "DATA_SIM_POS": {
         "prefix": "DATA_SIM_POS",
         "body": [
             "DATA_SIM_POS$0"
         ],
-        "description": "DATA_SIM_POS"
+        "description": "returns vector in global coordinates"
     },
     "DATA_SIM_RATING": {
         "prefix": "DATA_SIM_RATING",
         "body": [
             "DATA_SIM_RATING$0"
         ],
-        "description": "DATA_SIM_RATING"
+        "description": "returns string simulator rating \"PG\", \"MATURE\", \"ADULT\" or \"UNKNOWN\""
     },
     "DATA_SIM_STATUS": {
         "prefix": "DATA_SIM_STATUS",
         "body": [
             "DATA_SIM_STATUS$0"
         ],
-        "description": "DATA_SIM_STATUS"
+        "description": "Returns one of these strings. * \"up\": simulator currently up and running * \"down\": simulator currently down * \"starting\": simulator currently starting * \"stopping\": simulator currently stopping * \"crashed\": simulator has crashed * \"unknown\": simulator status unknown or unknown simulator"
     },
     "DEBUG_CHANNEL": {
         "prefix": "DEBUG_CHANNEL",
         "body": [
             "DEBUG_CHANNEL$0"
         ],
-        "description": "DEBUG_CHANNEL"
+        "description": "Chat channel reserved for script debugging and error messages. The client will display chat on this channel in the script console if the avatar is within the appropriate distance for the communication type (see Chat for details)."
     },
     "DEG_TO_RAD": {
         "prefix": "DEG_TO_RAD",
         "body": [
             "DEG_TO_RAD$0"
         ],
-        "description": "DEG_TO_RAD"
+        "description": "When multiplied by, converts a value in degrees to radians. Precise value is PI/180."
     },
     "EOF": {
         "prefix": "EOF",
         "body": [
             "EOF$0"
         ],
-        "description": "EOF"
+        "description": "EOF is a value returned by the dataserver event, as a result of a call to llGetNotecardLine, specifically when the requested line is past the end of the notecard. The value returned equals \"\\n\\n\\n\", which is to say, three newline characters (0x0a)."
     },
     "ERR_GENERIC": {
         "prefix": "ERR_GENERIC",
         "body": [
             "ERR_GENERIC$0"
         ],
-        "description": "A nebulous and inexplicable error, nothing is known about it."
+        "description": "- ! Function ! Indicates. - llReturnObjectsByID llReturnObjectsByOwner A nebulous and inexplicable error, nothing is known about it. }"
     },
     "ERR_MALFORMED_PARAMS": {
         "prefix": "ERR_MALFORMED_PARAMS",
         "body": [
             "ERR_MALFORMED_PARAMS$0"
         ],
-        "description": "Parameters are malformed."
+        "description": "Return Value for llReturnObject* functions. Indicates function Parameters are malformed."
     },
     "ERR_PARCEL_PERMISSIONS": {
         "prefix": "ERR_PARCEL_PERMISSIONS",
         "body": [
             "ERR_PARCEL_PERMISSIONS$0"
         ],
-        "description": "Permission lacked to perform task on specified parcel."
+        "description": "Return Value for llReturnObject* functions. Indicates Permission lacked to perform task on specified parcel."
     },
     "ERR_RUNTIME_PERMISSIONS": {
         "prefix": "ERR_RUNTIME_PERMISSIONS",
         "body": [
             "ERR_RUNTIME_PERMISSIONS$0"
         ],
-        "description": "Script lacks the runtime permission to perform the requested task."
+        "description": "Return Value for llReturnObject* functions. Indicates Script lacks the runtime permission to perform the requested task."
     },
     "ERR_THROTTLED": {
         "prefix": "ERR_THROTTLED",
         "body": [
             "ERR_THROTTLED$0"
         ],
-        "description": "Task has been throttled. Try again later."
+        "description": "Return Value for llReturnObject* functions. Indicates Task has been throttled. Try again later."
     },
     "ESTATE_ACCESS_ALLOWED_AGENT_ADD": {
         "prefix": "ESTATE_ACCESS_ALLOWED_AGENT_ADD",
         "body": [
             "ESTATE_ACCESS_ALLOWED_AGENT_ADD$0"
         ],
-        "description": "Add the agent to this estate's Allowed Residents list."
+        "description": "Used in input parameters of llManageEstateAccess . Add an agent to this estate's Allowed Residents list"
     },
     "ESTATE_ACCESS_ALLOWED_AGENT_REMOVE": {
         "prefix": "ESTATE_ACCESS_ALLOWED_AGENT_REMOVE",
         "body": [
             "ESTATE_ACCESS_ALLOWED_AGENT_REMOVE$0"
         ],
-        "description": "Remove the agent from this estate's Allowed Residents list."
+        "description": "Used in input parameters of llManageEstateAccess . Remove an agent to this estate's Allowed Residents list"
     },
     "ESTATE_ACCESS_ALLOWED_GROUP_ADD": {
         "prefix": "ESTATE_ACCESS_ALLOWED_GROUP_ADD",
         "body": [
             "ESTATE_ACCESS_ALLOWED_GROUP_ADD$0"
         ],
-        "description": "Add the group to this estate's Allowed groups list."
+        "description": "Used in input parameters of llManageEstateAccess .Add a group to this estate's Allowed groups list."
     },
     "ESTATE_ACCESS_ALLOWED_GROUP_REMOVE": {
         "prefix": "ESTATE_ACCESS_ALLOWED_GROUP_REMOVE",
         "body": [
             "ESTATE_ACCESS_ALLOWED_GROUP_REMOVE$0"
         ],
-        "description": "Remove the group from this estate's Allowed groups list."
+        "description": "Used in input parameters of llManageEstateAccess . Remove the group from this estate's Allowed groups list."
     },
     "ESTATE_ACCESS_BANNED_AGENT_ADD": {
         "prefix": "ESTATE_ACCESS_BANNED_AGENT_ADD",
         "body": [
             "ESTATE_ACCESS_BANNED_AGENT_ADD$0"
         ],
-        "description": "Add the agent to this estate's Banned residents list."
+        "description": "Used in input parameters of llManageEstateAccess. Add the agent to this estate's Banned residents list. If the agent is on the estate, they will be immediately teleported home or to a random infohub, if they don't have a home spot set. If the agent had their home spot on the region, it will be erased (but can be set again after an un-ban)."
     },
     "ESTATE_ACCESS_BANNED_AGENT_REMOVE": {
         "prefix": "ESTATE_ACCESS_BANNED_AGENT_REMOVE",
         "body": [
             "ESTATE_ACCESS_BANNED_AGENT_REMOVE$0"
         ],
-        "description": "Remove the agent from this estate's Banned residents list."
+        "description": "Used in input parameters of llManageEstateAccess . Remove the agent from this estate's Banned residents list."
     },
     "FALSE": {
         "prefix": "FALSE",
         "body": [
             "FALSE$0"
         ],
-        "description": "FALSE"
+        "description": "Constant used to define the FALSE value in conditional structures or variables/constants in general. Usually it's used because it is more readable, indicating a boolean value instead a integer value (0)."
     },
     "FORCE_DIRECT_PATH": {
         "prefix": "FORCE_DIRECT_PATH",
@@ -1222,476 +1222,476 @@
         "body": [
             "HORIZONTAL$0"
         ],
-        "description": "HORIZONTAL"
+        "description": "Constant to indicate that the orientation of the capsule for a Pathfinding character is horizontal."
     },
     "HTTP_ACCEPT": {
         "prefix": "HTTP_ACCEPT",
         "body": [
             "HTTP_ACCEPT$0"
         ],
-        "description": "HTTP_ACCEPT"
+        "description": "HTTP request option for configuring accept."
     },
     "HTTP_BODY_MAXLENGTH": {
         "prefix": "HTTP_BODY_MAXLENGTH",
         "body": [
             "HTTP_BODY_MAXLENGTH$0"
         ],
-        "description": "HTTP_BODY_MAXLENGTH"
+        "description": "Used with llHTTPRequest to set the maximum size the script will accept* for an HTTP body. The largest value this can be set to depends upon the VM that is being used."
     },
     "HTTP_BODY_TRUNCATED": {
         "prefix": "HTTP_BODY_TRUNCATED",
         "body": [
             "HTTP_BODY_TRUNCATED$0"
         ],
-        "description": "HTTP_BODY_TRUNCATED"
+        "description": "Truncation point in bytes"
     },
     "HTTP_CUSTOM_HEADER": {
         "prefix": "HTTP_CUSTOM_HEADER",
         "body": [
             "HTTP_CUSTOM_HEADER$0"
         ],
-        "description": "HTTP_CUSTOM_HEADER"
+        "description": "HTTP request option for configuring custom header."
     },
     "HTTP_METHOD": {
         "prefix": "HTTP_METHOD",
         "body": [
             "HTTP_METHOD$0"
         ],
-        "description": "HTTP_METHOD"
+        "description": "HTTP request option for configuring method."
     },
     "HTTP_MIMETYPE": {
         "prefix": "HTTP_MIMETYPE",
         "body": [
             "HTTP_MIMETYPE$0"
         ],
-        "description": "HTTP_MIMETYPE"
+        "description": "HTTP request option for configuring mimetype."
     },
     "HTTP_PRAGMA_NO_CACHE": {
         "prefix": "HTTP_PRAGMA_NO_CACHE",
         "body": [
             "HTTP_PRAGMA_NO_CACHE$0"
         ],
-        "description": "HTTP_PRAGMA_NO_CACHE"
+        "description": "HTTP request option for configuring pragma no cache."
     },
     "HTTP_USER_AGENT": {
         "prefix": "HTTP_USER_AGENT",
         "body": [
             "HTTP_USER_AGENT$0"
         ],
-        "description": "HTTP_USER_AGENT"
+        "description": "HTTP request option for configuring user agent."
     },
     "HTTP_VERBOSE_THROTTLE": {
         "prefix": "HTTP_VERBOSE_THROTTLE",
         "body": [
             "HTTP_VERBOSE_THROTTLE$0"
         ],
-        "description": "HTTP_VERBOSE_THROTTLE"
+        "description": "HTTP request option for configuring verbose throttle."
     },
     "HTTP_VERIFY_CERT": {
         "prefix": "HTTP_VERIFY_CERT",
         "body": [
             "HTTP_VERIFY_CERT$0"
         ],
-        "description": "HTTP_VERIFY_CERT"
+        "description": "HTTP request option for configuring verify cert."
     },
     "INVENTORY_ALL": {
         "prefix": "INVENTORY_ALL",
         "body": [
             "INVENTORY_ALL$0"
         ],
-        "description": "INVENTORY_ALL"
+        "description": "Used with Inventory functions and specifies ALL TYPES of inventory items will be retrieved by the function."
     },
     "INVENTORY_ANIMATION": {
         "prefix": "INVENTORY_ANIMATION",
         "body": [
             "INVENTORY_ANIMATION$0"
         ],
-        "description": "INVENTORY_ANIMATION"
+        "description": "Used with Inventory functions and specifies inventory items of ANIMATION type will be retrieved by the function."
     },
     "INVENTORY_BODYPART": {
         "prefix": "INVENTORY_BODYPART",
         "body": [
             "INVENTORY_BODYPART$0"
         ],
-        "description": "INVENTORY_BODYPART"
+        "description": "Used with Inventory functions and specifies inventory items of BODYPART type will be retrieved by the function."
     },
     "INVENTORY_CLOTHING": {
         "prefix": "INVENTORY_CLOTHING",
         "body": [
             "INVENTORY_CLOTHING$0"
         ],
-        "description": "INVENTORY_CLOTHING"
+        "description": "Used with Inventory functions and specifies inventory items of CLOTHING type will be retrieved by the function."
     },
     "INVENTORY_GESTURE": {
         "prefix": "INVENTORY_GESTURE",
         "body": [
             "INVENTORY_GESTURE$0"
         ],
-        "description": "INVENTORY_GESTURE"
+        "description": "Used with Inventory functions and specifies inventory items of GESTURE type will be retrieved by the function."
     },
     "INVENTORY_LANDMARK": {
         "prefix": "INVENTORY_LANDMARK",
         "body": [
             "INVENTORY_LANDMARK$0"
         ],
-        "description": "INVENTORY_LANDMARK"
+        "description": "Used with Inventory functions and specifies inventory items of LANDMARK type will be retrieved by the function."
     },
     "INVENTORY_NONE": {
         "prefix": "INVENTORY_NONE",
         "body": [
             "INVENTORY_NONE$0"
         ],
-        "description": "INVENTORY_NONE"
+        "description": "Value returned by Inventory functions, to indicate that the inventory item doesn't exist."
     },
     "INVENTORY_NOTECARD": {
         "prefix": "INVENTORY_NOTECARD",
         "body": [
             "INVENTORY_NOTECARD$0"
         ],
-        "description": "INVENTORY_NOTECARD"
+        "description": "Used with Inventory functions and specifies inventory items of NOTECARD type will be retrieved by the function."
     },
     "INVENTORY_OBJECT": {
         "prefix": "INVENTORY_OBJECT",
         "body": [
             "INVENTORY_OBJECT$0"
         ],
-        "description": "INVENTORY_OBJECT = 6"
+        "description": "Used with Inventory functions and specifies inventory items of OBJECT type will be retrieved by the function."
     },
     "INVENTORY_SCRIPT": {
         "prefix": "INVENTORY_SCRIPT",
         "body": [
             "INVENTORY_SCRIPT$0"
         ],
-        "description": "INVENTORY_SCRIPT"
+        "description": "Used with Inventory functions and specifies inventory items of SCRIPT type will be retrieved by the function."
     },
     "INVENTORY_SETTING": {
         "prefix": "INVENTORY_SETTING",
         "body": [
             "INVENTORY_SETTING$0"
         ],
-        "description": "INVENTORY_SETTING"
+        "description": "Used with Inventory functions and specifies inventory items of SETTING type will be retrieved by the function."
     },
     "INVENTORY_SOUND": {
         "prefix": "INVENTORY_SOUND",
         "body": [
             "INVENTORY_SOUND$0"
         ],
-        "description": "INVENTORY_SOUND"
+        "description": "Used with Inventory functions and specifies inventory items of SOUND type will be retrieved by the function."
     },
     "INVENTORY_TEXTURE": {
         "prefix": "INVENTORY_TEXTURE",
         "body": [
             "INVENTORY_TEXTURE$0"
         ],
-        "description": "INVENTORY_TEXTURE"
+        "description": "Used with Inventory functions and specifies inventory items of TEXTURE type will be retrieved by the function."
     },
     "JSON_APPEND": {
         "prefix": "JSON_APPEND",
         "body": [
             "JSON_APPEND$0"
         ],
-        "description": "JSON_APPEND"
+        "description": "A special specifier for llJsonSetValue which indicates the given value should be appended to the array at the specified level. Care should be taken, as if the value at that level is not an array, the existing data will be overwritten and replaced with the array meant for appending."
     },
     "JSON_ARRAY": {
         "prefix": "JSON_ARRAY",
         "body": [
             "JSON_ARRAY$0"
         ],
-        "description": "JSON_ARRAY"
+        "description": "Used with the llList2Json function to indicate that the provided list (which may be empty) is to be used to encode and return a string serialization of a Json array."
     },
     "JSON_DELETE": {
         "prefix": "JSON_DELETE",
         "body": [
             "JSON_DELETE$0"
         ],
-        "description": "Used with llJsonSetValue to remove a key-value pair."
+        "description": "A constant used to delete a value within a JSON text string."
     },
     "JSON_FALSE": {
         "prefix": "JSON_FALSE",
         "body": [
             "JSON_FALSE$0"
         ],
-        "description": "JSON_FALSE"
+        "description": "Return value for llJsonValueType function indicating the data type of a given address specifier in a given string-serialized JSON object."
     },
     "JSON_INVALID": {
         "prefix": "JSON_INVALID",
         "body": [
             "JSON_INVALID$0"
         ],
-        "description": "Value returned when inputs are not well formed."
+        "description": "A return value that indicates an invalid 'type' was specified to the llList2Json function. Also a return value for llJsonValueType function indicating the data type of a given address specifier in a given string-serialized JSON object."
     },
     "JSON_NULL": {
         "prefix": "JSON_NULL",
         "body": [
             "JSON_NULL$0"
         ],
-        "description": "JSON_NULL"
+        "description": "Return value for llJsonValueType function indicating the Json data type of a given address specifier in a given string-serialized JSON text."
     },
     "JSON_NUMBER": {
         "prefix": "JSON_NUMBER",
         "body": [
             "JSON_NUMBER$0"
         ],
-        "description": "JSON_NUMBER"
+        "description": "Return value for llJsonValueType function indicating the data type of a given address specifier in a given string-serialized JSON object."
     },
     "JSON_OBJECT": {
         "prefix": "JSON_OBJECT",
         "body": [
             "JSON_OBJECT$0"
         ],
-        "description": "JSON_OBJECT"
+        "description": "Used with the llList2Json function to indicate that the list provided is a strided list of \"Key\", Value pairs (which may be empty), and that a string representing a Json object will be returned."
     },
     "JSON_STRING": {
         "prefix": "JSON_STRING",
         "body": [
             "JSON_STRING$0"
         ],
-        "description": "JSON_STRING"
+        "description": "Return value for llJsonValueType function indicating the data type of a given address specifier in a given string-serialized JSON object."
     },
     "JSON_TRUE": {
         "prefix": "JSON_TRUE",
         "body": [
             "JSON_TRUE$0"
         ],
-        "description": "JSON_TRUE"
+        "description": "Return value for llJsonValueType function indicating the data type of a given address specifier in a given string-serialized JSON object."
     },
     "KFM_CMD_PAUSE": {
         "prefix": "KFM_CMD_PAUSE",
         "body": [
             "KFM_CMD_PAUSE$0"
         ],
-        "description": "KFM_CMD_PAUSE"
+        "description": "Command used in the options parameter llSetKeyframedMotion .Stops the animation but doesn t reset it at the start of motion."
     },
     "KFM_CMD_PLAY": {
         "prefix": "KFM_CMD_PLAY",
         "body": [
             "KFM_CMD_PLAY$0"
         ],
-        "description": "KFM_CMD_PLAY"
+        "description": "Command used in the options parameter llSetKeyframedMotion .Resumes the animation previously stopped by KFM_CMD_STOP or KFM_CMD_PAUSE"
     },
     "KFM_CMD_STOP": {
         "prefix": "KFM_CMD_STOP",
         "body": [
             "KFM_CMD_STOP$0"
         ],
-        "description": "KFM_CMD_STOP"
+        "description": "Command used in the options parameter llSetKeyframedMotion .Stops the animation and resets it at the start of motion."
     },
     "KFM_COMMAND": {
         "prefix": "KFM_COMMAND",
         "body": [
             "KFM_COMMAND$0"
         ],
-        "description": "KFM_COMMAND"
+        "description": "Command used in the options parameter of llSetKeyframedMotion .followed by one of: KFM_CMD_STOP, KFM_CMD_PLAY, KFM_CMD_PAUSE to play , stop or pause the motion ."
     },
     "KFM_DATA": {
         "prefix": "KFM_DATA",
         "body": [
             "KFM_DATA$0"
         ],
-        "description": "KFM_DATA"
+        "description": "Flag used in the options parameter llSetKeyframedMotion : is a flag followed by a bitwise combination of: KFM_TRANSLATION and KFM_ROTATION. If absent, both rotations and translations must be provided in the first parameter of llSetKeyframedMotion ."
     },
     "KFM_FORWARD": {
         "prefix": "KFM_FORWARD",
         "body": [
             "KFM_FORWARD$0"
         ],
-        "description": "KFM_FORWARD"
+        "description": "specify the playback mode used in llSetKeyframedMotion . It s the default playback mode . It plays the frames in this order frame1, frame2 . frame N And stops after"
     },
     "KFM_LOOP": {
         "prefix": "KFM_LOOP",
         "body": [
             "KFM_LOOP$0"
         ],
-        "description": "KFM_LOOP"
+        "description": "specify the playback mode used in llSetKeyframedMotion : will play the frames in the order number 1 , number 2 . number N , returns to the intitial position , plays number 1 , nummber 2 ."
     },
     "KFM_MODE": {
         "prefix": "KFM_MODE",
         "body": [
             "KFM_MODE$0"
         ],
-        "description": "KFM_MODE"
+        "description": "used in llSetKeyframedMotion . followed by one of: KFM_LOOP, KFM_REVERSE, KFM_FORWARD, or KFM_PING_PONG will specify the playback mode. Defaults to KFM_FORWARD. Must be specified when the keyframe list is provided."
     },
     "KFM_PING_PONG": {
         "prefix": "KFM_PING_PONG",
         "body": [
             "KFM_PING_PONG$0"
         ],
-        "description": "KFM_PING_PONG"
+        "description": "specify the playback mode used in llSetKeyframedMotion"
     },
     "KFM_REVERSE": {
         "prefix": "KFM_REVERSE",
         "body": [
             "KFM_REVERSE$0"
         ],
-        "description": "KFM_REVERSE"
+        "description": "specify the playback mode used in llSetKeyframedMotion . It plays the frames in this order frameN, frameN-1 . frame 2 , frame 1 . And stops after"
     },
     "KFM_ROTATION": {
         "prefix": "KFM_ROTATION",
         "body": [
             "KFM_ROTATION$0"
         ],
-        "description": "KFM_ROTATION"
+        "description": "Specifies the type of data in the list of moves for llSetKeyframedMotion"
     },
     "KFM_TRANSLATION": {
         "prefix": "KFM_TRANSLATION",
         "body": [
             "KFM_TRANSLATION$0"
         ],
-        "description": "KFM_TRANSLATION"
+        "description": "specifies the type of data in the list of moves for the function llSetKeyframedMotion"
     },
     "LAND_LEVEL": {
         "prefix": "LAND_LEVEL",
         "body": [
             "LAND_LEVEL$0"
         ],
-        "description": "LAND_LEVEL"
+        "description": "Terrain-edit operation for level."
     },
     "LAND_LOWER": {
         "prefix": "LAND_LOWER",
         "body": [
             "LAND_LOWER$0"
         ],
-        "description": "LAND_LOWER"
+        "description": "Terrain-edit operation for lower."
     },
     "LAND_NOISE": {
         "prefix": "LAND_NOISE",
         "body": [
             "LAND_NOISE$0"
         ],
-        "description": "LAND_NOISE"
+        "description": "Randomize the land - makes it rough"
     },
     "LAND_RAISE": {
         "prefix": "LAND_RAISE",
         "body": [
             "LAND_RAISE$0"
         ],
-        "description": "LAND_RAISE"
+        "description": "Terrain-edit operation for raise."
     },
     "LAND_REVERT": {
         "prefix": "LAND_REVERT",
         "body": [
             "LAND_REVERT$0"
         ],
-        "description": "LAND_REVERT"
+        "description": "Terrain-edit operation for revert."
     },
     "LAND_SMOOTH": {
         "prefix": "LAND_SMOOTH",
         "body": [
             "LAND_SMOOTH$0"
         ],
-        "description": "LAND_SMOOTH"
+        "description": "Terrain-edit operation for smooth."
     },
     "LINK_ALL_CHILDREN": {
         "prefix": "LINK_ALL_CHILDREN",
         "body": [
             "LINK_ALL_CHILDREN$0"
         ],
-        "description": "refers to all children, (everything but the root)"
+        "description": "Targets all the prims in the linkset, except the root."
     },
     "LINK_ALL_OTHERS": {
         "prefix": "LINK_ALL_OTHERS",
         "body": [
             "LINK_ALL_OTHERS$0"
         ],
-        "description": "refers to all other prims"
+        "description": "Targets all the other prims in the linkset, except the one the script resides in."
     },
     "LINK_ROOT": {
         "prefix": "LINK_ROOT",
         "body": [
             "LINK_ROOT$0"
         ],
-        "description": "refers to the root prim in a multi-prim linked set"
+        "description": "Targets the root prim in the linkset."
     },
     "LINK_SET": {
         "prefix": "LINK_SET",
         "body": [
             "LINK_SET$0"
         ],
-        "description": "refers to all prims"
+        "description": "Targets all the prims in the linkset."
     },
     "LINK_THIS": {
         "prefix": "LINK_THIS",
         "body": [
             "LINK_THIS$0"
         ],
-        "description": "refers to the prim the script is in"
+        "description": "Targets the prim the script resides in."
     },
     "LIST_STAT_GEOMETRIC_MEAN": {
         "prefix": "LIST_STAT_GEOMETRIC_MEAN",
         "body": [
             "LIST_STAT_GEOMETRIC_MEAN$0"
         ],
-        "description": "LIST_STAT_GEOMETRIC_MEAN"
+        "description": "Returns the geometric mean of a list of numbers. float geometric_mean = llListStatistics( LIST_STAT_GEOMETRIC_MEAN, numList ); For two numbers, a and b, the geometric mean is llSqrt(a*b). For a list of n numbers, the geometric mean is the n-th root of their product. It indicates the central tendency or typical value to expect."
     },
     "LIST_STAT_MAX": {
         "prefix": "LIST_STAT_MAX",
         "body": [
             "LIST_STAT_MAX$0"
         ],
-        "description": "LIST_STAT_MAX"
+        "description": "Retrieves the largest number in the list."
     },
     "LIST_STAT_MEAN": {
         "prefix": "LIST_STAT_MEAN",
         "body": [
             "LIST_STAT_MEAN$0"
         ],
-        "description": "LIST_STAT_MEAN"
+        "description": "Calculates the mean (average) of the numbers in the list."
     },
     "LIST_STAT_MEDIAN": {
         "prefix": "LIST_STAT_MEDIAN",
         "body": [
             "LIST_STAT_MEDIAN$0"
         ],
-        "description": "LIST_STAT_MEDIAN"
+        "description": "Calculates the median number in the list. float median = llListStatistics( LIST_STAT_MEDIAN, numList ); The median is the number for which half the values are less and half are greater. For example, the median of [1,1,1,2,1000,1000,1000] is 2, while the mean is 429.3."
     },
     "LIST_STAT_MIN": {
         "prefix": "LIST_STAT_MIN",
         "body": [
             "LIST_STAT_MIN$0"
         ],
-        "description": "LIST_STAT_MIN"
+        "description": "Retrieves the smallest number in the list."
     },
     "LIST_STAT_NUM_COUNT": {
         "prefix": "LIST_STAT_NUM_COUNT",
         "body": [
             "LIST_STAT_NUM_COUNT$0"
         ],
-        "description": "LIST_STAT_NUM_COUNT"
+        "description": "Retrieves the number of float and integer elements."
     },
     "LIST_STAT_RANGE": {
         "prefix": "LIST_STAT_RANGE",
         "body": [
             "LIST_STAT_RANGE$0"
         ],
-        "description": "LIST_STAT_RANGE"
+        "description": "Calculates the range of the list. (max - min)"
     },
     "LIST_STAT_STD_DEV": {
         "prefix": "LIST_STAT_STD_DEV",
         "body": [
             "LIST_STAT_STD_DEV$0"
         ],
-        "description": "LIST_STAT_STD_DEV"
+        "description": "Calculates the sample standard deviation of a list of numbers. float sample_standard_deviation = llListStatistics( LIST_STAT_STD_DEV, numList ); Standard deviation is a measure of how spread out the values are, and is defined as the square root of the average of the squares of the numbers: integer count = (integer)llListStatistics( LIST_STAT_NUM_COUNT, nu?"
     },
     "LIST_STAT_SUM": {
         "prefix": "LIST_STAT_SUM",
         "body": [
             "LIST_STAT_SUM$0"
         ],
-        "description": "LIST_STAT_SUM"
+        "description": "Calculates the sum of the numbers in a list."
     },
     "LIST_STAT_SUM_SQUARES": {
         "prefix": "LIST_STAT_SUM_SQUARES",
         "body": [
             "LIST_STAT_SUM_SQUARES$0"
         ],
-        "description": "LIST_STAT_SUM_SQUARES"
+        "description": "Calculates the sum of the squares of the numbers in a list. float sum_of_squares = llListStatistics( LIST_STAT_SUM_SQUARES, numList ); That is, for each number N_i in a list of k elements, it calculates N_1*N_1 + N_2*N_2 + . + N_k * N_k."
     },
     "LOOP": {
         "prefix": "LOOP",
         "body": [
             "LOOP$0"
         ],
-        "description": "LOOP"
+        "description": "Causes a texture animation to loop."
     },
     "MASK_BASE": {
         "prefix": "MASK_BASE",
@@ -1733,693 +1733,693 @@
         "body": [
             "NULL_KEY$0"
         ],
-        "description": "NULL_KEY"
+        "description": "NULL_KEY is a string. However it is only really useful as a key."
     },
     "OBJECT_ATTACHED_POINT": {
         "prefix": "OBJECT_ATTACHED_POINT",
         "body": [
             "OBJECT_ATTACHED_POINT$0"
         ],
-        "description": "OBJECT_ATTACHED_POINT"
+        "description": "Used with llGetObjectDetails, returns the value llGetAttached would return."
     },
     "OBJECT_ATTACHED_SLOTS_AVAILABLE": {
         "prefix": "OBJECT_ATTACHED_SLOTS_AVAILABLE",
         "body": [
             "OBJECT_ATTACHED_SLOTS_AVAILABLE$0"
         ],
-        "description": "OBJECT_ATTACHED_SLOTS_AVAILABLE"
+        "description": "This is a flag used with llGetObjectDetails to gets the avatar's available attachment slot count."
     },
     "OBJECT_BODY_SHAPE_TYPE": {
         "prefix": "OBJECT_BODY_SHAPE_TYPE",
         "body": [
             "OBJECT_BODY_SHAPE_TYPE$0"
         ],
-        "description": "OBJECT_BODY_SHAPE_TYPE"
+        "description": "This is a flag used with llGetObjectDetails to get the \"gender\" setting of an avatar's currently worn shape."
     },
     "OBJECT_CHARACTER_TIME": {
         "prefix": "OBJECT_CHARACTER_TIME",
         "body": [
             "OBJECT_CHARACTER_TIME$0"
         ],
-        "description": "OBJECT_CHARACTER_TIME"
+        "description": "This is a flag used with llGetObjectDetails to get the average CPU time (in seconds) used by the object for navigation, if the object is a pathfinding character. See Viewerhelp:Pathfinding_characters"
     },
     "OBJECT_CLICK_ACTION": {
         "prefix": "OBJECT_CLICK_ACTION",
         "body": [
             "OBJECT_CLICK_ACTION$0"
         ],
-        "description": "OBJECT_CLICK_ACTION"
+        "description": "This is a flag used with llGetObjectDetails to get the prim Click Action."
     },
     "OBJECT_CREATOR": {
         "prefix": "OBJECT_CREATOR",
         "body": [
             "OBJECT_CREATOR$0"
         ],
-        "description": "OBJECT_CREATOR"
+        "description": "This is a flag used with llGetObjectDetails to get the object creator key."
     },
     "OBJECT_DESC": {
         "prefix": "OBJECT_DESC",
         "body": [
             "OBJECT_DESC$0"
         ],
-        "description": "OBJECT_DESC"
+        "description": "This is a flag used with llGetObjectDetails to get the object description."
     },
     "OBJECT_SCALE": {
         "prefix": "OBJECT_SCALE",
         "body": [
             "OBJECT_SCALE$0"
         ],
-        "description": "OBJECT_SCALE"
+        "description": "Object property or flag for scale."
     },
     "OBJECT_GROUP": {
         "prefix": "OBJECT_GROUP",
         "body": [
             "OBJECT_GROUP$0"
         ],
-        "description": "OBJECT_GROUP"
+        "description": "This is a flag used with llGetObjectDetails to get the object group key."
     },
     "OBJECT_HOVER_HEIGHT": {
         "prefix": "OBJECT_HOVER_HEIGHT",
         "body": [
             "OBJECT_HOVER_HEIGHT$0"
         ],
-        "description": "OBJECT_HOVER_HEIGHT"
+        "description": "This is a flag used with llGetObjectDetails to get the hover height of the avatar."
     },
     "OBJECT_LAST_OWNER_ID": {
         "prefix": "OBJECT_LAST_OWNER_ID",
         "body": [
             "OBJECT_LAST_OWNER_ID$0"
         ],
-        "description": "OBJECT_LAST_OWNER_ID"
+        "description": "This is a flag used with llGetObjectDetails to get the last object owner key (if known)."
     },
     "OBJECT_NAME": {
         "prefix": "OBJECT_NAME",
         "body": [
             "OBJECT_NAME$0"
         ],
-        "description": "OBJECT_NAME"
+        "description": "This is a flag used with llGetObjectDetails to get the object name."
     },
     "OBJECT_OMEGA": {
         "prefix": "OBJECT_OMEGA",
         "body": [
             "OBJECT_OMEGA$0"
         ],
-        "description": "OBJECT_OMEGA"
+        "description": "Used with llGetObjectDetails to get the objects rotational velocity."
     },
     "OBJECT_OWNER": {
         "prefix": "OBJECT_OWNER",
         "body": [
             "OBJECT_OWNER$0"
         ],
-        "description": "OBJECT_OWNER"
+        "description": "This is a flag used with llGetObjectDetails to get the object owner key."
     },
     "OBJECT_PATHFINDING_TYPE": {
         "prefix": "OBJECT_PATHFINDING_TYPE",
         "body": [
             "OBJECT_PATHFINDING_TYPE$0"
         ],
-        "description": "OBJECT_PATHFINDING_TYPE"
+        "description": "Object property or flag for pathfinding type."
     },
     "OBJECT_PHANTOM": {
         "prefix": "OBJECT_PHANTOM",
         "body": [
             "OBJECT_PHANTOM$0"
         ],
-        "description": "OBJECT_PHANTOM"
+        "description": "This is a flag used with llGetObjectDetails to get the object's phantom attribute."
     },
     "OBJECT_PHYSICS": {
         "prefix": "OBJECT_PHYSICS",
         "body": [
             "OBJECT_PHYSICS$0"
         ],
-        "description": "OBJECT_PHYSICS"
+        "description": "This is a flag used with llGetObjectDetails to get the object's physics attribute."
     },
     "OBJECT_PHYSICS_COST": {
         "prefix": "OBJECT_PHYSICS_COST",
         "body": [
             "OBJECT_PHYSICS_COST$0"
         ],
-        "description": "OBJECT_PHYSICS_COST"
+        "description": "This is a flag used with llGetObjectDetails to get the physics cost of the object."
     },
     "OBJECT_POS": {
         "prefix": "OBJECT_POS",
         "body": [
             "OBJECT_POS$0"
         ],
-        "description": "OBJECT_POS"
+        "description": "This is a flag used with llGetObjectDetails to get the object position."
     },
     "OBJECT_PRIM_COUNT": {
         "prefix": "OBJECT_PRIM_COUNT",
         "body": [
             "OBJECT_PRIM_COUNT$0"
         ],
-        "description": "OBJECT_PRIM_COUNT"
+        "description": "This is a flag used with llGetObjectDetails to get the object's prim count."
     },
     "OBJECT_PRIM_EQUIVALENCE": {
         "prefix": "OBJECT_PRIM_EQUIVALENCE",
         "body": [
             "OBJECT_PRIM_EQUIVALENCE$0"
         ],
-        "description": "OBJECT_PRIM_EQUIVALENCE"
+        "description": "This is a flag used with llGetObjectDetails to get the prim equivalence of the object."
     },
     "OBJECT_RENDER_WEIGHT": {
         "prefix": "OBJECT_RENDER_WEIGHT",
         "body": [
             "OBJECT_RENDER_WEIGHT$0"
         ],
-        "description": "OBJECT_RENDER_WEIGHT"
+        "description": "This is a flag used with llGetObjectDetails to get the Avatar_Rendering_Cost of an avatar, based on values reported by nearby viewers. If no data is available, -1 is returned. The maximum render weight stored by the simulator is 500000. When called against an object, 0 is returned."
     },
     "OBJECT_RETURN_PARCEL": {
         "prefix": "OBJECT_RETURN_PARCEL",
         "body": [
             "OBJECT_RETURN_PARCEL$0"
         ],
-        "description": "Return all objects on the same parcel as the script which are owned by owner.\nThe script must be owned by an estate manager or over a parcel owned by the owner of the script."
+        "description": "For llReturnObjectsByOwner, sets the scope to return all objects on the same parcel as the script which are owned by 'owner'. The script must be owned by an estate manager or over a parcel owned by the owner of the script."
     },
     "OBJECT_RETURN_PARCEL_OWNER": {
         "prefix": "OBJECT_RETURN_PARCEL_OWNER",
         "body": [
             "OBJECT_RETURN_PARCEL_OWNER$0"
         ],
-        "description": "Return all objects owned by owner which are over parcels owned by the owner of the script."
+        "description": "For llReturnObjectsByOwner, sets the scope to return all objects owned by 'owner' which are over parcels owned by the owner of the script."
     },
     "OBJECT_RETURN_REGION": {
         "prefix": "OBJECT_RETURN_REGION",
         "body": [
             "OBJECT_RETURN_REGION$0"
         ],
-        "description": "Return all objects in the region owned by owner.\nThe script must be owned by the estate owner or an estate manager."
+        "description": "For llReturnObjectsByOwner, sets the scope to return all objects in the region owned by 'owner' - only works when the script is owned by the estate owner or an estate manager."
     },
     "OBJECT_ROOT": {
         "prefix": "OBJECT_ROOT",
         "body": [
             "OBJECT_ROOT$0"
         ],
-        "description": "OBJECT_ROOT"
+        "description": "Object property or flag for root."
     },
     "OBJECT_ROT": {
         "prefix": "OBJECT_ROT",
         "body": [
             "OBJECT_ROT$0"
         ],
-        "description": "OBJECT_ROT"
+        "description": "This is a flag used with llGetObjectDetails to get the object rotation."
     },
     "OBJECT_RUNNING_SCRIPT_COUNT": {
         "prefix": "OBJECT_RUNNING_SCRIPT_COUNT",
         "body": [
             "OBJECT_RUNNING_SCRIPT_COUNT$0"
         ],
-        "description": "OBJECT_RUNNING_SCRIPT_COUNT"
+        "description": "This is a flag used with llGetObjectDetails to get the number of running scripts."
     },
     "OBJECT_SCRIPT_MEMORY": {
         "prefix": "OBJECT_SCRIPT_MEMORY",
         "body": [
             "OBJECT_SCRIPT_MEMORY$0"
         ],
-        "description": "OBJECT_SCRIPT_MEMORY"
+        "description": "This is a flag used with llGetObjectDetails to get the amount of allocated memory in bytes. This value is not recomputed more often than every 10-20 seconds."
     },
     "OBJECT_SCRIPT_TIME": {
         "prefix": "OBJECT_SCRIPT_TIME",
         "body": [
             "OBJECT_SCRIPT_TIME$0"
         ],
-        "description": "OBJECT_SCRIPT_TIME"
+        "description": "This is a flag used with llGetObjectDetails to get the average CPU time (in seconds) used by scripts in an object or agent. Like top scripts, the time reported is the average script time per frame for the last 30 minutes for all scripts on the object."
     },
     "OBJECT_SELECT_COUNT": {
         "prefix": "OBJECT_SELECT_COUNT",
         "body": [
             "OBJECT_SELECT_COUNT$0"
         ],
-        "description": "OBJECT_SELECT_COUNT"
+        "description": "This is a flag used with llGetObjectDetails to get the total number of agents selecting any links in the object."
     },
     "OBJECT_SERVER_COST": {
         "prefix": "OBJECT_SERVER_COST",
         "body": [
             "OBJECT_SERVER_COST$0"
         ],
-        "description": "OBJECT_SERVER_COST"
+        "description": "This is a flag used with llGetObjectDetails to get the object cost of the object."
     },
     "OBJECT_STREAMING_COST": {
         "prefix": "OBJECT_STREAMING_COST",
         "body": [
             "OBJECT_STREAMING_COST$0"
         ],
-        "description": "OBJECT_STREAMING_COST"
+        "description": "This is a flag used with llGetObjectDetails to get the streaming/download cost of the object."
     },
     "OBJECT_TEMP_ON_REZ": {
         "prefix": "OBJECT_TEMP_ON_REZ",
         "body": [
             "OBJECT_TEMP_ON_REZ$0"
         ],
-        "description": "OBJECT_TEMP_ON_REZ"
+        "description": "This is a flag used with llGetObjectDetails to get the object's temporary attribute."
     },
     "OBJECT_TOTAL_INVENTORY_COUNT": {
         "prefix": "OBJECT_TOTAL_INVENTORY_COUNT",
         "body": [
             "OBJECT_TOTAL_INVENTORY_COUNT$0"
         ],
-        "description": "OBJECT_TOTAL_INVENTORY_COUNT"
+        "description": "This is a flag used with llGetObjectDetails to get the object's total number of inventory items."
     },
     "OBJECT_TOTAL_SCRIPT_COUNT": {
         "prefix": "OBJECT_TOTAL_SCRIPT_COUNT",
         "body": [
             "OBJECT_TOTAL_SCRIPT_COUNT$0"
         ],
-        "description": "OBJECT_TOTAL_SCRIPT_COUNT"
+        "description": "This is a flag used with llGetObjectDetails to get the total number of scripts, running or not."
     },
     "OBJECT_UNKNOWN_DETAIL": {
         "prefix": "OBJECT_UNKNOWN_DETAIL",
         "body": [
             "OBJECT_UNKNOWN_DETAIL$0"
         ],
-        "description": "OBJECT_UNKNOWN_DETAIL"
+        "description": "This is a flag returned by llGetObjectDetails when it is passed an invalid flag."
     },
     "OBJECT_VELOCITY": {
         "prefix": "OBJECT_VELOCITY",
         "body": [
             "OBJECT_VELOCITY$0"
         ],
-        "description": "OBJECT_VELOCITY"
+        "description": "This is a flag used with llGetObjectDetails to get the object velocity."
     },
     "OPT_CHARACTER": {
         "prefix": "OPT_CHARACTER",
         "body": [
             "OPT_CHARACTER$0"
         ],
-        "description": "OPT_CHARACTER"
+        "description": "Pathfinding option identifying character."
     },
     "OPT_AVATAR": {
         "prefix": "OPT_AVATAR",
         "body": [
             "OPT_AVATAR$0"
         ],
-        "description": "OPT_AVATAR"
+        "description": "Pathfinding option identifying avatar."
     },
     "OPT_EXCLUSION_VOLUME": {
         "prefix": "OPT_EXCLUSION_VOLUME",
         "body": [
             "OPT_EXCLUSION_VOLUME$0"
         ],
-        "description": "OPT_EXCLUSION_VOLUME"
+        "description": "Pathfinding option identifying exclusion volume."
     },
     "OPT_LEGACY_LINKSET": {
         "prefix": "OPT_LEGACY_LINKSET",
         "body": [
             "OPT_LEGACY_LINKSET$0"
         ],
-        "description": "OPT_LEGACY_LINKSET"
+        "description": "Pathfinding option identifying legacy linkset."
     },
     "OPT_MATERIAL_VOLUME": {
         "prefix": "OPT_MATERIAL_VOLUME",
         "body": [
             "OPT_MATERIAL_VOLUME$0"
         ],
-        "description": "OPT_MATERIAL_VOLUME"
+        "description": "Pathfinding option identifying material volume."
     },
     "OPT_OTHER": {
         "prefix": "OPT_OTHER",
         "body": [
             "OPT_OTHER$0"
         ],
-        "description": "OPT_OTHER"
+        "description": "Pathfinding option identifying other."
     },
     "OPT_STATIC_OBSTACLE": {
         "prefix": "OPT_STATIC_OBSTACLE",
         "body": [
             "OPT_STATIC_OBSTACLE$0"
         ],
-        "description": "OPT_STATIC_OBSTACLE"
+        "description": "Pathfinding option identifying static obstacle."
     },
     "OPT_WALKABLE": {
         "prefix": "OPT_WALKABLE",
         "body": [
             "OPT_WALKABLE$0"
         ],
-        "description": "OPT_WALKABLE"
+        "description": "Pathfinding option identifying walkable."
     },
     "PARCEL_COUNT_GROUP": {
         "prefix": "PARCEL_COUNT_GROUP",
         "body": [
             "PARCEL_COUNT_GROUP$0"
         ],
-        "description": "PARCEL_COUNT_GROUP"
+        "description": "Used with llGetParcelPrimCount to get the total land impact of objects shared with or owned by the parcel group."
     },
     "PARCEL_COUNT_OTHER": {
         "prefix": "PARCEL_COUNT_OTHER",
         "body": [
             "PARCEL_COUNT_OTHER$0"
         ],
-        "description": "PARCEL_COUNT_OTHER"
+        "description": "Used with llGetParcelPrimCount to get the land impact of all objects that are not owned by the parcel owner or shared with or owned by the group."
     },
     "PARCEL_COUNT_OWNER": {
         "prefix": "PARCEL_COUNT_OWNER",
         "body": [
             "PARCEL_COUNT_OWNER$0"
         ],
-        "description": "PARCEL_COUNT_OWNER"
+        "description": "Used with llGetParcelPrimCount to get the total land impact of objects owned by the parcel owner."
     },
     "PARCEL_COUNT_SELECTED": {
         "prefix": "PARCEL_COUNT_SELECTED",
         "body": [
             "PARCEL_COUNT_SELECTED$0"
         ],
-        "description": "PARCEL_COUNT_SELECTED"
+        "description": "Used with llGetParcelPrimCount to get the total land impact of all objects selected or sat on."
     },
     "PARCEL_COUNT_TEMP": {
         "prefix": "PARCEL_COUNT_TEMP",
         "body": [
             "PARCEL_COUNT_TEMP$0"
         ],
-        "description": "PARCEL_COUNT_TEMP"
+        "description": "Used with llGetParcelPrimCount to get the total land impact of temporary objects."
     },
     "PARCEL_COUNT_TOTAL": {
         "prefix": "PARCEL_COUNT_TOTAL",
         "body": [
             "PARCEL_COUNT_TOTAL$0"
         ],
-        "description": "PARCEL_COUNT_TOTAL"
+        "description": "Used with llGetParcelPrimCount to return total object land impact used on the parcel(s). Does not include temporary objects."
     },
     "PARCEL_DETAILS_AREA": {
         "prefix": "PARCEL_DETAILS_AREA",
         "body": [
             "PARCEL_DETAILS_AREA$0"
         ],
-        "description": "PARCEL_DETAILS_AREA"
+        "description": "This is a flag used with llGetParcelDetails to get the parcel size in sqm (m2)."
     },
     "PARCEL_DETAILS_DESC": {
         "prefix": "PARCEL_DETAILS_DESC",
         "body": [
             "PARCEL_DETAILS_DESC$0"
         ],
-        "description": "PARCEL_DETAILS_DESC"
+        "description": "This is a flag used with llGetParcelDetails to get the parcel description."
     },
     "PARCEL_DETAILS_GROUP": {
         "prefix": "PARCEL_DETAILS_GROUP",
         "body": [
             "PARCEL_DETAILS_GROUP$0"
         ],
-        "description": "PARCEL_DETAILS_GROUP"
+        "description": "This is a flag used with llGetParcelDetails to get the group key of the parcel."
     },
     "PARCEL_DETAILS_ID": {
         "prefix": "PARCEL_DETAILS_ID",
         "body": [
             "PARCEL_DETAILS_ID$0"
         ],
-        "description": "PARCEL_DETAILS_ID"
+        "description": "This is a flag used with llGetParcelDetails to get the parcel UUID."
     },
     "PARCEL_DETAILS_NAME": {
         "prefix": "PARCEL_DETAILS_NAME",
         "body": [
             "PARCEL_DETAILS_NAME$0"
         ],
-        "description": "PARCEL_DETAILS_NAME"
+        "description": "This is a flag used with llGetParcelDetails to get the parcel name."
     },
     "PARCEL_DETAILS_OWNER": {
         "prefix": "PARCEL_DETAILS_OWNER",
         "body": [
             "PARCEL_DETAILS_OWNER$0"
         ],
-        "description": "PARCEL_DETAILS_OWNER"
+        "description": "This is a flag used with llGetParcelDetails to get the parcel owner key."
     },
     "PARCEL_DETAILS_SEE_AVATARS": {
         "prefix": "PARCEL_DETAILS_SEE_AVATARS",
         "body": [
             "PARCEL_DETAILS_SEE_AVATARS$0"
         ],
-        "description": "PARCEL_DETAILS_SEE_AVATARS"
+        "description": "This is a flag used with llGetParcelDetails to get the \"See and chat with residents on this parcel\" setting."
     },
     "PARCEL_FLAG_ALLOW_ALL_OBJECT_ENTRY": {
         "prefix": "PARCEL_FLAG_ALLOW_ALL_OBJECT_ENTRY",
         "body": [
             "PARCEL_FLAG_ALLOW_ALL_OBJECT_ENTRY$0"
         ],
-        "description": "PARCEL_FLAG_ALLOW_ALL_OBJECT_ENTRY"
+        "description": "This is a flag used with llGetParcelFlags to check if objects are allowed to enter the parcel."
     },
     "PARCEL_FLAG_ALLOW_CREATE_GROUP_OBJECTS": {
         "prefix": "PARCEL_FLAG_ALLOW_CREATE_GROUP_OBJECTS",
         "body": [
             "PARCEL_FLAG_ALLOW_CREATE_GROUP_OBJECTS$0"
         ],
-        "description": "PARCEL_FLAG_ALLOW_CREATE_GROUP_OBJECTS"
+        "description": "This is a flag used with llGetParcelFlags to check if scripts in group deeded objects are allowed to rez new objects in the parcel."
     },
     "PARCEL_FLAG_ALLOW_CREATE_OBJECTS": {
         "prefix": "PARCEL_FLAG_ALLOW_CREATE_OBJECTS",
         "body": [
             "PARCEL_FLAG_ALLOW_CREATE_OBJECTS$0"
         ],
-        "description": "PARCEL_FLAG_ALLOW_CREATE_OBJECTS"
+        "description": "This is a flag used with llGetParcelFlags to check if anyone can create objects on the parcel."
     },
     "PARCEL_FLAG_ALLOW_DAMAGE": {
         "prefix": "PARCEL_FLAG_ALLOW_DAMAGE",
         "body": [
             "PARCEL_FLAG_ALLOW_DAMAGE$0"
         ],
-        "description": "PARCEL_FLAG_ALLOW_DAMAGE"
+        "description": "This is a flag used with llGetParcelFlags to check if damage is enabled on the parcel."
     },
     "PARCEL_FLAG_ALLOW_FLY": {
         "prefix": "PARCEL_FLAG_ALLOW_FLY",
         "body": [
             "PARCEL_FLAG_ALLOW_FLY$0"
         ],
-        "description": "PARCEL_FLAG_ALLOW_FLY"
+        "description": "This is a flag used with llGetParcelFlags to check if flying is allowed on the parcel."
     },
     "PARCEL_FLAG_ALLOW_GROUP_OBJECT_ENTRY": {
         "prefix": "PARCEL_FLAG_ALLOW_GROUP_OBJECT_ENTRY",
         "body": [
             "PARCEL_FLAG_ALLOW_GROUP_OBJECT_ENTRY$0"
         ],
-        "description": "PARCEL_FLAG_ALLOW_GROUP_OBJECT_ENTRY"
+        "description": "This is a flag used with llGetParcelFlags to check if group deeded objects are allowed to enter the parcel."
     },
     "PARCEL_FLAG_ALLOW_GROUP_SCRIPTS": {
         "prefix": "PARCEL_FLAG_ALLOW_GROUP_SCRIPTS",
         "body": [
             "PARCEL_FLAG_ALLOW_GROUP_SCRIPTS$0"
         ],
-        "description": "PARCEL_FLAG_ALLOW_GROUP_SCRIPTS"
+        "description": "This is a flag used with llGetParcelFlags to check if scripts in group deeded objects are allowed to run in the parcel."
     },
     "PARCEL_FLAG_ALLOW_LANDMARK": {
         "prefix": "PARCEL_FLAG_ALLOW_LANDMARK",
         "body": [
             "PARCEL_FLAG_ALLOW_LANDMARK$0"
         ],
-        "description": "PARCEL_FLAG_ALLOW_LANDMARK"
+        "description": "This is a flag used with llGetParcelFlags to check if creating landmarks is allowed on the parcel."
     },
     "PARCEL_FLAG_ALLOW_SCRIPTS": {
         "prefix": "PARCEL_FLAG_ALLOW_SCRIPTS",
         "body": [
             "PARCEL_FLAG_ALLOW_SCRIPTS$0"
         ],
-        "description": "PARCEL_FLAG_ALLOW_SCRIPTS"
+        "description": "This is a flag used with llGetParcelFlags to check if scripts are allowed to run on the parcel."
     },
     "PARCEL_FLAG_ALLOW_TERRAFORM": {
         "prefix": "PARCEL_FLAG_ALLOW_TERRAFORM",
         "body": [
             "PARCEL_FLAG_ALLOW_TERRAFORM$0"
         ],
-        "description": "PARCEL_FLAG_ALLOW_TERRAFORM"
+        "description": "This is a flag used with llGetParcelFlags to check if anyone is allowed to terraform the parcel."
     },
     "PARCEL_FLAG_LOCAL_SOUND_ONLY": {
         "prefix": "PARCEL_FLAG_LOCAL_SOUND_ONLY",
         "body": [
             "PARCEL_FLAG_LOCAL_SOUND_ONLY$0"
         ],
-        "description": "PARCEL_FLAG_LOCAL_SOUND_ONLY"
+        "description": "This is a flag used with llGetParcelFlags to check if the parcel allows sound originating from outside of the parcel to be heard inside the parcel."
     },
     "PARCEL_FLAG_RESTRICT_PUSHOBJECT": {
         "prefix": "PARCEL_FLAG_RESTRICT_PUSHOBJECT",
         "body": [
             "PARCEL_FLAG_RESTRICT_PUSHOBJECT$0"
         ],
-        "description": "PARCEL_FLAG_RESTRICT_PUSHOBJECT"
+        "description": "This is a flag used with llGetParcelFlags to check if llPushObject is allowed to be used by non-owners (or non-group officers if group owned land) inside the parcel."
     },
     "PARCEL_FLAG_USE_ACCESS_GROUP": {
         "prefix": "PARCEL_FLAG_USE_ACCESS_GROUP",
         "body": [
             "PARCEL_FLAG_USE_ACCESS_GROUP$0"
         ],
-        "description": "PARCEL_FLAG_USE_ACCESS_GROUP"
+        "description": "This is a flag used with llGetParcelFlags to check if the parcel has access restricted to a group."
     },
     "PARCEL_FLAG_USE_ACCESS_LIST": {
         "prefix": "PARCEL_FLAG_USE_ACCESS_LIST",
         "body": [
             "PARCEL_FLAG_USE_ACCESS_LIST$0"
         ],
-        "description": "PARCEL_FLAG_USE_ACCESS_LIST"
+        "description": "This is a flag used with llGetParcelFlags to check if the parcel has access restricted to a list of avatars."
     },
     "PARCEL_FLAG_USE_BAN_LIST": {
         "prefix": "PARCEL_FLAG_USE_BAN_LIST",
         "body": [
             "PARCEL_FLAG_USE_BAN_LIST$0"
         ],
-        "description": "PARCEL_FLAG_USE_BAN_LIST"
+        "description": "This is a flag used with llGetParcelFlags to check if the parcel has access restricted with a ban list of avatars."
     },
     "PARCEL_FLAG_USE_LAND_PASS_LIST": {
         "prefix": "PARCEL_FLAG_USE_LAND_PASS_LIST",
         "body": [
             "PARCEL_FLAG_USE_LAND_PASS_LIST$0"
         ],
-        "description": "PARCEL_FLAG_USE_LAND_PASS_LIST"
+        "description": "This is a flag used with llGetParcelFlags to check if the parcel has access restricted with a land-pass list of avatars. Land Passes are sold for L$."
     },
     "PARCEL_MEDIA_COMMAND_AGENT": {
         "prefix": "PARCEL_MEDIA_COMMAND_AGENT",
         "body": [
             "PARCEL_MEDIA_COMMAND_AGENT$0"
         ],
-        "description": "PARCEL_MEDIA_COMMAND_AGENT"
+        "description": "Applies the media command to the specified agent only."
     },
     "PARCEL_MEDIA_COMMAND_AUTO_ALIGN": {
         "prefix": "PARCEL_MEDIA_COMMAND_AUTO_ALIGN",
         "body": [
             "PARCEL_MEDIA_COMMAND_AUTO_ALIGN$0"
         ],
-        "description": "PARCEL_MEDIA_COMMAND_AUTO_ALIGN"
+        "description": "Sets the parcel option 'Auto scale content'."
     },
     "PARCEL_MEDIA_COMMAND_DESC": {
         "prefix": "PARCEL_MEDIA_COMMAND_DESC",
         "body": [
             "PARCEL_MEDIA_COMMAND_DESC$0"
         ],
-        "description": "PARCEL_MEDIA_COMMAND_DESC"
+        "description": "Use this to get or set the parcel media description."
     },
     "PARCEL_MEDIA_COMMAND_LOOP": {
         "prefix": "PARCEL_MEDIA_COMMAND_LOOP",
         "body": [
             "PARCEL_MEDIA_COMMAND_LOOP$0"
         ],
-        "description": "PARCEL_MEDIA_COMMAND_LOOP"
+        "description": "Start the media stream playing from the current frame. When the end is reached, loop to the beginning and continue."
     },
     "PARCEL_MEDIA_COMMAND_LOOP_SET": {
         "prefix": "PARCEL_MEDIA_COMMAND_LOOP_SET",
         "body": [
             "PARCEL_MEDIA_COMMAND_LOOP_SET$0"
         ],
-        "description": "PARCEL_MEDIA_COMMAND_LOOP_SET"
+        "description": "Use this to get or set the parcel's media loop duration. It may not be functional. See VWR-19712 for detail."
     },
     "PARCEL_MEDIA_COMMAND_PAUSE": {
         "prefix": "PARCEL_MEDIA_COMMAND_PAUSE",
         "body": [
             "PARCEL_MEDIA_COMMAND_PAUSE$0"
         ],
-        "description": "PARCEL_MEDIA_COMMAND_PAUSE"
+        "description": "Pause the media stream (stop playing but stay on current frame)."
     },
     "PARCEL_MEDIA_COMMAND_PLAY": {
         "prefix": "PARCEL_MEDIA_COMMAND_PLAY",
         "body": [
             "PARCEL_MEDIA_COMMAND_PLAY$0"
         ],
-        "description": "PARCEL_MEDIA_COMMAND_PLAY"
+        "description": "Start the media stream playing from the current frame and stop when the end is reached."
     },
     "PARCEL_MEDIA_COMMAND_SIZE": {
         "prefix": "PARCEL_MEDIA_COMMAND_SIZE",
         "body": [
             "PARCEL_MEDIA_COMMAND_SIZE$0"
         ],
-        "description": "PARCEL_MEDIA_COMMAND_SIZE"
+        "description": "Use this to get or set the parcel media pixel resolution."
     },
     "PARCEL_MEDIA_COMMAND_STOP": {
         "prefix": "PARCEL_MEDIA_COMMAND_STOP",
         "body": [
             "PARCEL_MEDIA_COMMAND_STOP$0"
         ],
-        "description": "PARCEL_MEDIA_COMMAND_STOP"
+        "description": "Stop the media stream and go back to the first frame."
     },
     "PARCEL_MEDIA_COMMAND_TEXTURE": {
         "prefix": "PARCEL_MEDIA_COMMAND_TEXTURE",
         "body": [
             "PARCEL_MEDIA_COMMAND_TEXTURE$0"
         ],
-        "description": "PARCEL_MEDIA_COMMAND_TEXTURE"
+        "description": "Use this to get or set the parcel's media texture."
     },
     "PARCEL_MEDIA_COMMAND_TIME": {
         "prefix": "PARCEL_MEDIA_COMMAND_TIME",
         "body": [
             "PARCEL_MEDIA_COMMAND_TIME$0"
         ],
-        "description": "PARCEL_MEDIA_COMMAND_TIME"
+        "description": "Move a media stream to a specific time in (floating point) seconds."
     },
     "PARCEL_MEDIA_COMMAND_TYPE": {
         "prefix": "PARCEL_MEDIA_COMMAND_TYPE",
         "body": [
             "PARCEL_MEDIA_COMMAND_TYPE$0"
         ],
-        "description": "PARCEL_MEDIA_COMMAND_TYPE"
+        "description": "Use this to get or set the parcel media MIME type (e.g. \"text/html\")."
     },
     "PARCEL_MEDIA_COMMAND_UNLOAD": {
         "prefix": "PARCEL_MEDIA_COMMAND_UNLOAD",
         "body": [
             "PARCEL_MEDIA_COMMAND_UNLOAD$0"
         ],
-        "description": "PARCEL_MEDIA_COMMAND_UNLOAD"
+        "description": "Completely unloads the movie and restores the original texture."
     },
     "PARCEL_MEDIA_COMMAND_URL": {
         "prefix": "PARCEL_MEDIA_COMMAND_URL",
         "body": [
             "PARCEL_MEDIA_COMMAND_URL$0"
         ],
-        "description": "PARCEL_MEDIA_COMMAND_URL"
+        "description": "Used to get or set the parcel's media url."
     },
     "PASSIVE": {
         "prefix": "PASSIVE",
         "body": [
             "PASSIVE$0"
         ],
-        "description": "PASSIVE"
+        "description": "If it is contained in the result of llDetectedType(), it means it is non-physical objects. If it is used as an filter of llSensor() or llSensorRepeat(), it will search for non-scripted or script is inactive and non-physical or, if physical, not moving. Thus, it is not using SL server resources now."
     },
     "PASS_ALWAYS": {
         "prefix": "PASS_ALWAYS",
         "body": [
             "PASS_ALWAYS$0"
         ],
-        "description": "PASS_ALWAYS"
+        "description": "The applicable event group will always be triggered in the the root prim. Whether or not is handled in the child prim is irrelevant."
     },
     "PASS_IF_NOT_HANDLED": {
         "prefix": "PASS_IF_NOT_HANDLED",
         "body": [
             "PASS_IF_NOT_HANDLED$0"
         ],
-        "description": "PASS_IF_NOT_HANDLED"
+        "description": "The applicable event group will be triggered in the the root prim if it is not handled in this child prim."
     },
     "PASS_NEVER": {
         "prefix": "PASS_NEVER",
         "body": [
             "PASS_NEVER$0"
         ],
-        "description": "PASS_NEVER"
+        "description": "The applicable event group will never be triggered in the the root prim. Whether or not is handled in the child prim is irrelevant."
     },
     "PATROL_PAUSE_AT_WAYPOINTS": {
         "prefix": "PATROL_PAUSE_AT_WAYPOINTS",
         "body": [
             "PATROL_PAUSE_AT_WAYPOINTS$0"
         ],
-        "description": "Whether the character should pause briefly after reaching each patrol point.\n- Parameters: [ integer boolean ]\n- Default: [ FALSE ]"
+        "description": "Option parameter for llPatrolPoints function. Can be set TRUE or FALSE (the default). When set TRUE, characters will slow down and momentarily pause at each waypoint. When set FALSE, characters will continue to move to the next waypoint at full speed, with no pause."
     },
     "PAYMENT_INFO_ON_FILE": {
         "prefix": "PAYMENT_INFO_ON_FILE",
         "body": [
             "PAYMENT_INFO_ON_FILE$0"
         ],
-        "description": "PAYMENT_INFO_ON_FILE"
+        "description": "If payment info is on file."
     },
     "PAYMENT_INFO_USED": {
         "prefix": "PAYMENT_INFO_USED",
         "body": [
             "PAYMENT_INFO_USED$0"
         ],
-        "description": "PAYMENT_INFO_USED"
+        "description": "If payment info has been used."
     },
     "PAY_DEFAULT": {
         "prefix": "PAY_DEFAULT",
         "body": [
             "PAY_DEFAULT$0"
         ],
-        "description": "PAY_DEFAULT"
+        "description": "Uses the default value for a pay button."
     },
     "PAY_HIDE": {
         "prefix": "PAY_HIDE",
         "body": [
             "PAY_HIDE$0"
         ],
-        "description": "PAY_HIDE"
+        "description": "Hides a pay button completely."
     },
     "PERMISSION_ATTACH": {
         "prefix": "PERMISSION_ATTACH",
@@ -2461,14 +2461,14 @@
         "body": [
             "PERMISSION_RETURN_OBJECTS$0"
         ],
-        "description": "Used by llReturnObjectsByOwner and llReturnObjectsByID to return objects from parcels"
+        "description": "Required Permission to use the llReturnObject* functions."
     },
     "PERMISSION_SILENT_ESTATE_MANAGEMENT": {
         "prefix": "PERMISSION_SILENT_ESTATE_MANAGEMENT",
         "body": [
             "PERMISSION_SILENT_ESTATE_MANAGEMENT$0"
         ],
-        "description": "manage estate access without notifying the owner of changes"
+        "description": "A script with this permission does not notify the object owner when it modifies estate access rules via llManageEstateAccess."
     },
     "PERMISSION_TAKE_CONTROLS": {
         "prefix": "PERMISSION_TAKE_CONTROLS",
@@ -2482,7 +2482,7 @@
         "body": [
             "PERMISSION_TELEPORT$0"
         ],
-        "description": "teleport the agent"
+        "description": "Permission required to use llTeleportAgent."
     },
     "PERMISSION_TRACK_CAMERA": {
         "prefix": "PERMISSION_TRACK_CAMERA",
@@ -2538,252 +2538,252 @@
         "body": [
             "PI$0"
         ],
-        "description": "PI"
+        "description": "Pi. The number of radians in a half circle."
     },
     "PING_PONG": {
         "prefix": "PING_PONG",
         "body": [
             "PING_PONG$0"
         ],
-        "description": "PING_PONG"
+        "description": "Causes a texture animation to play forward first, then in reverse."
     },
     "PI_BY_TWO": {
         "prefix": "PI_BY_TWO",
         "body": [
             "PI_BY_TWO$0"
         ],
-        "description": "PI_BY_TWO"
+        "description": "PI/2. The number of radians in a quarter circle."
     },
     "PRIM_ALLOW_UNSIT": {
         "prefix": "PRIM_ALLOW_UNSIT",
         "body": [
             "PRIM_ALLOW_UNSIT$0"
         ],
-        "description": "PRIM_ALLOW_UNSIT"
+        "description": "When set on a prim that is running a script as part of an experience an avatar that is seated on the sit target and has agreed to participate in the experience will be unable to stand or select another prim to sit on."
     },
     "PRIM_ALPHA_MODE": {
         "prefix": "PRIM_ALPHA_MODE",
         "body": [
             "PRIM_ALPHA_MODE$0"
         ],
-        "description": "PRIM_ALPHA_MODE"
+        "description": "Used to specify how the alpha channel of the diffuse texture should affect rendering of a prim's face. Usage: [ PRIM_ALPHA_MODE, integer face, integer alpha_mode, integer mask_cutoff ]"
     },
     "PRIM_ALPHA_MODE_BLEND": {
         "prefix": "PRIM_ALPHA_MODE_BLEND",
         "body": [
             "PRIM_ALPHA_MODE_BLEND$0"
         ],
-        "description": "PRIM_ALPHA_MODE_BLEND"
+        "description": "Used with PRIM_ALPHA_MODE. Prims faces set to this type use alpha blending for diffuse texture rendering (assuming the alpha channel exists)."
     },
     "PRIM_ALPHA_MODE_EMISSIVE": {
         "prefix": "PRIM_ALPHA_MODE_EMISSIVE",
         "body": [
             "PRIM_ALPHA_MODE_EMISSIVE$0"
         ],
-        "description": "PRIM_ALPHA_MODE_EMISSIVE"
+        "description": "Used with PRIM_ALPHA_MODE. Prims faces set to this type render with an emissivity corresponding to the opacity of each pixel of the diffuse texture. The more opaque a pixel is, the brighter it renders under all lighting conditions. A fully-opaque pixel will effectively render as 'full bright'."
     },
     "PRIM_ALPHA_MODE_MASK": {
         "prefix": "PRIM_ALPHA_MODE_MASK",
         "body": [
             "PRIM_ALPHA_MODE_MASK$0"
         ],
-        "description": "PRIM_ALPHA_MODE_MASK"
+        "description": "Used with PRIM_ALPHA_MODE. Prims faces set to this type render as either completely opaque or completely transparent on a per-pixel basis. Pixels which are less opaque than the specified mask_cutoff are rendered as completely transparent, and the rest are rendered as fully opaque."
     },
     "PRIM_ALPHA_MODE_NONE": {
         "prefix": "PRIM_ALPHA_MODE_NONE",
         "body": [
             "PRIM_ALPHA_MODE_NONE$0"
         ],
-        "description": "PRIM_ALPHA_MODE_NONE"
+        "description": "Used with PRIM_ALPHA_MODE. Prims faces set to this type ignore the alpha channel of the diffuse texture, and render as completely opaque."
     },
     "PRIM_BUMP_BARK": {
         "prefix": "PRIM_BUMP_BARK",
         "body": [
             "PRIM_BUMP_BARK$0"
         ],
-        "description": "PRIM_BUMP_BARK"
+        "description": "Primitive parameter or setting for bump bark."
     },
     "PRIM_BUMP_BLOBS": {
         "prefix": "PRIM_BUMP_BLOBS",
         "body": [
             "PRIM_BUMP_BLOBS$0"
         ],
-        "description": "PRIM_BUMP_BLOBS"
+        "description": "Primitive parameter or setting for bump blobs."
     },
     "PRIM_BUMP_BRICKS": {
         "prefix": "PRIM_BUMP_BRICKS",
         "body": [
             "PRIM_BUMP_BRICKS$0"
         ],
-        "description": "PRIM_BUMP_BRICKS"
+        "description": "Primitive parameter or setting for bump bricks."
     },
     "PRIM_BUMP_BRIGHT": {
         "prefix": "PRIM_BUMP_BRIGHT",
         "body": [
             "PRIM_BUMP_BRIGHT$0"
         ],
-        "description": "PRIM_BUMP_BRIGHT"
+        "description": "Primitive parameter or setting for bump bright."
     },
     "PRIM_BUMP_CHECKER": {
         "prefix": "PRIM_BUMP_CHECKER",
         "body": [
             "PRIM_BUMP_CHECKER$0"
         ],
-        "description": "PRIM_BUMP_CHECKER"
+        "description": "Primitive parameter or setting for bump checker."
     },
     "PRIM_BUMP_CONCRETE": {
         "prefix": "PRIM_BUMP_CONCRETE",
         "body": [
             "PRIM_BUMP_CONCRETE$0"
         ],
-        "description": "PRIM_BUMP_CONCRETE"
+        "description": "Primitive parameter or setting for bump concrete."
     },
     "PRIM_BUMP_DARK": {
         "prefix": "PRIM_BUMP_DARK",
         "body": [
             "PRIM_BUMP_DARK$0"
         ],
-        "description": "PRIM_BUMP_DARK"
+        "description": "Primitive parameter or setting for bump dark."
     },
     "PRIM_BUMP_DISKS": {
         "prefix": "PRIM_BUMP_DISKS",
         "body": [
             "PRIM_BUMP_DISKS$0"
         ],
-        "description": "PRIM_BUMP_DISKS"
+        "description": "Primitive parameter or setting for bump disks."
     },
     "PRIM_BUMP_GRAVEL": {
         "prefix": "PRIM_BUMP_GRAVEL",
         "body": [
             "PRIM_BUMP_GRAVEL$0"
         ],
-        "description": "PRIM_BUMP_GRAVEL"
+        "description": "Primitive parameter or setting for bump gravel."
     },
     "PRIM_BUMP_LARGETILE": {
         "prefix": "PRIM_BUMP_LARGETILE",
         "body": [
             "PRIM_BUMP_LARGETILE$0"
         ],
-        "description": "PRIM_BUMP_LARGETILE"
+        "description": "Primitive parameter or setting for bump largetile."
     },
     "PRIM_BUMP_NONE": {
         "prefix": "PRIM_BUMP_NONE",
         "body": [
             "PRIM_BUMP_NONE$0"
         ],
-        "description": "PRIM_BUMP_NONE"
+        "description": "Primitive parameter or setting for bump none."
     },
     "PRIM_BUMP_SHINY": {
         "prefix": "PRIM_BUMP_SHINY",
         "body": [
             "PRIM_BUMP_SHINY$0"
         ],
-        "description": "PRIM_BUMP_SHINY"
+        "description": "Gets or sets the bump mapping and shininess of a prim face. Usage: [ PRIM_BUMP_SHINY, integer face, integer shiny, integer bump ]"
     },
     "PRIM_BUMP_SIDING": {
         "prefix": "PRIM_BUMP_SIDING",
         "body": [
             "PRIM_BUMP_SIDING$0"
         ],
-        "description": "PRIM_BUMP_SIDING"
+        "description": "Primitive parameter or setting for bump siding."
     },
     "PRIM_BUMP_STONE": {
         "prefix": "PRIM_BUMP_STONE",
         "body": [
             "PRIM_BUMP_STONE$0"
         ],
-        "description": "PRIM_BUMP_STONE"
+        "description": "Primitive parameter or setting for bump stone."
     },
     "PRIM_BUMP_STUCCO": {
         "prefix": "PRIM_BUMP_STUCCO",
         "body": [
             "PRIM_BUMP_STUCCO$0"
         ],
-        "description": "PRIM_BUMP_STUCCO"
+        "description": "Primitive parameter or setting for bump stucco."
     },
     "PRIM_BUMP_SUCTION": {
         "prefix": "PRIM_BUMP_SUCTION",
         "body": [
             "PRIM_BUMP_SUCTION$0"
         ],
-        "description": "PRIM_BUMP_SUCTION"
+        "description": "Primitive parameter or setting for bump suction."
     },
     "PRIM_BUMP_TILE": {
         "prefix": "PRIM_BUMP_TILE",
         "body": [
             "PRIM_BUMP_TILE$0"
         ],
-        "description": "PRIM_BUMP_TILE"
+        "description": "Primitive parameter or setting for bump tile."
     },
     "PRIM_BUMP_WEAVE": {
         "prefix": "PRIM_BUMP_WEAVE",
         "body": [
             "PRIM_BUMP_WEAVE$0"
         ],
-        "description": "PRIM_BUMP_WEAVE"
+        "description": "Primitive parameter or setting for bump weave."
     },
     "PRIM_BUMP_WOOD": {
         "prefix": "PRIM_BUMP_WOOD",
         "body": [
             "PRIM_BUMP_WOOD$0"
         ],
-        "description": "PRIM_BUMP_WOOD"
+        "description": "Primitive parameter or setting for bump wood."
     },
     "PRIM_COLOR": {
         "prefix": "PRIM_COLOR",
         "body": [
             "PRIM_COLOR$0"
         ],
-        "description": "PRIM_COLOR"
+        "description": "Used to get or set the Blinn-Phong color and alpha of a prim's face. Usage: [ PRIM_COLOR, integer face, vector color, float alpha ]"
     },
     "PRIM_DESC": {
         "prefix": "PRIM_DESC",
         "body": [
             "PRIM_DESC$0"
         ],
-        "description": "PRIM_DESC"
+        "description": "Used to get or set the prim's description. Usage: [ PRIM_DESC, string description ]"
     },
     "PRIM_FLEXIBLE": {
         "prefix": "PRIM_FLEXIBLE",
         "body": [
             "PRIM_FLEXIBLE$0"
         ],
-        "description": "PRIM_FLEXIBLE"
+        "description": "Used to get or set the prim's flexible configuration. Usage: [ PRIM_FLEXIBLE, integer boolean, integer softness, float gravity, float friction, float wind, float tension, vector force ]"
     },
     "PRIM_FULLBRIGHT": {
         "prefix": "PRIM_FULLBRIGHT",
         "body": [
             "PRIM_FULLBRIGHT$0"
         ],
-        "description": "PRIM_FULLBRIGHT"
+        "description": "Used to get or set the full-bright setting of a prim's face. Usage: [ PRIM_FULLBRIGHT, integer face ]"
     },
     "PRIM_GLOW": {
         "prefix": "PRIM_GLOW",
         "body": [
             "PRIM_GLOW$0"
         ],
-        "description": "PRIM_GLOW"
+        "description": "PRIM_GLOW is used to get or set the glow status of the face. Use the integer number 25 if the compiler rejects the named constant. Usage: [ PRIM_GLOW, integer face, float intensity ]"
     },
     "PRIM_GLTF_ALPHA_MODE_OPAQUE": {
         "prefix": "PRIM_GLTF_ALPHA_MODE_OPAQUE",
         "body": [
             "PRIM_GLTF_ALPHA_MODE_OPAQUE, $0"
         ],
-        "description": "0 - Ignore the alpha value and render the material as opaque."
+        "description": "Opaque rendering mode for GLTF materials, used with PRIM_GLTF_BASE_COLOR. No transparency."
     },
     "PRIM_GLTF_ALPHA_MODE_BLEND": {
         "prefix": "PRIM_GLTF_ALPHA_MODE_BLEND",
         "body": [
             "PRIM_GLTF_ALPHA_MODE_BLEND, $0"
         ],
-        "description": "1 - Render the material with transparency determined by the alpha value. Blending is done in linear color space. As is the case for Blinn-Phong as well, this mode suffers from depth sorting and performance issues. Use alpha mask instead when possible."
+        "description": "Alpha blending rendering mode for GLTF materials, used with PRIM_GLTF_BASE_COLOR. Transparency from the texture is applied and multiplied by the material's opacity multiplier, in linear color space."
     },
     "PRIM_GLTF_ALPHA_MODE_MASK": {
         "prefix": "PRIM_GLTF_ALPHA_MODE_MASK",
         "body": [
             "PRIM_GLTF_ALPHA_MODE_MASK, $0"
         ],
-        "description": "2 - Render the material as fully opaque where the alpha value is greater than the alpha cutoff, and otherwise render the material as fully transparent."
+        "description": "Alpha masked rendering mode for GLTF materials, used with PRIM_GLTF_BASE_COLOR. Transparency from the texture is compared to the material's alpha cutoff, with pixels above the cutoff fully opaque and pixels below it fully transparent."
     },
     "PRIM_GLTF_BASE_COLOR": {
         "prefix": "PRIM_GLTF_BASE_COLOR",
@@ -2800,7 +2800,7 @@
             "\t${9:0}, // float alpha_mask_cutoff",
             "\t${10:0} // bool double_sided"
         ],
-        "description": "48 - [PRIM_GLTF_BASE_COLOR, integer face, string texture, vector repeats, vector offsets, float rotation_in_radians, vector linear_color, float alpha, integer gltf_alpha_mode, float alpha_mask_cutoff, integer double_sided]\nSets the prim's GLTF Material Base Color map attributes.\nThis parameter's arguments are GLTF overrides.\nWarning: Setting an argument to the empty string (\"\") will clear the respective override. GLTF texture transforms are always overrides, so setting them to the empty string (\"\") will clear them. See this example for a workaround. The SL team is open to feedback on LSL improvements for GLTF."
+        "description": "Used to get or set the GLTF base color override of an object's face. Usage: [ PRIM_GLTF_BASE_COLOR, integer face, string texture, vector repeats, vector offsets, float rotation_in_radians, vector tint_color, float alpha, integer alpha_mode, float alpha_mask_cutoff, integer double_sided ]"
     },
     "PRIM_GLTF_NORMAL": {
         "prefix": "PRIM_GLTF_NORMAL",
@@ -2812,7 +2812,7 @@
             "\t${4:<0,0,0>}, // vector offsets",
             "\t${5:ZERO_ROTATION} // float rotation_in_radians"
         ],
-        "description": "47 - [PRIM_GLTF_NORMAL, integer face, string texture, vector repeats, vector offsets, float rotation_in_radians]\nSets the prim's GLTF ORM map attributes (Occlusion, Roughness, Metallic).\nThis parameter's arguments are GLTF overrides.\nWarning: Setting an argument to the empty string (\"\") will clear the respective override. GLTF texture transforms are always overrides, so setting them to the empty string (\"\") will clear them. See this example for a workaround. The SL team is open to feedback on LSL improvements for GLTF."
+        "description": "Used to get or set the GLTF normal map override of an object's face. Usage: [ PRIM_GLTF_NORMAL, integer face, string texture, vector repeats, vector offsets, float rotation_in_radians ]"
     },
     "PRIM_GLTF_METALLIC_ROUGHNESS": {
         "prefix": "PRIM_GLTF_METALLIC_ROUGHNESS",
@@ -2826,7 +2826,7 @@
             "\t${6:0}, // float metallic_factor",
             "\t${7:0} // float roughness_factor"
         ],
-        "description": "47 - [PRIM_GLTF_METALLIC_ROUGHNESS, integer face, string texture, vector repeats, vector offsets, float rotation_in_radians, float metallic_factor, float roughness_factor]\nSets the prim's GLTF Material Normal map attributes.\nThis parameter's arguments are GLTF overrides.\nWarning: Setting an argument to the empty string (\"\") will clear the respective override. GLTF texture transforms are always overrides, so setting them to the empty string (\"\") will clear them. See this example for a workaround. The SL team is open to feedback on LSL improvements for GLTF."
+        "description": "Used to get or set the GLTF occlusion/metallic/roughness override of an object's face. Usage: [ PRIM_GLTF_METALLIC_ROUGHNESS, integer face, string texture, vector repeats, vector offsets, float rotation_in_radians, float metallic_factor, float roughness_factor ]"
     },
     "PRIM_GLTF_EMISSIVE": {
         "prefix": "PRIM_GLTF_EMISSIVE",
@@ -2839,105 +2839,105 @@
             "\t${5:0}, // float rotation_in_radians",
             "\t${6:<0,0,0>} // vector linear_emissive_tint"
         ],
-        "description": "46 - [PRIM_GLTF_EMISSIVE, integer face, string texture, vector repeats, vector offsets, float rotation_in_radians, vector linear_emissive_tint]\nSets the prim's GLTF Material Emissive map attributes.\nThis parameter's arguments are GLTF overrides.\nWarning: Setting an argument to the empty string (\"\") will clear the respective override. GLTF texture transforms are always overrides, so setting them to the empty string (\"\") will clear them. See this example for a workaround. The SL team is open to feedback on LSL improvements for GLTF."
+        "description": "Used to get or set the GLTF emission override of an object's face. Usage: [ PRIM_GLTF_EMISSIVE, integer face, string texture, vector repeats, vector offsets, float rotation_in_radians, vector tint_color ]"
     },
     "PRIM_HOLE_CIRCLE": {
         "prefix": "PRIM_HOLE_CIRCLE",
         "body": [
             "PRIM_HOLE_CIRCLE$0"
         ],
-        "description": "PRIM_HOLE_CIRCLE"
+        "description": "Used with certain PRIM_TYPE_* flags to make a circular hole, via the hole_shape parameter."
     },
     "PRIM_HOLE_DEFAULT": {
         "prefix": "PRIM_HOLE_DEFAULT",
         "body": [
             "PRIM_HOLE_DEFAULT$0"
         ],
-        "description": "PRIM_HOLE_DEFAULT"
+        "description": "Used with certain PRIM_TYPE_* flags to make a hole the same shape as the outer shape, via the hole_shape parameter."
     },
     "PRIM_HOLE_SQUARE": {
         "prefix": "PRIM_HOLE_SQUARE",
         "body": [
             "PRIM_HOLE_SQUARE$0"
         ],
-        "description": "PRIM_HOLE_SQUARE"
+        "description": "Used with certain PRIM_TYPE_* flags to make a squarish hole, via the hole_shape parameter."
     },
     "PRIM_HOLE_TRIANGLE": {
         "prefix": "PRIM_HOLE_TRIANGLE",
         "body": [
             "PRIM_HOLE_TRIANGLE$0"
         ],
-        "description": "PRIM_HOLE_TRIANGLE"
+        "description": "Used with certain PRIM_TYPE_* flags to make a triangular hole, via the hole_shape parameter."
     },
     "PRIM_LINK_TARGET": {
         "prefix": "PRIM_LINK_TARGET",
         "body": [
             "PRIM_LINK_TARGET$0"
         ],
-        "description": "PRIM_LINK_TARGET"
+        "description": "Used to get or set multiple links with a single PrimParameters call."
     },
     "PRIM_MATERIAL": {
         "prefix": "PRIM_MATERIAL",
         "body": [
             "PRIM_MATERIAL$0"
         ],
-        "description": "PRIM_MATERIAL"
+        "description": "Sets the prim material. Material does not affect mass, but affects friction, bounce (elasticity), and collision sound. Usage: [ PRIM_MATERIAL, integer material ]"
     },
     "PRIM_MATERIAL_FLESH": {
         "prefix": "PRIM_MATERIAL_FLESH",
         "body": [
             "PRIM_MATERIAL_FLESH$0"
         ],
-        "description": "PRIM_MATERIAL_FLESH"
+        "description": "Primitive parameter or setting for material flesh."
     },
     "PRIM_MATERIAL_GLASS": {
         "prefix": "PRIM_MATERIAL_GLASS",
         "body": [
             "PRIM_MATERIAL_GLASS$0"
         ],
-        "description": "PRIM_MATERIAL_GLASS"
+        "description": "Very low friction"
     },
     "PRIM_MATERIAL_LIGHT": {
         "prefix": "PRIM_MATERIAL_LIGHT",
         "body": [
             "PRIM_MATERIAL_LIGHT$0"
         ],
-        "description": "PRIM_MATERIAL_LIGHT"
+        "description": "This constant and it's underlying functionality is deprecated. Light is no longer a prim property, it is now a face property. The same functionality is reproduced with [ PRIM_FULLBRIGHT, ALL_SIDES, TRUE ]"
     },
     "PRIM_MATERIAL_METAL": {
         "prefix": "PRIM_MATERIAL_METAL",
         "body": [
             "PRIM_MATERIAL_METAL$0"
         ],
-        "description": "PRIM_MATERIAL_METAL"
+        "description": "Primitive parameter or setting for material metal."
     },
     "PRIM_MATERIAL_PLASTIC": {
         "prefix": "PRIM_MATERIAL_PLASTIC",
         "body": [
             "PRIM_MATERIAL_PLASTIC$0"
         ],
-        "description": "PRIM_MATERIAL_PLASTIC"
+        "description": "Primitive parameter or setting for material plastic."
     },
     "PRIM_MATERIAL_RUBBER": {
         "prefix": "PRIM_MATERIAL_RUBBER",
         "body": [
             "PRIM_MATERIAL_RUBBER$0"
         ],
-        "description": "PRIM_MATERIAL_RUBBER"
+        "description": "Primitive parameter or setting for material rubber."
     },
     "PRIM_MATERIAL_STONE": {
         "prefix": "PRIM_MATERIAL_STONE",
         "body": [
             "PRIM_MATERIAL_STONE$0"
         ],
-        "description": "PRIM_MATERIAL_STONE"
+        "description": "Primitive parameter or setting for material stone."
     },
     "PRIM_MATERIAL_WOOD": {
         "prefix": "PRIM_MATERIAL_WOOD",
         "body": [
             "PRIM_MATERIAL_WOOD$0"
         ],
-        "description": "PRIM_MATERIAL_WOOD"
+        "description": "Primitive parameter or setting for material wood."
     },
     "PRIM_MEDIA_ALT_IMAGE_ENABLE": {
         "prefix": "PRIM_MEDIA_ALT_IMAGE_ENABLE",
@@ -2951,462 +2951,462 @@
         "body": [
             "PRIM_MEDIA_AUTO_LOOP$0"
         ],
-        "description": "PRIM_MEDIA_AUTO_LOOP"
+        "description": "Primitive parameter or setting for media auto loop."
     },
     "PRIM_MEDIA_AUTO_PLAY": {
         "prefix": "PRIM_MEDIA_AUTO_PLAY",
         "body": [
             "PRIM_MEDIA_AUTO_PLAY$0"
         ],
-        "description": "PRIM_MEDIA_AUTO_PLAY"
+        "description": "Primitive parameter or setting for media auto play."
     },
     "PRIM_MEDIA_AUTO_SCALE": {
         "prefix": "PRIM_MEDIA_AUTO_SCALE",
         "body": [
             "PRIM_MEDIA_AUTO_SCALE$0"
         ],
-        "description": "PRIM_MEDIA_AUTO_SCALE"
+        "description": "Primitive parameter or setting for media auto scale."
     },
     "PRIM_MEDIA_AUTO_ZOOM": {
         "prefix": "PRIM_MEDIA_AUTO_ZOOM",
         "body": [
             "PRIM_MEDIA_AUTO_ZOOM$0"
         ],
-        "description": "PRIM_MEDIA_AUTO_ZOOM"
+        "description": "Primitive parameter or setting for media auto zoom."
     },
     "PRIM_MEDIA_CURRENT_URL": {
         "prefix": "PRIM_MEDIA_CURRENT_URL",
         "body": [
             "PRIM_MEDIA_CURRENT_URL$0"
         ],
-        "description": "PRIM_MEDIA_CURRENT_URL"
+        "description": "Primitive parameter or setting for media current url."
     },
     "PRIM_MEDIA_FIRST_CLICK_INTERACT": {
         "prefix": "PRIM_MEDIA_FIRST_CLICK_INTERACT",
         "body": [
             "PRIM_MEDIA_FIRST_CLICK_INTERACT$0"
         ],
-        "description": "PRIM_MEDIA_FIRST_CLICK_INTERACT"
+        "description": "Primitive parameter or setting for media first click interact."
     },
     "PRIM_MEDIA_HEIGHT_PIXELS": {
         "prefix": "PRIM_MEDIA_HEIGHT_PIXELS",
         "body": [
             "PRIM_MEDIA_HEIGHT_PIXELS$0"
         ],
-        "description": "PRIM_MEDIA_HEIGHT_PIXELS"
+        "description": "Primitive parameter or setting for media height pixels."
     },
     "PRIM_MEDIA_HOME_URL": {
         "prefix": "PRIM_MEDIA_HOME_URL",
         "body": [
             "PRIM_MEDIA_HOME_URL$0"
         ],
-        "description": "PRIM_MEDIA_HOME_URL"
+        "description": "Primitive parameter or setting for media home url."
     },
     "PRIM_MEDIA_PERMS_CONTROL": {
         "prefix": "PRIM_MEDIA_PERMS_CONTROL",
         "body": [
             "PRIM_MEDIA_PERMS_CONTROL$0"
         ],
-        "description": "PRIM_MEDIA_PERMS_CONTROL"
+        "description": "Primitive parameter or setting for media perms control."
     },
     "PRIM_MEDIA_PERMS_INTERACT": {
         "prefix": "PRIM_MEDIA_PERMS_INTERACT",
         "body": [
             "PRIM_MEDIA_PERMS_INTERACT$0"
         ],
-        "description": "PRIM_MEDIA_PERMS_INTERACT"
+        "description": "Primitive parameter or setting for media perms interact."
     },
     "PRIM_MEDIA_PERM_ANYONE": {
         "prefix": "PRIM_MEDIA_PERM_ANYONE",
         "body": [
             "PRIM_MEDIA_PERM_ANYONE$0"
         ],
-        "description": "PRIM_MEDIA_PERM_ANYONE"
+        "description": "Primitive parameter or setting for media perm anyone."
     },
     "PRIM_MEDIA_PERM_GROUP": {
         "prefix": "PRIM_MEDIA_PERM_GROUP",
         "body": [
             "PRIM_MEDIA_PERM_GROUP$0"
         ],
-        "description": "PRIM_MEDIA_PERM_GROUP"
+        "description": "Primitive parameter or setting for media perm group."
     },
     "PRIM_MEDIA_PERM_NONE": {
         "prefix": "PRIM_MEDIA_PERM_NONE",
         "body": [
             "PRIM_MEDIA_PERM_NONE$0"
         ],
-        "description": "PRIM_MEDIA_PERM_NONE"
+        "description": "Primitive parameter or setting for media perm none."
     },
     "PRIM_MEDIA_PERM_OWNER": {
         "prefix": "PRIM_MEDIA_PERM_OWNER",
         "body": [
             "PRIM_MEDIA_PERM_OWNER$0"
         ],
-        "description": "PRIM_MEDIA_PERM_OWNER"
+        "description": "Primitive parameter or setting for media perm owner."
     },
     "PRIM_MEDIA_WHITELIST": {
         "prefix": "PRIM_MEDIA_WHITELIST",
         "body": [
             "PRIM_MEDIA_WHITELIST$0"
         ],
-        "description": "PRIM_MEDIA_WHITELIST"
+        "description": "Primitive parameter or setting for media whitelist."
     },
     "PRIM_MEDIA_WHITELIST_ENABLE": {
         "prefix": "PRIM_MEDIA_WHITELIST_ENABLE",
         "body": [
             "PRIM_MEDIA_WHITELIST_ENABLE$0"
         ],
-        "description": "PRIM_MEDIA_WHITELIST_ENABLE"
+        "description": "Primitive parameter or setting for media whitelist enable."
     },
     "PRIM_MEDIA_WIDTH_PIXELS": {
         "prefix": "PRIM_MEDIA_WIDTH_PIXELS",
         "body": [
             "PRIM_MEDIA_WIDTH_PIXELS$0"
         ],
-        "description": "PRIM_MEDIA_WIDTH_PIXELS"
+        "description": "Primitive parameter or setting for media width pixels."
     },
     "PRIM_NAME": {
         "prefix": "PRIM_NAME",
         "body": [
             "PRIM_NAME$0"
         ],
-        "description": "PRIM_NAME"
+        "description": "Used to get or set the prim's name. Usage: [ PRIM_NAME, string name ]"
     },
     "PRIM_NORMAL": {
         "prefix": "PRIM_NORMAL",
         "body": [
             "PRIM_NORMAL$0"
         ],
-        "description": "PRIM_NORMAL"
+        "description": "Used to get or set the Blinn-Phong normal map texture settings of a prim's face. Usage: [ PRIM_NORMAL, integer face, string texture, vector repeats, vector offsets, float rotation_in_radians ]"
     },
     "PRIM_OMEGA": {
         "prefix": "PRIM_OMEGA",
         "body": [
             "PRIM_OMEGA$0"
         ],
-        "description": "PRIM_OMEGA"
+        "description": "Used to make the object spin at the specified axis and rate, or retrieve spin settings. See llTargetOmega for specification. Usage: [ PRIM_OMEGA, vector axis, float spinrate, float gain ]"
     },
     "PRIM_PHANTOM": {
         "prefix": "PRIM_PHANTOM",
         "body": [
             "PRIM_PHANTOM$0"
         ],
-        "description": "PRIM_PHANTOM"
+        "description": "Used to get or set the object's phantom status."
     },
     "PRIM_PHYSICS": {
         "prefix": "PRIM_PHYSICS",
         "body": [
             "PRIM_PHYSICS$0"
         ],
-        "description": "PRIM_PHYSICS"
+        "description": "Used to get or set the object's physics status. When enabled the object responds to SL physics."
     },
     "PRIM_PHYSICS_SHAPE_CONVEX": {
         "prefix": "PRIM_PHYSICS_SHAPE_CONVEX",
         "body": [
             "PRIM_PHYSICS_SHAPE_CONVEX$0"
         ],
-        "description": "PRIM_PHYSICS_SHAPE_CONVEX"
+        "description": "Used with PRIM_PHYSICS_SHAPE_TYPE. Prims of this type use the convex hull of the prim shape for physics (this is the default for mesh objects)"
     },
     "PRIM_PHYSICS_SHAPE_NONE": {
         "prefix": "PRIM_PHYSICS_SHAPE_NONE",
         "body": [
             "PRIM_PHYSICS_SHAPE_NONE$0"
         ],
-        "description": "PRIM_PHYSICS_SHAPE_NONE"
+        "description": "Used with PRIM_PHYSICS_SHAPE_TYPE. Prims of this type are ignored by the physics engine. Read more details on PRIM_PHYSICS_SHAPE_TYPE"
     },
     "PRIM_PHYSICS_SHAPE_PRIM": {
         "prefix": "PRIM_PHYSICS_SHAPE_PRIM",
         "body": [
             "PRIM_PHYSICS_SHAPE_PRIM$0"
         ],
-        "description": "PRIM_PHYSICS_SHAPE_PRIM"
+        "description": "Used with PRIM_PHYSICS_SHAPE_TYPE. Prims of this type use the normal prim shape for physics (this is the default for all non-mesh objects)"
     },
     "PRIM_PHYSICS_SHAPE_TYPE": {
         "prefix": "PRIM_PHYSICS_SHAPE_TYPE",
         "body": [
             "PRIM_PHYSICS_SHAPE_TYPE$0"
         ],
-        "description": "PRIM_PHYSICS_SHAPE_TYPE"
+        "description": "Sets the type of shape used by the physics engine for the prim, primarily for physics optimization. Usage: [ PRIM_PHYSICS_SHAPE_TYPE, integer pstype ]"
     },
     "PRIM_POINT_LIGHT": {
         "prefix": "PRIM_POINT_LIGHT",
         "body": [
             "PRIM_POINT_LIGHT$0"
         ],
-        "description": "PRIM_POINT_LIGHT"
+        "description": "Configures the prim point light. Usage: [ PRIM_POINT_LIGHT, integer boolean, vector linear_color, float intensity, float radius, float falloff ]"
     },
     "PRIM_POSITION": {
         "prefix": "PRIM_POSITION",
         "body": [
             "PRIM_POSITION$0"
         ],
-        "description": "PRIM_POSITION"
+        "description": "PRIM_POSITION is used to get or set the prim's position. Usage: [ PRIM_POSITION, vector position ]"
     },
     "PRIM_POS_LOCAL": {
         "prefix": "PRIM_POS_LOCAL",
         "body": [
             "PRIM_POS_LOCAL$0"
         ],
-        "description": "PRIM_POS_LOCAL"
+        "description": "Gets or sets the prim local position. Usage: [ PRIM_POS_LOCAL, vector pos ]"
     },
     "PRIM_ROTATION": {
         "prefix": "PRIM_ROTATION",
         "body": [
             "PRIM_ROTATION$0"
         ],
-        "description": "PRIM_ROTATION"
+        "description": "Gets or sets the prim rotation. Usage: [ PRIM_ROTATION, rotation rot ]"
     },
     "PRIM_ROT_LOCAL": {
         "prefix": "PRIM_ROT_LOCAL",
         "body": [
             "PRIM_ROT_LOCAL$0"
         ],
-        "description": "PRIM_ROT_LOCAL"
+        "description": "Gets or sets the prim local rotation. Usage: [ PRIM_ROT_LOCAL, rotation rot_local ]"
     },
     "PRIM_SCRIPTED_SIT_ONLY": {
         "prefix": "PRIM_SCRIPTED_SIT_ONLY",
         "body": [
             "PRIM_SCRIPTED_SIT_ONLY$0"
         ],
-        "description": "PRIM_SCRIPTED_SIT_ONLY"
+        "description": "Agents may only be seated on this prim using llSitOnLink. Attempts to do a manual sit will fail. This flag applies even outside of an experience enabled region."
     },
     "PRIM_SCULPT_FLAG_INVERT": {
         "prefix": "PRIM_SCULPT_FLAG_INVERT",
         "body": [
             "PRIM_SCULPT_FLAG_INVERT$0"
         ],
-        "description": "PRIM_SCULPT_FLAG_INVERT"
+        "description": "PRIM_SCULPT_FLAG_INVERT will cause the sculpted prim to render inside out. It works by inverting the Normal of each polygon that makes up the sculpted prim. Sculpted Prims: FAQ"
     },
     "PRIM_SCULPT_FLAG_MIRROR": {
         "prefix": "PRIM_SCULPT_FLAG_MIRROR",
         "body": [
             "PRIM_SCULPT_FLAG_MIRROR$0"
         ],
-        "description": "PRIM_SCULPT_FLAG_MIRROR"
+        "description": "PRIM_SCULPT_FLAG_MIRROR will cause a mirror of the sculpted prim to rendered. The sculpted prim is mirrored over the X axis. Sculpted Prims: FAQ"
     },
     "PRIM_SCULPT_TYPE_CYLINDER": {
         "prefix": "PRIM_SCULPT_TYPE_CYLINDER",
         "body": [
             "PRIM_SCULPT_TYPE_CYLINDER$0"
         ],
-        "description": "PRIM_SCULPT_TYPE_CYLINDER"
+        "description": "When used in conjunction with type_sculpt_const a cylinder type sculpty is produced. It does this by stitching the left side to right."
     },
     "PRIM_SCULPT_TYPE_MASK": {
         "prefix": "PRIM_SCULPT_TYPE_MASK",
         "body": [
             "PRIM_SCULPT_TYPE_MASK$0"
         ],
-        "description": "PRIM_SCULPT_TYPE_MASK"
+        "description": "PRIM_SCULPT_TYPE_MASK can be used when parsing the output of llGetPrimitiveParams when dealing with sculpted prims (PRIM_TYPE_SCULPT) to separate the sculpted type from the flags (PRIM_SCULPT_FLAG_INVERT and PRIM_SCULPT_FLAG_MIRROR) that can modify it. Sculpted Prims: FAQ"
     },
     "PRIM_SCULPT_TYPE_PLANE": {
         "prefix": "PRIM_SCULPT_TYPE_PLANE",
         "body": [
             "PRIM_SCULPT_TYPE_PLANE$0"
         ],
-        "description": "PRIM_SCULPT_TYPE_PLANE"
+        "description": "When used in conjunction with type_sculpt_const a plane type sculpty is produced. No stitching or converging is performed."
     },
     "PRIM_SCULPT_TYPE_SPHERE": {
         "prefix": "PRIM_SCULPT_TYPE_SPHERE",
         "body": [
             "PRIM_SCULPT_TYPE_SPHERE$0"
         ],
-        "description": "PRIM_SCULPT_TYPE_SPHERE"
+        "description": "When used in conjunction with type_sculpt_const a sphere type sculpty is produced. It does this by stitching the left side to right then separately converging the top & bottom."
     },
     "PRIM_SCULPT_TYPE_TORUS": {
         "prefix": "PRIM_SCULPT_TYPE_TORUS",
         "body": [
             "PRIM_SCULPT_TYPE_TORUS$0"
         ],
-        "description": "PRIM_SCULPT_TYPE_TORUS"
+        "description": "When used in conjunction with type_sculpt_const a torus type sculpty is produced. It does this by stitching the top to bottom and the left side to right."
     },
     "PRIM_SHINY_HIGH": {
         "prefix": "PRIM_SHINY_HIGH",
         "body": [
             "PRIM_SHINY_HIGH$0"
         ],
-        "description": "PRIM_SHINY_HIGH"
+        "description": "Sets the highest intensity legacy shininess."
     },
     "PRIM_SHINY_LOW": {
         "prefix": "PRIM_SHINY_LOW",
         "body": [
             "PRIM_SHINY_LOW$0"
         ],
-        "description": "PRIM_SHINY_LOW"
+        "description": "Sets the lowest intensity legacy shininess."
     },
     "PRIM_SHINY_MEDIUM": {
         "prefix": "PRIM_SHINY_MEDIUM",
         "body": [
             "PRIM_SHINY_MEDIUM$0"
         ],
-        "description": "PRIM_SHINY_MEDIUM"
+        "description": "Sets a medium intensity legacy shininess."
     },
     "PRIM_SHINY_NONE": {
         "prefix": "PRIM_SHINY_NONE",
         "body": [
             "PRIM_SHINY_NONE$0"
         ],
-        "description": "PRIM_SHINY_NONE"
+        "description": "Disables legacy shininess."
     },
     "PRIM_SIT_TARGET": {
         "prefix": "PRIM_SIT_TARGET",
         "body": [
             "PRIM_SIT_TARGET$0"
         ],
-        "description": "PRIM_SIT_TARGET"
+        "description": "The sit target, if any defined for this prim. If the active value is 0 the sit target is deactivated. If it is nonzero the prim's sit target is set to the indicated offset and rotation. As with llLinkSitTarget(), these values are relative to the prim. However, unlike llLinkSitTarget() an offset of may be explicitly set."
     },
     "PRIM_SIZE": {
         "prefix": "PRIM_SIZE",
         "body": [
             "PRIM_SIZE$0"
         ],
-        "description": "PRIM_SIZE"
+        "description": "Returns or sets the prim's size. Usage: [ PRIM_SIZE, vector size ]"
     },
     "PRIM_SLICE": {
         "prefix": "PRIM_SLICE",
         "body": [
             "PRIM_SLICE$0"
         ],
-        "description": "PRIM_SLICE"
+        "description": "Used to get or set the prim's slice values (a shape attribute, equivalent to advanced_cut)."
     },
     "PRIM_SPECULAR": {
         "prefix": "PRIM_SPECULAR",
         "body": [
             "PRIM_SPECULAR$0"
         ],
-        "description": "PRIM_SPECULAR"
+        "description": "Used to get or set the Blinn-Phong specular map texture settings of a prim's face. Usage: [ PRIM_SPECULAR, integer face, string texture, vector repeats, vector offsets, float rotation_in_radians, vector specular_color, integer glossiness, integer environment ]"
     },
     "PRIM_TEMP_ON_REZ": {
         "prefix": "PRIM_TEMP_ON_REZ",
         "body": [
             "PRIM_TEMP_ON_REZ$0"
         ],
-        "description": "PRIM_TEMP_ON_REZ"
+        "description": "Used to get or set the object's temporary status. It lives until the next garbage collection cycle (about 1 minute). Does not count against normal prim limits. There are limits to the number of temporary objects that can exist in a region and the garbage collector may run sooner than expected."
     },
     "PRIM_TEXGEN": {
         "prefix": "PRIM_TEXGEN",
         "body": [
             "PRIM_TEXGEN$0"
         ],
-        "description": "PRIM_TEXGEN"
+        "description": "Gets or sets the texture mapping mode of a face. Usage: [ PRIM_TEXGEN, integer face, integer tg_type ]"
     },
     "PRIM_TEXGEN_DEFAULT": {
         "prefix": "PRIM_TEXGEN_DEFAULT",
         "body": [
             "PRIM_TEXGEN_DEFAULT$0"
         ],
-        "description": "PRIM_TEXGEN_DEFAULT"
+        "description": "Used with PRIM_TEXGEN to set the texture mapping mode, specifically that the texture repeats units are in texture repeats per face."
     },
     "PRIM_TEXGEN_PLANAR": {
         "prefix": "PRIM_TEXGEN_PLANAR",
         "body": [
             "PRIM_TEXGEN_PLANAR$0"
         ],
-        "description": "PRIM_TEXGEN_PLANAR"
+        "description": "Used with PRIM_TEXGEN to set the texture mapping mode, specifically that the texture repeats units are in texture repeats per half meter. This is in contrast to the in-world editing tool, in which the planar texture scaling units are repeats per meter."
     },
     "PRIM_TEXT": {
         "prefix": "PRIM_TEXT",
         "body": [
             "PRIM_TEXT$0"
         ],
-        "description": "PRIM_TEXT"
+        "description": "Used to get or set the object's floating text. Usage: [ PRIM_TEXT, string text, vector color, float alpha ]"
     },
     "PRIM_TEXTURE": {
         "prefix": "PRIM_TEXTURE",
         "body": [
             "PRIM_TEXTURE$0"
         ],
-        "description": "PRIM_TEXTURE"
+        "description": "Used to get or set the Blinn-Phong diffuse texture settings of a prim's face. Usage: [ PRIM_TEXTURE, integer face, string texture, vector repeats, vector offsets, float rotation_in_radians ]"
     },
     "PRIM_TYPE": {
         "prefix": "PRIM_TYPE",
         "body": [
             "PRIM_TYPE$0"
         ],
-        "description": "PRIM_TYPE"
+        "description": "Gets or sets the type of the prim and associated type parameters. Usage: [ PRIM_TYPE, integer type_flag ]"
     },
     "PRIM_TYPE_BOX": {
         "prefix": "PRIM_TYPE_BOX",
         "body": [
             "PRIM_TYPE_BOX$0"
         ],
-        "description": "PRIM_TYPE_BOX"
+        "description": "PRIM_TYPE_BOX is a parameter of PRIM_TYPE used to make prim into a box and to change specific properties that define the shape of that box. Usage: [ PRIM_TYPE, PRIM_TYPE_BOX, integer hole_shape, vector cut, float hollow, vector twist, vector top_size, vector top_shear ]"
     },
     "PRIM_TYPE_CYLINDER": {
         "prefix": "PRIM_TYPE_CYLINDER",
         "body": [
             "PRIM_TYPE_CYLINDER$0"
         ],
-        "description": "PRIM_TYPE_CYLINDER"
+        "description": "PRIM_TYPE_CYLINDER is a parameter of PRIM_TYPE used to make prim into a cylinder and to change specific properties that define the shape of that cylinder. Usage: [ PRIM_TYPE, PRIM_TYPE_CYLINDER, integer hole_shape, vector cut, float hollow, vector twist, vector top_size, vector top_shear ]"
     },
     "PRIM_TYPE_PRISM": {
         "prefix": "PRIM_TYPE_PRISM",
         "body": [
             "PRIM_TYPE_PRISM$0"
         ],
-        "description": "PRIM_TYPE_PRISM"
+        "description": "PRIM_TYPE_PRISM is a parameter of PRIM_TYPE used to make prim into a prism and to change specific properties that define the shape of that prism. Usage: [ PRIM_TYPE, PRIM_TYPE_PRISM, integer hole_shape, vector cut, float hollow, vector twist, vector top_size, vector top_shear ]"
     },
     "PRIM_TYPE_RING": {
         "prefix": "PRIM_TYPE_RING",
         "body": [
             "PRIM_TYPE_RING$0"
         ],
-        "description": "PRIM_TYPE_RING"
+        "description": "PRIM_TYPE_RING is a parameter of PRIM_TYPE used to make prim into a ring and to change specific properties that define the shape of that ring. Usage: [ PRIM_TYPE, PRIM_TYPE_RING, integer hole_shape, vector cut, float hollow, vector twist, vector hole_size, vector top_shear, vector profile_cut, vector taper, float revolutions, float radius_offset, float skew ]"
     },
     "PRIM_TYPE_SCULPT": {
         "prefix": "PRIM_TYPE_SCULPT",
         "body": [
             "PRIM_TYPE_SCULPT$0"
         ],
-        "description": "PRIM_TYPE_SCULPT"
+        "description": "Sets the prim shape to a sculpted shape using the specified sculpt texture and type. Usage: [ PRIM_TYPE, PRIM_TYPE_SCULPT, string map, integer type ]"
     },
     "PRIM_TYPE_SPHERE": {
         "prefix": "PRIM_TYPE_SPHERE",
         "body": [
             "PRIM_TYPE_SPHERE$0"
         ],
-        "description": "PRIM_TYPE_SPHERE"
+        "description": "PRIM_TYPE_SPHERE is a parameter of PRIM_TYPE used to make prim into a sphere and to change specific properties that define the shape of that sphere. Usage: [ PRIM_TYPE, PRIM_TYPE_SPHERE, integer hole_shape, vector cut, float hollow, vector twist, vector dimple ]"
     },
     "PRIM_TYPE_TORUS": {
         "prefix": "PRIM_TYPE_TORUS",
         "body": [
             "PRIM_TYPE_TORUS$0"
         ],
-        "description": "PRIM_TYPE_TORUS"
+        "description": "PRIM_TYPE_TORUS is a parameter of PRIM_TYPE used to make prim into a torus and to change specific properties that define the shape of that torus. Usage: [ PRIM_TYPE, PRIM_TYPE_TORUS, integer hole_shape, vector cut, float hollow, vector twist, vector hole_size, vector top_shear, vector profile_cut, vector taper, float revolutions, float radius_offset, float skew ]"
     },
     "PRIM_TYPE_TUBE": {
         "prefix": "PRIM_TYPE_TUBE",
         "body": [
             "PRIM_TYPE_TUBE$0"
         ],
-        "description": "PRIM_TYPE_TUBE"
+        "description": "PRIM_TYPE_TUBE is a parameter of PRIM_TYPE used to make prim into a tube and to change specific properties that define the shape of that tube. Usage: [ PRIM_TYPE, PRIM_TYPE_TUBE, integer hole_shape, vector cut, float hollow, vector twist, vector hole_size, vector top_shear, vector profile_cut, vector taper, float revolutions, float radius_offset, float skew ]"
     },
     "PROFILE_NONE": {
         "prefix": "PROFILE_NONE",
         "body": [
             "PROFILE_NONE$0"
         ],
-        "description": "Disables profiling"
+        "description": "Disables script profiling."
     },
     "PROFILE_SCRIPT_MEMORY": {
         "prefix": "PROFILE_SCRIPT_MEMORY",
         "body": [
             "PROFILE_SCRIPT_MEMORY$0"
         ],
-        "description": "Enables memory profiling"
+        "description": "Enables script memory profiling, tracking the maximum amount of memory consumed while it is active."
     },
     "PUBLIC_CHANNEL": {
         "prefix": "PUBLIC_CHANNEL",
         "body": [
             "PUBLIC_CHANNEL$0"
         ],
-        "description": "PUBLIC_CHANNEL"
+        "description": "Chat channel that broadcasts to all nearby users & objects. This channel is sometimes referred to as: open chat, local chat and public chat."
     },
     "RAD_TO_DEG": {
         "prefix": "RAD_TO_DEG",
         "body": [
             "RAD_TO_DEG$0"
         ],
-        "description": "RAD_TO_DEG"
+        "description": "When multiplied by, converts a value in radians to degrees. Precise value is 180/PI."
     },
     "RCERR_CAST_TIME_EXCEEDED": {
         "prefix": "RCERR_CAST_TIME_EXCEEDED",
@@ -3448,21 +3448,21 @@
         "body": [
             "RC_GET_LINK_NUM$0"
         ],
-        "description": "RC_GET_LINK_NUM"
+        "description": "Raycast option or result field for get link num."
     },
     "RC_GET_NORMAL": {
         "prefix": "RC_GET_NORMAL",
         "body": [
             "RC_GET_NORMAL$0"
         ],
-        "description": "RC_GET_NORMAL"
+        "description": "Raycast option or result field for get normal."
     },
     "RC_GET_ROOT_KEY": {
         "prefix": "RC_GET_ROOT_KEY",
         "body": [
             "RC_GET_ROOT_KEY$0"
         ],
-        "description": "RC_GET_ROOT_KEY"
+        "description": "Raycast option or result field for get root key."
     },
     "RC_MAX_HITS": {
         "prefix": "RC_MAX_HITS",
@@ -3476,28 +3476,28 @@
         "body": [
             "RC_REJECT_AGENTS$0"
         ],
-        "description": "RC_REJECT_AGENTS"
+        "description": "Raycast option or result field for reject agents."
     },
     "RC_REJECT_LAND": {
         "prefix": "RC_REJECT_LAND",
         "body": [
             "RC_REJECT_LAND$0"
         ],
-        "description": "RC_REJECT_LAND"
+        "description": "Raycast option or result field for reject land."
     },
     "RC_REJECT_NONPHYSICAL": {
         "prefix": "RC_REJECT_NONPHYSICAL",
         "body": [
             "RC_REJECT_NONPHYSICAL$0"
         ],
-        "description": "RC_REJECT_NONPHYSICAL"
+        "description": "Raycast option or result field for reject nonphysical."
     },
     "RC_REJECT_PHYSICAL": {
         "prefix": "RC_REJECT_PHYSICAL",
         "body": [
             "RC_REJECT_PHYSICAL$0"
         ],
-        "description": "RC_REJECT_PHYSICAL"
+        "description": "Raycast option or result field for reject physical."
     },
     "RC_REJECT_TYPES": {
         "prefix": "RC_REJECT_TYPES",
@@ -3511,63 +3511,63 @@
         "body": [
             "REGION_FLAG_ALLOW_DAMAGE$0"
         ],
-        "description": "REGION_FLAG_ALLOW_DAMAGE"
+        "description": "This is a flag used with llGetRegionFlags to check if the region is entirely damage enabled."
     },
     "REGION_FLAG_ALLOW_DIRECT_TELEPORT": {
         "prefix": "REGION_FLAG_ALLOW_DIRECT_TELEPORT",
         "body": [
             "REGION_FLAG_ALLOW_DIRECT_TELEPORT$0"
         ],
-        "description": "REGION_FLAG_ALLOW_DIRECT_TELEPORT"
+        "description": "This is a flag used with llGetRegionFlags to check if direct teleportation is allowed in the region."
     },
     "REGION_FLAG_BLOCK_FLY": {
         "prefix": "REGION_FLAG_BLOCK_FLY",
         "body": [
             "REGION_FLAG_BLOCK_FLY$0"
         ],
-        "description": "REGION_FLAG_BLOCK_FLY"
+        "description": "This is a flag used with llGetRegionFlags to check if flying is disabled in the region."
     },
     "REGION_FLAG_BLOCK_TERRAFORM": {
         "prefix": "REGION_FLAG_BLOCK_TERRAFORM",
         "body": [
             "REGION_FLAG_BLOCK_TERRAFORM$0"
         ],
-        "description": "REGION_FLAG_BLOCK_TERRAFORM"
+        "description": "This is a flag used with llGetRegionFlags to check if terraforming is disabled in the region."
     },
     "REGION_FLAG_DISABLE_COLLISIONS": {
         "prefix": "REGION_FLAG_DISABLE_COLLISIONS",
         "body": [
             "REGION_FLAG_DISABLE_COLLISIONS$0"
         ],
-        "description": "REGION_FLAG_DISABLE_COLLISIONS"
+        "description": "This is a flag used with llGetRegionFlags to check if collisions have been disabled in the region."
     },
     "REGION_FLAG_DISABLE_PHYSICS": {
         "prefix": "REGION_FLAG_DISABLE_PHYSICS",
         "body": [
             "REGION_FLAG_DISABLE_PHYSICS$0"
         ],
-        "description": "REGION_FLAG_DISABLE_PHYSICS"
+        "description": "This is a flag used with llGetRegionFlags to check if physics has been disabled in the region."
     },
     "REGION_FLAG_FIXED_SUN": {
         "prefix": "REGION_FLAG_FIXED_SUN",
         "body": [
             "REGION_FLAG_FIXED_SUN$0"
         ],
-        "description": "REGION_FLAG_FIXED_SUN"
+        "description": "This is a flag used with llGetRegionFlags to check if the sun's position has been fixed in the region."
     },
     "REGION_FLAG_RESTRICT_PUSHOBJECT": {
         "prefix": "REGION_FLAG_RESTRICT_PUSHOBJECT",
         "body": [
             "REGION_FLAG_RESTRICT_PUSHOBJECT$0"
         ],
-        "description": "REGION_FLAG_RESTRICT_PUSHOBJECT"
+        "description": "This is a flag used with llGetRegionFlags to check if llPushObject is restricted in the region."
     },
     "REGION_FLAG_SANDBOX": {
         "prefix": "REGION_FLAG_SANDBOX",
         "body": [
             "REGION_FLAG_SANDBOX$0"
         ],
-        "description": "REGION_FLAG_SANDBOX"
+        "description": "This is a flag used with llGetRegionFlags to check if the region is a sandbox."
     },
     "REMOTE_DATA_CHANNEL": {
         "prefix": "REMOTE_DATA_CHANNEL",
@@ -3595,28 +3595,28 @@
         "body": [
             "REVERSE$0"
         ],
-        "description": "REVERSE"
+        "description": "Reverses the direction of a texture animation, playing it from end to start."
     },
     "ROTATE": {
         "prefix": "ROTATE",
         "body": [
             "ROTATE$0"
         ],
-        "description": "ROTATE"
+        "description": "Causes a texture animation to change the texture's rotation. Cannot be combined with SCALE."
     },
     "SCALE": {
         "prefix": "SCALE",
         "body": [
             "SCALE$0"
         ],
-        "description": "SCALE"
+        "description": "Causes a texture animation to change the texture's scale. Cannot be combined with ROTATE."
     },
     "SCRIPTED": {
         "prefix": "SCRIPTED",
         "body": [
             "SCRIPTED$0"
         ],
-        "description": "SCRIPTED"
+        "description": "If it is contained in the result of llDetectedType(), it means what was detected has at least one active script. If it is used as a filter of llSensor() or llSensorRepeat(), it will search for objects that has any script, which is doing anything in simulator just now."
     },
     "SIM_STAT_PCT_CHARS_STEPPED": {
         "prefix": "SIM_STAT_PCT_CHARS_STEPPED",
@@ -3630,28 +3630,28 @@
         "body": [
             "SMOOTH$0"
         ],
-        "description": "SMOOTH"
+        "description": "Causes a texture animation to move smoothly between frames, instead of instant changes."
     },
     "SQRT2": {
         "prefix": "SQRT2",
         "body": [
             "SQRT2$0"
         ],
-        "description": "SQRT2"
+        "description": "The square root of two."
     },
     "STATUS_BLOCK_GRAB": {
         "prefix": "STATUS_BLOCK_GRAB",
         "body": [
             "STATUS_BLOCK_GRAB$0"
         ],
-        "description": "STATUS_BLOCK_GRAB"
+        "description": "This status flag keeps the object from being moved by grabs. It will only block grab moves of unlinked prims or the root of a linkset. *To block grab moves of an entire linkset use STATUS_BLOCK_GRAB_OBJECT"
     },
     "STATUS_BLOCK_GRAB_OBJECT": {
         "prefix": "STATUS_BLOCK_GRAB_OBJECT",
         "body": [
             "STATUS_BLOCK_GRAB_OBJECT$0"
         ],
-        "description": "STATUS_BLOCK_GRAB_OBJECT"
+        "description": "This status flag keeps the object from being moved by grabs. This flag applies to the entire linkset. * To block grab moves of only the root prim or unlinked individual prims, use STATUS_BLOCK_GRAB."
     },
     "STATUS_BOUNDS_ERROR": {
         "prefix": "STATUS_BOUNDS_ERROR",
@@ -3665,14 +3665,14 @@
         "body": [
             "STATUS_CAST_SHADOWS$0"
         ],
-        "description": "STATUS_CAST_SHADOWS"
+        "description": "This status flag would set an object's ability to cast shadows."
     },
     "STATUS_DIE_AT_EDGE": {
         "prefix": "STATUS_DIE_AT_EDGE",
         "body": [
             "STATUS_DIE_AT_EDGE$0"
         ],
-        "description": "STATUS_DIE_AT_EDGE"
+        "description": "Causes the object to be deleted when it goes off world, this is overridden by STATUS_RETURN_AT_EDGE."
     },
     "STATUS_INTERNAL_ERROR": {
         "prefix": "STATUS_INTERNAL_ERROR",
@@ -3714,49 +3714,49 @@
         "body": [
             "STATUS_PHANTOM$0"
         ],
-        "description": "STATUS_PHANTOM"
+        "description": "This property (set FALSE by default) when set TRUE turns the object un-solid (objects and avatars can pass through it)."
     },
     "STATUS_PHYSICS": {
         "prefix": "STATUS_PHYSICS",
         "body": [
             "STATUS_PHYSICS$0"
         ],
-        "description": "STATUS_PHYSICS"
+        "description": "This property (set FALSE by default) if set TRUE allows that the object is subject to and can offer physical interactions and forces."
     },
     "STATUS_RETURN_AT_EDGE": {
         "prefix": "STATUS_RETURN_AT_EDGE",
         "body": [
             "STATUS_RETURN_AT_EDGE$0"
         ],
-        "description": "STATUS_RETURN_AT_EDGE"
+        "description": "Causes the object to be returned when it goes off world, overrides STATUS_DIE_AT_EDGE."
     },
     "STATUS_ROTATE_X": {
         "prefix": "STATUS_ROTATE_X",
         "body": [
             "STATUS_ROTATE_X$0"
         ],
-        "description": "STATUS_ROTATE_X"
+        "description": "This property (set TRUE by default) allow physical rotation on the object's local X-axis. Setting to FALSE prevents physical rotation around the local X-axis. For example, a sit-and-spin device spins around the Z axis (up) but not around the X or Y axes."
     },
     "STATUS_ROTATE_Y": {
         "prefix": "STATUS_ROTATE_Y",
         "body": [
             "STATUS_ROTATE_Y$0"
         ],
-        "description": "STATUS_ROTATE_Y"
+        "description": "This property (set TRUE by default) allows physical rotation on the object's local Y-axis. Setting to FALSE prevents physical rotation around the local Y-axis. For example, a sit-and-spin device spins around the Z axis (up) but not around the X or Y axes."
     },
     "STATUS_ROTATE_Z": {
         "prefix": "STATUS_ROTATE_Z",
         "body": [
             "STATUS_ROTATE_Z$0"
         ],
-        "description": "STATUS_ROTATE_Z"
+        "description": "This property (set TRUE by default) allows physical rotation on the object's local Z-axis. Setting to FALSE prevents physical rotation around the local Z-axis."
     },
     "STATUS_SANDBOX": {
         "prefix": "STATUS_SANDBOX",
         "body": [
             "STATUS_SANDBOX$0"
         ],
-        "description": "STATUS_SANDBOX"
+        "description": "This status flag keeps the object from getting away."
     },
     "STATUS_TYPE_MISMATCH": {
         "prefix": "STATUS_TYPE_MISMATCH",
@@ -3777,483 +3777,483 @@
         "body": [
             "STRING_TRIM$0"
         ],
-        "description": "STRING_TRIM"
+        "description": "Trim spaces off the beginning and the end. Equal to STRING_TRIM_HEAD"
     },
     "STRING_TRIM_HEAD": {
         "prefix": "STRING_TRIM_HEAD",
         "body": [
             "STRING_TRIM_HEAD$0"
         ],
-        "description": "STRING_TRIM_HEAD"
+        "description": "Trim spaces off the beginning"
     },
     "STRING_TRIM_TAIL": {
         "prefix": "STRING_TRIM_TAIL",
         "body": [
             "STRING_TRIM_TAIL$0"
         ],
-        "description": "STRING_TRIM_TAIL"
+        "description": "Trim spaces off the end"
     },
     "TEXTURE_DEFAULT": {
         "prefix": "TEXTURE_DEFAULT",
         "body": [
             "TEXTURE_DEFAULT$0"
         ],
-        "description": "TEXTURE_DEFAULT"
+        "description": "LSL constant identifying texture default."
     },
     "TEXTURE_BLANK": {
         "prefix": "TEXTURE_BLANK",
         "body": [
             "TEXTURE_BLANK$0"
         ],
-        "description": "TEXTURE_BLANK"
+        "description": "UUID for the \"Blank\" texture"
     },
     "TEXTURE_MEDIA": {
         "prefix": "TEXTURE_MEDIA",
         "body": [
             "TEXTURE_MEDIA$0"
         ],
-        "description": "TEXTURE_MEDIA"
+        "description": "UUID for the \"Default Media\" texture"
     },
     "TEXTURE_PLYWOOD": {
         "prefix": "TEXTURE_PLYWOOD",
         "body": [
             "TEXTURE_PLYWOOD$0"
         ],
-        "description": "TEXTURE_PLYWOOD"
+        "description": "UUID for the default \"Plywood\" texture"
     },
     "TEXTURE_TRANSPARENT": {
         "prefix": "TEXTURE_TRANSPARENT",
         "body": [
             "TEXTURE_TRANSPARENT$0"
         ],
-        "description": "TEXTURE_TRANSPARENT"
+        "description": "UUID for \"*Default Transparent Texture\" in the library, also included with viewers."
     },
     "TOUCH_INVALID_FACE": {
         "prefix": "TOUCH_INVALID_FACE",
         "body": [
             "TOUCH_INVALID_FACE$0"
         ],
-        "description": "TOUCH_INVALID_FACE"
+        "description": "Returned by llDetectedTouchFace when the touch position is not valid."
     },
     "TOUCH_INVALID_TEXCOORD": {
         "prefix": "TOUCH_INVALID_TEXCOORD",
         "body": [
             "TOUCH_INVALID_TEXCOORD$0"
         ],
-        "description": "TOUCH_INVALID_TEXCOORD"
+        "description": "Returned by llDetectedTouchUV and llDetectedTouchST when the touch position is not valid."
     },
     "TOUCH_INVALID_VECTOR": {
         "prefix": "TOUCH_INVALID_VECTOR",
         "body": [
             "TOUCH_INVALID_VECTOR$0"
         ],
-        "description": "TOUCH_INVALID_VECTOR"
+        "description": "Returned by llDetectedTouchPos, llDetectedTouchNormal, and llDetectedTouchBinormal when the touch position is not valid."
     },
     "TRAVERSAL_TYPE": {
         "prefix": "TRAVERSAL_TYPE",
         "body": [
             "TRAVERSAL_TYPE$0"
         ],
-        "description": "Controls the speed at which characters moves on terrain that is less than 100% walkable will move faster (e.g., a cat crossing a street) or slower (e.g., a car driving in a swamp).\nTo use _FAST or _SLOW, you must specify a CHARACTER_TYPE.\n- Default: TRAVERSAL_TYPE_SLOW\n- Range / Values: TRAVERSAL_TYPE_FAST, TRAVERSAL_TYPE_SLOW, TRAVERSAL_TYPE_NONE"
+        "description": "Used in combination with one of the traversal type flags. The default is TRAVERSAL_TYPE_SLOW, other options are TRAVERSAL_TYPE_FAST and TRAVERSAL_TYPE_NONE."
     },
     "TRAVERSAL_TYPE_FAST": {
         "prefix": "TRAVERSAL_TYPE_FAST",
         "body": [
             "TRAVERSAL_TYPE_FAST$0"
         ],
-        "description": "TRAVERSAL_TYPE_FAST"
+        "description": "LSL constant identifying traversal type fast."
     },
     "TRAVERSAL_TYPE_SLOW": {
         "prefix": "TRAVERSAL_TYPE_SLOW",
         "body": [
             "TRAVERSAL_TYPE_SLOW$0"
         ],
-        "description": "TRAVERSAL_TYPE_SLOW"
+        "description": "LSL constant identifying traversal type slow."
     },
     "TRAVERSAL_TYPE_NONE": {
         "prefix": "TRAVERSAL_TYPE_NONE",
         "body": [
             "TRAVERSAL_TYPE_NONE$0"
         ],
-        "description": "TRAVERSAL_TYPE_NONE"
+        "description": "LSL constant identifying traversal type none."
     },
     "TRUE": {
         "prefix": "TRUE",
         "body": [
             "TRUE$0"
         ],
-        "description": "TRUE"
+        "description": "Constant used to define the TRUE value in conditional structures or variables/constants in general. Usually it's used because it is more readable, indicating a boolean value instead a integer value (1). However, this is an arbitrary distinction in LSL which uses integers to represent Boolean values anyway."
     },
     "TWO_PI": {
         "prefix": "TWO_PI",
         "body": [
             "TWO_PI$0"
         ],
-        "description": "TWO_PI"
+        "description": "Two times PI. The number of radians in a full circle."
     },
     "TYPE_FLOAT": {
         "prefix": "TYPE_FLOAT",
         "body": [
             "TYPE_FLOAT$0"
         ],
-        "description": "TYPE_FLOAT"
+        "description": "Type identifier for the float data type."
     },
     "TYPE_INTEGER": {
         "prefix": "TYPE_INTEGER",
         "body": [
             "TYPE_INTEGER$0"
         ],
-        "description": "TYPE_INTEGER"
+        "description": "Type identifier for the integer data type."
     },
     "TYPE_INVALID": {
         "prefix": "TYPE_INVALID",
         "body": [
             "TYPE_INVALID$0"
         ],
-        "description": "TYPE_INVALID"
+        "description": "Type identifier for the invalid data type."
     },
     "TYPE_KEY": {
         "prefix": "TYPE_KEY",
         "body": [
             "TYPE_KEY$0"
         ],
-        "description": "TYPE_KEY"
+        "description": "Type identifier for the key data type."
     },
     "TYPE_ROTATION": {
         "prefix": "TYPE_ROTATION",
         "body": [
             "TYPE_ROTATION$0"
         ],
-        "description": "TYPE_ROTATION"
+        "description": "Type identifier for the rotation data type."
     },
     "TYPE_STRING": {
         "prefix": "TYPE_STRING",
         "body": [
             "TYPE_STRING$0"
         ],
-        "description": "TYPE_STRING"
+        "description": "Type identifier for the string data type."
     },
     "TYPE_VECTOR": {
         "prefix": "TYPE_VECTOR",
         "body": [
             "TYPE_VECTOR$0"
         ],
-        "description": "TYPE_VECTOR"
+        "description": "Type identifier for the vector data type."
     },
     "URL_REQUEST_DENIED": {
         "prefix": "URL_REQUEST_DENIED",
         "body": [
             "URL_REQUEST_DENIED$0"
         ],
-        "description": "URL_REQUEST_DENIED"
+        "description": "URL request status or option for request denied."
     },
     "URL_REQUEST_GRANTED": {
         "prefix": "URL_REQUEST_GRANTED",
         "body": [
             "URL_REQUEST_GRANTED$0"
         ],
-        "description": "URL_REQUEST_GRANTED"
+        "description": "URL request status or option for request granted."
     },
     "VEHICLE_FLAG_NO_FLY_UP": {
         "prefix": "VEHICLE_FLAG_NO_FLY_UP",
         "body": [
             "VEHICLE_FLAG_NO_FLY_UP$0"
         ],
-        "description": "VEHICLE_FLAG_NO_FLY_UP"
+        "description": "Vehicle setting or behavior flag for flag no fly up."
     },
     "VEHICLE_ANGULAR_DEFLECTION_EFFICIENCY": {
         "prefix": "VEHICLE_ANGULAR_DEFLECTION_EFFICIENCY",
         "body": [
             "VEHICLE_ANGULAR_DEFLECTION_EFFICIENCY$0"
         ],
-        "description": "VEHICLE_ANGULAR_DEFLECTION_EFFICIENCY"
+        "description": "slider between 0 (no deflection) and 1 (maximum strength)"
     },
     "VEHICLE_ANGULAR_DEFLECTION_TIMESCALE": {
         "prefix": "VEHICLE_ANGULAR_DEFLECTION_TIMESCALE",
         "body": [
             "VEHICLE_ANGULAR_DEFLECTION_TIMESCALE$0"
         ],
-        "description": "VEHICLE_ANGULAR_DEFLECTION_TIMESCALE"
+        "description": "exponential timescale for the vehicle to achieve full angular deflection"
     },
     "VEHICLE_ANGULAR_FRICTION_TIMESCALE": {
         "prefix": "VEHICLE_ANGULAR_FRICTION_TIMESCALE",
         "body": [
             "VEHICLE_ANGULAR_FRICTION_TIMESCALE$0"
         ],
-        "description": "VEHICLE_ANGULAR_FRICTION_TIMESCALE"
+        "description": "vector of timescales for exponential decay of angular velocity about the three vehicle axes"
     },
     "VEHICLE_ANGULAR_MOTOR_DECAY_TIMESCALE": {
         "prefix": "VEHICLE_ANGULAR_MOTOR_DECAY_TIMESCALE",
         "body": [
             "VEHICLE_ANGULAR_MOTOR_DECAY_TIMESCALE$0"
         ],
-        "description": "VEHICLE_ANGULAR_MOTOR_DECAY_TIMESCALE"
+        "description": "exponential timescale (in seconds) for the angular motor's effectiveness to decay toward zero"
     },
     "VEHICLE_ANGULAR_MOTOR_DIRECTION": {
         "prefix": "VEHICLE_ANGULAR_MOTOR_DIRECTION",
         "body": [
             "VEHICLE_ANGULAR_MOTOR_DIRECTION$0"
         ],
-        "description": "VEHICLE_ANGULAR_MOTOR_DIRECTION"
+        "description": "vector of angular velocity (in radian/second) that the vehicle will try to achieve"
     },
     "VEHICLE_ANGULAR_MOTOR_TIMESCALE": {
         "prefix": "VEHICLE_ANGULAR_MOTOR_TIMESCALE",
         "body": [
             "VEHICLE_ANGULAR_MOTOR_TIMESCALE$0"
         ],
-        "description": "VEHICLE_ANGULAR_MOTOR_TIMESCALE"
+        "description": "exponential timescale for the angular motor to achieve full power"
     },
     "VEHICLE_BANKING_EFFICIENCY": {
         "prefix": "VEHICLE_BANKING_EFFICIENCY",
         "body": [
             "VEHICLE_BANKING_EFFICIENCY$0"
         ],
-        "description": "VEHICLE_BANKING_EFFICIENCY"
+        "description": "slider between -1.00 (leans out of turns), 0 (no banking) and +1.00 (leans into turns). This parameter makes banking affect steering, not the other way around. Use vehicle angular motors to bank the vehicle."
     },
     "VEHICLE_BANKING_MIX": {
         "prefix": "VEHICLE_BANKING_MIX",
         "body": [
             "VEHICLE_BANKING_MIX$0"
         ],
-        "description": "VEHICLE_BANKING_MIX"
+        "description": "slider between 0 (static banking) and 1 (dynamic banking)"
     },
     "VEHICLE_BANKING_TIMESCALE": {
         "prefix": "VEHICLE_BANKING_TIMESCALE",
         "body": [
             "VEHICLE_BANKING_TIMESCALE$0"
         ],
-        "description": "VEHICLE_BANKING_TIMESCALE"
+        "description": "exponential timescale for the banking behaviour to take full effect"
     },
     "VEHICLE_BUOYANCY": {
         "prefix": "VEHICLE_BUOYANCY",
         "body": [
             "VEHICLE_BUOYANCY$0"
         ],
-        "description": "VEHICLE_BUOYANCY"
+        "description": "slider between -1 (double gravity) and 1 (full anti-gravity)"
     },
     "VEHICLE_FLAG_CAMERA_DECOUPLED": {
         "prefix": "VEHICLE_FLAG_CAMERA_DECOUPLED",
         "body": [
             "VEHICLE_FLAG_CAMERA_DECOUPLED$0"
         ],
-        "description": "VEHICLE_FLAG_CAMERA_DECOUPLED"
+        "description": "This flag only has an effect when steering a vehicle with mouselook. In other words, only when either VEHICLE_FLAG_MOUSELOOK_STEER or VEHICLE_FLAG_MOUSELOOK_BANK are also set. When it is in effect it has zero server-side consequences, except that a bit is set in the flags field in the vehicle's ObjectUpdate message sent from server to client."
     },
     "VEHICLE_FLAG_HOVER_GLOBAL_HEIGHT": {
         "prefix": "VEHICLE_FLAG_HOVER_GLOBAL_HEIGHT",
         "body": [
             "VEHICLE_FLAG_HOVER_GLOBAL_HEIGHT$0"
         ],
-        "description": "VEHICLE_FLAG_HOVER_GLOBAL_HEIGHT"
+        "description": "Hover at global height instead of height above ground or water."
     },
     "VEHICLE_FLAG_HOVER_TERRAIN_ONLY": {
         "prefix": "VEHICLE_FLAG_HOVER_TERRAIN_ONLY",
         "body": [
             "VEHICLE_FLAG_HOVER_TERRAIN_ONLY$0"
         ],
-        "description": "VEHICLE_FLAG_HOVER_TERRAIN_ONLY"
+        "description": "Makes the vehicle float over land."
     },
     "VEHICLE_FLAG_HOVER_UP_ONLY": {
         "prefix": "VEHICLE_FLAG_HOVER_UP_ONLY",
         "body": [
             "VEHICLE_FLAG_HOVER_UP_ONLY$0"
         ],
-        "description": "VEHICLE_FLAG_HOVER_UP_ONLY"
+        "description": "Vehicle setting or behavior flag for flag hover up only."
     },
     "VEHICLE_FLAG_HOVER_WATER_ONLY": {
         "prefix": "VEHICLE_FLAG_HOVER_WATER_ONLY",
         "body": [
             "VEHICLE_FLAG_HOVER_WATER_ONLY$0"
         ],
-        "description": "VEHICLE_FLAG_HOVER_WATER_ONLY"
+        "description": "Makes the vehicle over water."
     },
     "VEHICLE_FLAG_LIMIT_MOTOR_UP": {
         "prefix": "VEHICLE_FLAG_LIMIT_MOTOR_UP",
         "body": [
             "VEHICLE_FLAG_LIMIT_MOTOR_UP$0"
         ],
-        "description": "VEHICLE_FLAG_LIMIT_MOTOR_UP"
+        "description": "Vehicle setting or behavior flag for flag limit motor up."
     },
     "VEHICLE_FLAG_LIMIT_ROLL_ONLY": {
         "prefix": "VEHICLE_FLAG_LIMIT_ROLL_ONLY",
         "body": [
             "VEHICLE_FLAG_LIMIT_ROLL_ONLY$0"
         ],
-        "description": "VEHICLE_FLAG_LIMIT_ROLL_ONLY"
+        "description": "Vehicle setting or behavior flag for flag limit roll only."
     },
     "VEHICLE_FLAG_MOUSELOOK_BANK": {
         "prefix": "VEHICLE_FLAG_MOUSELOOK_BANK",
         "body": [
             "VEHICLE_FLAG_MOUSELOOK_BANK$0"
         ],
-        "description": "VEHICLE_FLAG_MOUSELOOK_BANK"
+        "description": "Vehicle setting or behavior flag for flag mouselook bank."
     },
     "VEHICLE_FLAG_MOUSELOOK_STEER": {
         "prefix": "VEHICLE_FLAG_MOUSELOOK_STEER",
         "body": [
             "VEHICLE_FLAG_MOUSELOOK_STEER$0"
         ],
-        "description": "VEHICLE_FLAG_MOUSELOOK_STEER"
+        "description": "Vehicle setting or behavior flag for flag mouselook steer."
     },
     "VEHICLE_FLAG_NO_DEFLECTION_UP": {
         "prefix": "VEHICLE_FLAG_NO_DEFLECTION_UP",
         "body": [
             "VEHICLE_FLAG_NO_DEFLECTION_UP$0"
         ],
-        "description": "VEHICLE_FLAG_NO_DEFLECTION_UP"
+        "description": "Vehicle setting or behavior flag for flag no deflection up."
     },
     "VEHICLE_HOVER_EFFICIENCY": {
         "prefix": "VEHICLE_HOVER_EFFICIENCY",
         "body": [
             "VEHICLE_HOVER_EFFICIENCY$0"
         ],
-        "description": "VEHICLE_HOVER_EFFICIENCY"
+        "description": "slider between 0 (bouncy) and 1 (critically damped) hover behaviour"
     },
     "VEHICLE_HOVER_HEIGHT": {
         "prefix": "VEHICLE_HOVER_HEIGHT",
         "body": [
             "VEHICLE_HOVER_HEIGHT$0"
         ],
-        "description": "VEHICLE_HOVER_HEIGHT"
+        "description": "height the vehicle will try to hover above ground. Set to zero to disable hover."
     },
     "VEHICLE_HOVER_TIMESCALE": {
         "prefix": "VEHICLE_HOVER_TIMESCALE",
         "body": [
             "VEHICLE_HOVER_TIMESCALE$0"
         ],
-        "description": "VEHICLE_HOVER_TIMESCALE"
+        "description": "Period of time (in seconds) for the vehicle to achieve its hover height"
     },
     "VEHICLE_LINEAR_DEFLECTION_EFFICIENCY": {
         "prefix": "VEHICLE_LINEAR_DEFLECTION_EFFICIENCY",
         "body": [
             "VEHICLE_LINEAR_DEFLECTION_EFFICIENCY$0"
         ],
-        "description": "VEHICLE_LINEAR_DEFLECTION_EFFICIENCY"
+        "description": "slider between 0 (no deflection) and 1 (maximum strength)"
     },
     "VEHICLE_LINEAR_DEFLECTION_TIMESCALE": {
         "prefix": "VEHICLE_LINEAR_DEFLECTION_TIMESCALE",
         "body": [
             "VEHICLE_LINEAR_DEFLECTION_TIMESCALE$0"
         ],
-        "description": "VEHICLE_LINEAR_DEFLECTION_TIMESCALE"
+        "description": "exponential timescale for the vehicle to redirect its velocity to its x-axis"
     },
     "VEHICLE_LINEAR_FRICTION_TIMESCALE": {
         "prefix": "VEHICLE_LINEAR_FRICTION_TIMESCALE",
         "body": [
             "VEHICLE_LINEAR_FRICTION_TIMESCALE$0"
         ],
-        "description": "VEHICLE_LINEAR_FRICTION_TIMESCALE"
+        "description": "vector of timescales for exponential decay of linear velocity about the three vehicle axes"
     },
     "VEHICLE_LINEAR_MOTOR_DECAY_TIMESCALE": {
         "prefix": "VEHICLE_LINEAR_MOTOR_DECAY_TIMESCALE",
         "body": [
             "VEHICLE_LINEAR_MOTOR_DECAY_TIMESCALE$0"
         ],
-        "description": "VEHICLE_LINEAR_MOTOR_DECAY_TIMESCALE"
+        "description": "exponential timescale (in seconds) for the linear motor's effectiveness to decay toward zero"
     },
     "VEHICLE_LINEAR_MOTOR_DIRECTION": {
         "prefix": "VEHICLE_LINEAR_MOTOR_DIRECTION",
         "body": [
             "VEHICLE_LINEAR_MOTOR_DIRECTION$0"
         ],
-        "description": "VEHICLE_LINEAR_MOTOR_DIRECTION"
+        "description": "Vector of linear velocity (in meters/second) that the vehicle will try to achieve."
     },
     "VEHICLE_LINEAR_MOTOR_OFFSET": {
         "prefix": "VEHICLE_LINEAR_MOTOR_OFFSET",
         "body": [
             "VEHICLE_LINEAR_MOTOR_OFFSET$0"
         ],
-        "description": "VEHICLE_LINEAR_MOTOR_OFFSET"
+        "description": "Used with llSetVehicleVectorParam to set the offset for where the linear motor is to be applied from the vehicle's center of mass."
     },
     "VEHICLE_LINEAR_MOTOR_TIMESCALE": {
         "prefix": "VEHICLE_LINEAR_MOTOR_TIMESCALE",
         "body": [
             "VEHICLE_LINEAR_MOTOR_TIMESCALE$0"
         ],
-        "description": "VEHICLE_LINEAR_MOTOR_TIMESCALE"
+        "description": "exponential timescale for the vehicle to achieve its full linear motor velocity"
     },
     "VEHICLE_REFERENCE_FRAME": {
         "prefix": "VEHICLE_REFERENCE_FRAME",
         "body": [
             "VEHICLE_REFERENCE_FRAME$0"
         ],
-        "description": "VEHICLE_REFERENCE_FRAME"
+        "description": "Used to set the rotation of vehicle axes relative to local frame."
     },
     "VEHICLE_TYPE_AIRPLANE": {
         "prefix": "VEHICLE_TYPE_AIRPLANE",
         "body": [
             "VEHICLE_TYPE_AIRPLANE$0"
         ],
-        "description": "VEHICLE_TYPE_AIRPLANE"
+        "description": "Uses linear deflection for lift, no hover, and banking to turn."
     },
     "VEHICLE_TYPE_BALLOON": {
         "prefix": "VEHICLE_TYPE_BALLOON",
         "body": [
             "VEHICLE_TYPE_BALLOON$0"
         ],
-        "description": "VEHICLE_TYPE_BALLOON"
+        "description": "Hover, and friction, but no deflection."
     },
     "VEHICLE_TYPE_BOAT": {
         "prefix": "VEHICLE_TYPE_BOAT",
         "body": [
             "VEHICLE_TYPE_BOAT$0"
         ],
-        "description": "VEHICLE_TYPE_BOAT"
+        "description": "Hovers over water with lots of friction and some anglar deflection."
     },
     "VEHICLE_TYPE_CAR": {
         "prefix": "VEHICLE_TYPE_CAR",
         "body": [
             "VEHICLE_TYPE_CAR$0"
         ],
-        "description": "VEHICLE_TYPE_CAR"
+        "description": "Another vehicle that bounces along the ground but needs the motors to be driven from external controls or timer events."
     },
     "VEHICLE_TYPE_NONE": {
         "prefix": "VEHICLE_TYPE_NONE",
         "body": [
             "VEHICLE_TYPE_NONE$0"
         ],
-        "description": "VEHICLE_TYPE_NONE"
+        "description": "Turns off vehicle support"
     },
     "VEHICLE_TYPE_SLED": {
         "prefix": "VEHICLE_TYPE_SLED",
         "body": [
             "VEHICLE_TYPE_SLED$0"
         ],
-        "description": "VEHICLE_TYPE_SLED"
+        "description": "Simple vehicle that bumps along the ground, and likes to move along it's local x-axis."
     },
     "VEHICLE_VERTICAL_ATTRACTION_EFFICIENCY": {
         "prefix": "VEHICLE_VERTICAL_ATTRACTION_EFFICIENCY",
         "body": [
             "VEHICLE_VERTICAL_ATTRACTION_EFFICIENCY$0"
         ],
-        "description": "VEHICLE_VERTICAL_ATTRACTION_EFFICIENCY"
+        "description": "slider between 0 (bouncy) and 1 (critically damped) attraction of vehicle's z-axis to orient to the world's z axis (up)"
     },
     "VEHICLE_VERTICAL_ATTRACTION_TIMESCALE": {
         "prefix": "VEHICLE_VERTICAL_ATTRACTION_TIMESCALE",
         "body": [
             "VEHICLE_VERTICAL_ATTRACTION_TIMESCALE$0"
         ],
-        "description": "VEHICLE_VERTICAL_ATTRACTION_TIMESCALE"
+        "description": "exponential timescale (in seconds) for the vehicle to align its z-axis to the world z-axis"
     },
     "VERTICAL": {
         "prefix": "VERTICAL",
         "body": [
             "VERTICAL$0"
         ],
-        "description": "VERTICAL"
+        "description": "Constant to indicate that the orientation of the capsule for a Pathfinding character is vertical."
     },
     "ZERO_ROTATION": {
         "prefix": "ZERO_ROTATION",
         "body": [
             "ZERO_ROTATION$0"
         ],
-        "description": "ZERO_ROTATION"
+        "description": "Represents a rotation that causes no change, that is, an identity rotation. The default value for a variable of rotation type."
     },
     "ZERO_VECTOR": {
         "prefix": "ZERO_VECTOR",
         "body": [
             "ZERO_VECTOR$0"
         ],
-        "description": "ZERO_VECTOR"
+        "description": "The default value for a variable of vector type."
     },
     "XP_ERROR_NONE": {
         "prefix": "XP_ERROR_NONE",
@@ -4393,7 +4393,7 @@
         "body": [
             "CHARACTER_CMD_JUMP$0"
         ],
-        "description": "Makes the character jump.\nThe option list is required to start with a height parameter: [float height]\n* float height – height to jump, between 0.1m and 2.0m"
+        "description": "Makes the character jump.\nThe option list is required to start with a height parameter: [float height]\n* float height - height to jump, between 0.1m and 2.0m"
     },
     "CHARACTER_CMD_SMOOTH_STOP": {
         "prefix": "CHARACTER_CMD_SMOOTH_STOP",
@@ -4428,77 +4428,77 @@
         "body": [
             "PURSUIT_OFFSET$0"
         ],
-        "description": "Go to a position offset from the target.\n- Default Value: ZERO_VECTOR\n- Usage: [PURSUIT_OFFSET, vector offset]"
+        "description": "Go to a position offset from the target."
     },
     "REQUIRE_LINE_OF_SIGHT": {
         "prefix": "REQUIRE_LINE_OF_SIGHT",
         "body": [
             "REQUIRE_LINE_OF_SIGHT$0"
         ],
-        "description": "Define whether the character needs a physical line-of-sight to give chase. When enabled, the character will not pick a new target position while there is a something solid between the character and the target object/agent.\n- Default Value: FALSE\n- Usage: [REQUIRE_LINE_OF_SIGHT, integer boolean]"
+        "description": "Define whether the character needs a physical line-of-sight to give chase. When enabled, the character will not pick a new target position while there is a something solid between the character and the target object/agent."
     },
     "PURSUIT_FUZZ_FACTOR": {
         "prefix": "PURSUIT_FUZZ_FACTOR",
         "body": [
             "PURSUIT_FUZZ_FACTOR$0"
         ],
-        "description": "Selects a random destination near the PURSUIT_OFFSET. The valid fuzz factor range is from 0 to 1, where 1 is most random. This option requires a nonzero PURSUIT_OFFSET.\n- Default Value: 0.0\n- Usage: [PURSUIT_FUZZ_FACTOR, float factor]"
+        "description": "Selects a random destination near the PURSUIT_OFFSET. The valid fuzz factor range is from 0 to 1, where 1 is most random. This option requires a nonzero PURSUIT_OFFSET."
     },
     "PURSUIT_INTERCEPT": {
         "prefix": "PURSUIT_INTERCEPT",
         "body": [
             "PURSUIT_INTERCEPT$0"
         ],
-        "description": "Define whether the character attempts to predict the target's future location.\n- Default Value: FALSE\n- Usage: [PURSUIT_INTERCEPT, integer boolean]"
+        "description": "Define whether the character attempts to predict the target's future location."
     },
     "PURSUIT_GOAL_TOLERANCE": {
         "prefix": "PURSUIT_GOAL_TOLERANCE",
         "body": [
             "PURSUIT_GOAL_TOLERANCE$0"
         ],
-        "description": "Defines approximately how close the character must be to the current goal to consider itself to be at the desired position. The valid range is from 0.25 to 10m.\n- Default Value: Default is proportional to character size\n- Usage: [PURSUIT_GOAL_TOLERANCE, float tolerance]"
+        "description": "Defines approximately how close the character must be to the current goal to consider itself to be at the desired position. The valid range is from 0.25 to 10m."
     },
     "PRIM_MEDIA_CONTROLS": {
         "prefix": "PRIM_MEDIA_CONTROLS",
         "body": [
             "PRIM_MEDIA_CONTROLS$0"
         ],
-        "description": "PRIM_MEDIA_CONTROLS"
+        "description": "Primitive parameter or setting for media controls."
     },
     "PRIM_MEDIA_CONTROLS_STANDARD": {
         "prefix": "PRIM_MEDIA_CONTROLS_STANDARD",
         "body": [
             "PRIM_MEDIA_CONTROLS_STANDARD$0"
         ],
-        "description": "PRIM_MEDIA_CONTROLS_STANDARD"
+        "description": "Primitive parameter or setting for media controls standard."
     },
     "PRIM_MEDIA_CONTROLS_MINI": {
         "prefix": "PRIM_MEDIA_CONTROLS_MINI",
         "body": [
             "PRIM_MEDIA_CONTROLS_MINI$0"
         ],
-        "description": "PRIM_MEDIA_CONTROLS_MINI"
+        "description": "Primitive parameter or setting for media controls mini."
     },
     "AVOID_CHARACTERS": {
         "prefix": "AVOID_CHARACTERS",
         "body": [
             "AVOID_CHARACTERS$0"
         ],
-        "description": "AVOID_CHARACTERS"
+        "description": "LSL constant identifying avoid characters."
     },
     "AVOID_DYNAMIC_OBSTACLES": {
         "prefix": "AVOID_DYNAMIC_OBSTACLES",
         "body": [
             "AVOID_DYNAMIC_OBSTACLES$0"
         ],
-        "description": "AVOID_DYNAMIC_OBSTACLES"
+        "description": "LSL constant identifying avoid dynamic obstacles."
     },
     "AVOID_NONE": {
         "prefix": "AVOID_NONE",
         "body": [
             "AVOID_NONE$0"
         ],
-        "description": "AVOID_NONE"
+        "description": "LSL constant identifying avoid none."
     },
     "SKY_TRACKS": {
         "prefix": "SKY_TRACKS",
@@ -4905,5 +4905,649 @@
             "SERVICE_ERROR$0"
         ],
         "description": "There was an error connecting to the back-end service"
+    },
+    "AGENT_AUTOMATED": {
+        "prefix": "AGENT_AUTOMATED",
+        "body": [
+            "AGENT_AUTOMATED$0"
+        ],
+        "description": "Identifies an avatar registered with Linden Lab as an automated or scripted agent (bot)."
+    },
+    "AGENT_FLOATING_VIA_SCRIPTED_ATTACHMENT": {
+        "prefix": "AGENT_FLOATING_VIA_SCRIPTED_ATTACHMENT",
+        "body": [
+            "AGENT_FLOATING_VIA_SCRIPTED_ATTACHMENT$0"
+        ],
+        "description": "Indicates that the agent is floating because of a scripted attachment using either llSetHoverHeight or llGroundRepel."
+    },
+    "CHANGED_RENDER_MATERIAL": {
+        "prefix": "CHANGED_RENDER_MATERIAL",
+        "body": [
+            "CHANGED_RENDER_MATERIAL$0"
+        ],
+        "description": "Prim material ID or material overrides have changed on one or more faces."
+    },
+    "CLICK_ACTION_DISABLED": {
+        "prefix": "CLICK_ACTION_DISABLED",
+        "body": [
+            "CLICK_ACTION_DISABLED$0"
+        ],
+        "description": "Click-action option for disabled."
+    },
+    "CLICK_ACTION_IGNORE": {
+        "prefix": "CLICK_ACTION_IGNORE",
+        "body": [
+            "CLICK_ACTION_IGNORE$0"
+        ],
+        "description": "Click-action option for ignore."
+    },
+    "COMBAT_CHANNEL": {
+        "prefix": "COMBAT_CHANNEL",
+        "body": [
+            "COMBAT_CHANNEL$0"
+        ],
+        "description": "A channel reserved for combat related log events broadcast to the entire region."
+    },
+    "COMBAT_LOG_ID": {
+        "prefix": "COMBAT_LOG_ID",
+        "body": [
+            "COMBAT_LOG_ID$0"
+        ],
+        "description": "Messages from the region to the combat log will all be from this ID."
+    },
+    "DAMAGEABLE": {
+        "prefix": "DAMAGEABLE",
+        "body": [
+            "DAMAGEABLE$0"
+        ],
+        "description": "If it is contained in the result of llDetectedType, it means what was detected is either an agent that can take damage, or is an object containing a script with either on_damage or final_damage events (able to process damage)."
+    },
+    "GAME_CONTROL_AXIS_LEFTX": {
+        "prefix": "GAME_CONTROL_AXIS_LEFTX",
+        "body": [
+            "GAME_CONTROL_AXIS_LEFTX$0"
+        ],
+        "description": "LSL constant identifying game control axis leftx."
+    },
+    "GAME_CONTROL_AXIS_LEFTY": {
+        "prefix": "GAME_CONTROL_AXIS_LEFTY",
+        "body": [
+            "GAME_CONTROL_AXIS_LEFTY$0"
+        ],
+        "description": "LSL constant identifying game control axis lefty."
+    },
+    "GAME_CONTROL_AXIS_RIGHTX": {
+        "prefix": "GAME_CONTROL_AXIS_RIGHTX",
+        "body": [
+            "GAME_CONTROL_AXIS_RIGHTX$0"
+        ],
+        "description": "LSL constant identifying game control axis rightx."
+    },
+    "GAME_CONTROL_AXIS_RIGHTY": {
+        "prefix": "GAME_CONTROL_AXIS_RIGHTY",
+        "body": [
+            "GAME_CONTROL_AXIS_RIGHTY$0"
+        ],
+        "description": "LSL constant identifying game control axis righty."
+    },
+    "GAME_CONTROL_AXIS_TRIGGERLEFT": {
+        "prefix": "GAME_CONTROL_AXIS_TRIGGERLEFT",
+        "body": [
+            "GAME_CONTROL_AXIS_TRIGGERLEFT$0"
+        ],
+        "description": "LSL constant identifying game control axis triggerleft."
+    },
+    "GAME_CONTROL_AXIS_TRIGGERRIGHT": {
+        "prefix": "GAME_CONTROL_AXIS_TRIGGERRIGHT",
+        "body": [
+            "GAME_CONTROL_AXIS_TRIGGERRIGHT$0"
+        ],
+        "description": "LSL constant identifying game control axis triggerright."
+    },
+    "GAME_CONTROL_BUTTON_A": {
+        "prefix": "GAME_CONTROL_BUTTON_A",
+        "body": [
+            "GAME_CONTROL_BUTTON_A$0"
+        ],
+        "description": "LSL constant identifying game control button a."
+    },
+    "GAME_CONTROL_BUTTON_B": {
+        "prefix": "GAME_CONTROL_BUTTON_B",
+        "body": [
+            "GAME_CONTROL_BUTTON_B$0"
+        ],
+        "description": "LSL constant identifying game control button b."
+    },
+    "GAME_CONTROL_BUTTON_BACK": {
+        "prefix": "GAME_CONTROL_BUTTON_BACK",
+        "body": [
+            "GAME_CONTROL_BUTTON_BACK$0"
+        ],
+        "description": "LSL constant identifying game control button back."
+    },
+    "GAME_CONTROL_BUTTON_DPAD_DOWN": {
+        "prefix": "GAME_CONTROL_BUTTON_DPAD_DOWN",
+        "body": [
+            "GAME_CONTROL_BUTTON_DPAD_DOWN$0"
+        ],
+        "description": "LSL constant identifying game control button dpad down."
+    },
+    "GAME_CONTROL_BUTTON_DPAD_LEFT": {
+        "prefix": "GAME_CONTROL_BUTTON_DPAD_LEFT",
+        "body": [
+            "GAME_CONTROL_BUTTON_DPAD_LEFT$0"
+        ],
+        "description": "LSL constant identifying game control button dpad left."
+    },
+    "GAME_CONTROL_BUTTON_DPAD_RIGHT": {
+        "prefix": "GAME_CONTROL_BUTTON_DPAD_RIGHT",
+        "body": [
+            "GAME_CONTROL_BUTTON_DPAD_RIGHT$0"
+        ],
+        "description": "LSL constant identifying game control button dpad right."
+    },
+    "GAME_CONTROL_BUTTON_DPAD_UP": {
+        "prefix": "GAME_CONTROL_BUTTON_DPAD_UP",
+        "body": [
+            "GAME_CONTROL_BUTTON_DPAD_UP$0"
+        ],
+        "description": "LSL constant identifying game control button dpad up."
+    },
+    "GAME_CONTROL_BUTTON_EAST": {
+        "prefix": "GAME_CONTROL_BUTTON_EAST",
+        "body": [
+            "GAME_CONTROL_BUTTON_EAST$0"
+        ],
+        "description": "LSL constant identifying game control button east."
+    },
+    "GAME_CONTROL_BUTTON_GUIDE": {
+        "prefix": "GAME_CONTROL_BUTTON_GUIDE",
+        "body": [
+            "GAME_CONTROL_BUTTON_GUIDE$0"
+        ],
+        "description": "LSL constant identifying game control button guide."
+    },
+    "GAME_CONTROL_BUTTON_LEFTSHOULDER": {
+        "prefix": "GAME_CONTROL_BUTTON_LEFTSHOULDER",
+        "body": [
+            "GAME_CONTROL_BUTTON_LEFTSHOULDER$0"
+        ],
+        "description": "LSL constant identifying game control button leftshoulder."
+    },
+    "GAME_CONTROL_BUTTON_LEFTSTICK": {
+        "prefix": "GAME_CONTROL_BUTTON_LEFTSTICK",
+        "body": [
+            "GAME_CONTROL_BUTTON_LEFTSTICK$0"
+        ],
+        "description": "LSL constant identifying game control button leftstick."
+    },
+    "GAME_CONTROL_BUTTON_MISC1": {
+        "prefix": "GAME_CONTROL_BUTTON_MISC1",
+        "body": [
+            "GAME_CONTROL_BUTTON_MISC1$0"
+        ],
+        "description": "LSL constant identifying game control button misc1."
+    },
+    "GAME_CONTROL_BUTTON_NORTH": {
+        "prefix": "GAME_CONTROL_BUTTON_NORTH",
+        "body": [
+            "GAME_CONTROL_BUTTON_NORTH$0"
+        ],
+        "description": "LSL constant identifying game control button north."
+    },
+    "GAME_CONTROL_BUTTON_PADDLE1": {
+        "prefix": "GAME_CONTROL_BUTTON_PADDLE1",
+        "body": [
+            "GAME_CONTROL_BUTTON_PADDLE1$0"
+        ],
+        "description": "LSL constant identifying game control button paddle1."
+    },
+    "GAME_CONTROL_BUTTON_PADDLE2": {
+        "prefix": "GAME_CONTROL_BUTTON_PADDLE2",
+        "body": [
+            "GAME_CONTROL_BUTTON_PADDLE2$0"
+        ],
+        "description": "LSL constant identifying game control button paddle2."
+    },
+    "GAME_CONTROL_BUTTON_PADDLE3": {
+        "prefix": "GAME_CONTROL_BUTTON_PADDLE3",
+        "body": [
+            "GAME_CONTROL_BUTTON_PADDLE3$0"
+        ],
+        "description": "LSL constant identifying game control button paddle3."
+    },
+    "GAME_CONTROL_BUTTON_PADDLE4": {
+        "prefix": "GAME_CONTROL_BUTTON_PADDLE4",
+        "body": [
+            "GAME_CONTROL_BUTTON_PADDLE4$0"
+        ],
+        "description": "LSL constant identifying game control button paddle4."
+    },
+    "GAME_CONTROL_BUTTON_RIGHTSHOULDER": {
+        "prefix": "GAME_CONTROL_BUTTON_RIGHTSHOULDER",
+        "body": [
+            "GAME_CONTROL_BUTTON_RIGHTSHOULDER$0"
+        ],
+        "description": "LSL constant identifying game control button rightshoulder."
+    },
+    "GAME_CONTROL_BUTTON_RIGHTSTICK": {
+        "prefix": "GAME_CONTROL_BUTTON_RIGHTSTICK",
+        "body": [
+            "GAME_CONTROL_BUTTON_RIGHTSTICK$0"
+        ],
+        "description": "LSL constant identifying game control button rightstick."
+    },
+    "GAME_CONTROL_BUTTON_SOUTH": {
+        "prefix": "GAME_CONTROL_BUTTON_SOUTH",
+        "body": [
+            "GAME_CONTROL_BUTTON_SOUTH$0"
+        ],
+        "description": "LSL constant identifying game control button south."
+    },
+    "GAME_CONTROL_BUTTON_START": {
+        "prefix": "GAME_CONTROL_BUTTON_START",
+        "body": [
+            "GAME_CONTROL_BUTTON_START$0"
+        ],
+        "description": "LSL constant identifying game control button start."
+    },
+    "GAME_CONTROL_BUTTON_TOUCHPAD": {
+        "prefix": "GAME_CONTROL_BUTTON_TOUCHPAD",
+        "body": [
+            "GAME_CONTROL_BUTTON_TOUCHPAD$0"
+        ],
+        "description": "LSL constant identifying game control button touchpad."
+    },
+    "GAME_CONTROL_BUTTON_WEST": {
+        "prefix": "GAME_CONTROL_BUTTON_WEST",
+        "body": [
+            "GAME_CONTROL_BUTTON_WEST$0"
+        ],
+        "description": "LSL constant identifying game control button west."
+    },
+    "GAME_CONTROL_BUTTON_X": {
+        "prefix": "GAME_CONTROL_BUTTON_X",
+        "body": [
+            "GAME_CONTROL_BUTTON_X$0"
+        ],
+        "description": "LSL constant identifying game control button x."
+    },
+    "GAME_CONTROL_BUTTON_Y": {
+        "prefix": "GAME_CONTROL_BUTTON_Y",
+        "body": [
+            "GAME_CONTROL_BUTTON_Y$0"
+        ],
+        "description": "LSL constant identifying game control button y."
+    },
+    "HTTP_EXTENDED_ERROR": {
+        "prefix": "HTTP_EXTENDED_ERROR",
+        "body": [
+            "HTTP_EXTENDED_ERROR$0"
+        ],
+        "description": "HTTP request option for configuring extended error."
+    },
+    "INVENTORY_MATERIAL": {
+        "prefix": "INVENTORY_MATERIAL",
+        "body": [
+            "INVENTORY_MATERIAL$0"
+        ],
+        "description": "Used with Inventory functions and specifies inventory items of MATERIAL type will be retrieved by the function."
+    },
+    "LlGetGroup": {
+        "prefix": "LlGetGroup",
+        "body": [
+            "LlGetGroup$0"
+        ],
+        "description": "LSL constant identifying llgetgroup."
+    },
+    "NAK": {
+        "prefix": "NAK",
+        "body": [
+            "NAK$0"
+        ],
+        "description": "NAK is a value returned by the llGetNotecardLineSync function when the requested notecard data is not available due to the notecard not being in the region notecard cache. The value returned equals the characters with codes \"10, 21, 10\", which is to say the ASCII \"NAK\" character surrounded by two newline characters."
+    },
+    "OBJECT_DAMAGE": {
+        "prefix": "OBJECT_DAMAGE",
+        "body": [
+            "OBJECT_DAMAGE$0"
+        ],
+        "description": "Gets the damage amount delivered by a prim on collision."
+    },
+    "OBJECT_DAMAGE_TYPE": {
+        "prefix": "OBJECT_DAMAGE_TYPE",
+        "body": [
+            "OBJECT_DAMAGE_TYPE$0"
+        ],
+        "description": "Gets the damage type that is applied when this prim collides with another object. Can match one of the DAMAGE_TYPE_* constants, be a custom damage type or be a repurposed damage field."
+    },
+    "OBJECT_GROUP_TAG": {
+        "prefix": "OBJECT_GROUP_TAG",
+        "body": [
+            "OBJECT_GROUP_TAG$0"
+        ],
+        "description": "This is a flag used with llGetObjectDetails to get the active group tag/title of the avatar defined in key."
+    },
+    "OBJECT_HEALTH": {
+        "prefix": "OBJECT_HEALTH",
+        "body": [
+            "OBJECT_HEALTH$0"
+        ],
+        "description": "Gets the health of the object."
+    },
+    "PARCEL_DETAILS_FLAGS": {
+        "prefix": "PARCEL_DETAILS_FLAGS",
+        "body": [
+            "PARCEL_DETAILS_FLAGS$0"
+        ],
+        "description": "Used with llGetParcelDetails, see llGetParcelFlags for the meaning of the returned flags."
+    },
+    "PERMISSION_GAME_CONTROL": {
+        "prefix": "PERMISSION_GAME_CONTROL",
+        "body": [
+            "PERMISSION_GAME_CONTROL$0"
+        ],
+        "description": "Permission flag granting or identifying game control."
+    },
+    "PERMISSION_PRIVILEGED_LAND_ACCESS": {
+        "prefix": "PERMISSION_PRIVILEGED_LAND_ACCESS",
+        "body": [
+            "PERMISSION_PRIVILEGED_LAND_ACCESS$0"
+        ],
+        "description": "Required Permission to use the llSetParcelForSale() function."
+    },
+    "PRIM_CLICK_ACTION": {
+        "prefix": "PRIM_CLICK_ACTION",
+        "body": [
+            "PRIM_CLICK_ACTION$0"
+        ],
+        "description": "Which action will be taken when left-clicking the prim. Followed by one of these flags"
+    },
+    "PRIM_DAMAGE": {
+        "prefix": "PRIM_DAMAGE",
+        "body": [
+            "PRIM_DAMAGE$0"
+        ],
+        "description": "Sets the damage amount and damage type delivered by a prim on collision."
+    },
+    "PRIM_HEALTH": {
+        "prefix": "PRIM_HEALTH",
+        "body": [
+            "PRIM_HEALTH$0"
+        ],
+        "description": "Used to get or set the health of the object. Objects start with 0 health by default."
+    },
+    "PRIM_PROJECTOR": {
+        "prefix": "PRIM_PROJECTOR",
+        "body": [
+            "PRIM_PROJECTOR$0"
+        ],
+        "description": "The light projection settings for this prim. If the prim is not a projector the texture key will be NULL_KEY."
+    },
+    "PRIM_REFLECTION_PROBE": {
+        "prefix": "PRIM_REFLECTION_PROBE",
+        "body": [
+            "PRIM_REFLECTION_PROBE$0"
+        ],
+        "description": "PRIM_REFLECTION_PROBE is used to change the reflection probe configuration of the prim. Usage: [ PRIM_REFLECTION_PROBE, float ambiance, float clip_distance, integer flags ]"
+    },
+    "PRIM_REFLECTION_PROBE_BOX": {
+        "prefix": "PRIM_REFLECTION_PROBE_BOX",
+        "body": [
+            "PRIM_REFLECTION_PROBE_BOX$0"
+        ],
+        "description": "Used with PRIM_REFLECTION_PROBE. A reflection probe is a sphere by default, otherwise a box if this flag is set on the corresponding prim."
+    },
+    "PRIM_REFLECTION_PROBE_DYNAMIC": {
+        "prefix": "PRIM_REFLECTION_PROBE_DYNAMIC",
+        "body": [
+            "PRIM_REFLECTION_PROBE_DYNAMIC$0"
+        ],
+        "description": "Used with PRIM_REFLECTION_PROBE. A reflection probe does not image avatars by default, otherwise it images avatars if this flag is set on the corresponding prim. Imaging avatars in reflection probes has a performance cost."
+    },
+    "PRIM_REFLECTION_PROBE_MIRROR": {
+        "prefix": "PRIM_REFLECTION_PROBE_MIRROR",
+        "body": [
+            "PRIM_REFLECTION_PROBE_MIRROR$0"
+        ],
+        "description": "Used with PRIM_REFLECTION_PROBE. When enabled, objects with low-roughness PBR materials objects act as a mirror. Note that mirrors do not reflect avatars unless PRIM_REFLECTION_PROBE_DYNAMIC is also set. Rendering mirrors has a performance cost."
+    },
+    "PRIM_RENDER_MATERIAL": {
+        "prefix": "PRIM_RENDER_MATERIAL",
+        "body": [
+            "PRIM_RENDER_MATERIAL$0"
+        ],
+        "description": "Used to get or set the material settings of a prim's face. Usage: [ PRIM_RENDER_MATERIAL, integer face, string render_material ]"
+    },
+    "PRIM_SCULPT_FLAG_ANIMESH": {
+        "prefix": "PRIM_SCULPT_FLAG_ANIMESH",
+        "body": [
+            "PRIM_SCULPT_FLAG_ANIMESH$0"
+        ],
+        "description": "PRIM_SCULPT_FLAG_ANIMESH is a read-only flag set when the object is an Animated mesh. Sculpted Prims: FAQ"
+    },
+    "PRIM_SCULPT_TYPE_MESH": {
+        "prefix": "PRIM_SCULPT_TYPE_MESH",
+        "body": [
+            "PRIM_SCULPT_TYPE_MESH$0"
+        ],
+        "description": "When used in conjunction with type_sculpt_const a Mesh object produced."
+    },
+    "REZ_DAMAGE": {
+        "prefix": "REZ_DAMAGE",
+        "body": [
+            "REZ_DAMAGE$0"
+        ],
+        "description": "Sets the damage amount delivered by a prim on collision when the object is rezzed."
+    },
+    "REZ_DAMAGE_TYPE": {
+        "prefix": "REZ_DAMAGE_TYPE",
+        "body": [
+            "REZ_DAMAGE_TYPE$0"
+        ],
+        "description": "Sets the damage type when rezzed to apply when this prim collides with another object. Can match one of the DAMAGE_TYPE_* constants, be a custom damage type or be a repurposed damage field."
+    },
+    "SIM_STAT_ACTIVE_SCRIPT_COUNT": {
+        "prefix": "SIM_STAT_ACTIVE_SCRIPT_COUNT",
+        "body": [
+            "SIM_STAT_ACTIVE_SCRIPT_COUNT$0"
+        ],
+        "description": "Simulator statistic identifier for active script count."
+    },
+    "SIM_STAT_AGENT_COUNT": {
+        "prefix": "SIM_STAT_AGENT_COUNT",
+        "body": [
+            "SIM_STAT_AGENT_COUNT$0"
+        ],
+        "description": "Simulator statistic identifier for agent count."
+    },
+    "SIM_STAT_AGENT_MS": {
+        "prefix": "SIM_STAT_AGENT_MS",
+        "body": [
+            "SIM_STAT_AGENT_MS$0"
+        ],
+        "description": "Simulator statistic identifier for agent ms."
+    },
+    "SIM_STAT_AGENT_UPDATES": {
+        "prefix": "SIM_STAT_AGENT_UPDATES",
+        "body": [
+            "SIM_STAT_AGENT_UPDATES$0"
+        ],
+        "description": "Simulator statistic identifier for agent updates."
+    },
+    "SIM_STAT_AI_MS": {
+        "prefix": "SIM_STAT_AI_MS",
+        "body": [
+            "SIM_STAT_AI_MS$0"
+        ],
+        "description": "Simulator statistic identifier for ai ms."
+    },
+    "SIM_STAT_ASSET_DOWNLOADS": {
+        "prefix": "SIM_STAT_ASSET_DOWNLOADS",
+        "body": [
+            "SIM_STAT_ASSET_DOWNLOADS$0"
+        ],
+        "description": "Simulator statistic identifier for asset downloads."
+    },
+    "SIM_STAT_ASSET_UPLOADS": {
+        "prefix": "SIM_STAT_ASSET_UPLOADS",
+        "body": [
+            "SIM_STAT_ASSET_UPLOADS$0"
+        ],
+        "description": "Simulator statistic identifier for asset uploads."
+    },
+    "SIM_STAT_CHILD_AGENT_COUNT": {
+        "prefix": "SIM_STAT_CHILD_AGENT_COUNT",
+        "body": [
+            "SIM_STAT_CHILD_AGENT_COUNT$0"
+        ],
+        "description": "Simulator statistic identifier for child agent count."
+    },
+    "SIM_STAT_FRAME_MS": {
+        "prefix": "SIM_STAT_FRAME_MS",
+        "body": [
+            "SIM_STAT_FRAME_MS$0"
+        ],
+        "description": "Simulator statistic identifier for frame ms."
+    },
+    "SIM_STAT_IMAGE_MS": {
+        "prefix": "SIM_STAT_IMAGE_MS",
+        "body": [
+            "SIM_STAT_IMAGE_MS$0"
+        ],
+        "description": "Simulator statistic identifier for image ms."
+    },
+    "SIM_STAT_IO_PUMP_MS": {
+        "prefix": "SIM_STAT_IO_PUMP_MS",
+        "body": [
+            "SIM_STAT_IO_PUMP_MS$0"
+        ],
+        "description": "Simulator statistic identifier for io pump ms."
+    },
+    "SIM_STAT_NET_MS": {
+        "prefix": "SIM_STAT_NET_MS",
+        "body": [
+            "SIM_STAT_NET_MS$0"
+        ],
+        "description": "Simulator statistic identifier for net ms."
+    },
+    "SIM_STAT_OTHER_MS": {
+        "prefix": "SIM_STAT_OTHER_MS",
+        "body": [
+            "SIM_STAT_OTHER_MS$0"
+        ],
+        "description": "Simulator statistic identifier for other ms."
+    },
+    "SIM_STAT_PACKETS_IN": {
+        "prefix": "SIM_STAT_PACKETS_IN",
+        "body": [
+            "SIM_STAT_PACKETS_IN$0"
+        ],
+        "description": "Simulator statistic identifier for packets in."
+    },
+    "SIM_STAT_PACKETS_OUT": {
+        "prefix": "SIM_STAT_PACKETS_OUT",
+        "body": [
+            "SIM_STAT_PACKETS_OUT$0"
+        ],
+        "description": "Simulator statistic identifier for packets out."
+    },
+    "SIM_STAT_PHYSICS_FPS": {
+        "prefix": "SIM_STAT_PHYSICS_FPS",
+        "body": [
+            "SIM_STAT_PHYSICS_FPS$0"
+        ],
+        "description": "Simulator statistic identifier for physics fps."
+    },
+    "SIM_STAT_PHYSICS_MS": {
+        "prefix": "SIM_STAT_PHYSICS_MS",
+        "body": [
+            "SIM_STAT_PHYSICS_MS$0"
+        ],
+        "description": "Simulator statistic identifier for physics ms."
+    },
+    "SIM_STAT_PHYSICS_OTHER_MS": {
+        "prefix": "SIM_STAT_PHYSICS_OTHER_MS",
+        "body": [
+            "SIM_STAT_PHYSICS_OTHER_MS$0"
+        ],
+        "description": "Simulator statistic identifier for physics other ms."
+    },
+    "SIM_STAT_PHYSICS_SHAPE_MS": {
+        "prefix": "SIM_STAT_PHYSICS_SHAPE_MS",
+        "body": [
+            "SIM_STAT_PHYSICS_SHAPE_MS$0"
+        ],
+        "description": "Simulator statistic identifier for physics shape ms."
+    },
+    "SIM_STAT_PHYSICS_STEP_MS": {
+        "prefix": "SIM_STAT_PHYSICS_STEP_MS",
+        "body": [
+            "SIM_STAT_PHYSICS_STEP_MS$0"
+        ],
+        "description": "Simulator statistic identifier for physics step ms."
+    },
+    "SIM_STAT_SCRIPT_EPS": {
+        "prefix": "SIM_STAT_SCRIPT_EPS",
+        "body": [
+            "SIM_STAT_SCRIPT_EPS$0"
+        ],
+        "description": "Simulator statistic identifier for script eps."
+    },
+    "SIM_STAT_SCRIPT_MS": {
+        "prefix": "SIM_STAT_SCRIPT_MS",
+        "body": [
+            "SIM_STAT_SCRIPT_MS$0"
+        ],
+        "description": "Simulator statistic identifier for script ms."
+    },
+    "SIM_STAT_SCRIPT_RUN_PCT": {
+        "prefix": "SIM_STAT_SCRIPT_RUN_PCT",
+        "body": [
+            "SIM_STAT_SCRIPT_RUN_PCT$0"
+        ],
+        "description": "Simulator statistic identifier for script run pct."
+    },
+    "SIM_STAT_SLEEP_MS": {
+        "prefix": "SIM_STAT_SLEEP_MS",
+        "body": [
+            "SIM_STAT_SLEEP_MS$0"
+        ],
+        "description": "Simulator statistic identifier for sleep ms."
+    },
+    "SIM_STAT_SPARE_MS": {
+        "prefix": "SIM_STAT_SPARE_MS",
+        "body": [
+            "SIM_STAT_SPARE_MS$0"
+        ],
+        "description": "Simulator statistic identifier for spare ms."
+    },
+    "SIM_STAT_UNACKED_BYTES": {
+        "prefix": "SIM_STAT_UNACKED_BYTES",
+        "body": [
+            "SIM_STAT_UNACKED_BYTES$0"
+        ],
+        "description": "Simulator statistic identifier for unacked bytes."
+    },
+    "STATUS_DIE_AT_NO_ENTRY": {
+        "prefix": "STATUS_DIE_AT_NO_ENTRY",
+        "body": [
+            "STATUS_DIE_AT_NO_ENTRY$0"
+        ],
+        "description": "Causes the object to be deleted when it attempts to enter a parcel that prohibits object entry or is full. Overridden by STATUS_DIE_AT_NO_ENTRY. Objects that are no-copy ignore this setting and remain in world."
+    },
+    "TARGETED_EMAIL_OBJECT_OWNER": {
+        "prefix": "TARGETED_EMAIL_OBJECT_OWNER",
+        "body": [
+            "TARGETED_EMAIL_OBJECT_OWNER$0"
+        ],
+        "description": "Causes the message to be sent to the owner of the calling object"
+    },
+    "VEHICLE_FLAG_BLOCK_INTERFERENCE": {
+        "prefix": "VEHICLE_FLAG_BLOCK_INTERFERENCE",
+        "body": [
+            "VEHICLE_FLAG_BLOCK_INTERFERENCE$0"
+        ],
+        "description": "When set, this flag prevents the vehicle you're sitting on from being pushed by an attachment you're wearing."
     }
 }
