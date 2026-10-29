@@ -6,6 +6,10 @@ All notable changes to the "lsl" extension will be documented in this file.
 ## [Unreleased]
 - Added Code Snippets for LSL All Constants Description.
 
+## [1.6.0] - 2026-10-29
+### Added
+- Add variable IntelliSense completions
+
 ## [1.5.1] - 2026-10-25
 ### Fixed
 - fix: preprocessed diagnostic line mapping

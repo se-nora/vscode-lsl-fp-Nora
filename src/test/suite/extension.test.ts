@@ -3,7 +3,7 @@ import * as assert from 'assert';
 // You can import and use all API from the 'vscode' module
 // as well as import your extension to test it
 import * as vscode from 'vscode';
-import { parseFirestormDiagnosticLocation, parseFirestormResult } from '../../extension';
+import { getDeclaredVariables, parseFirestormDiagnosticLocation, parseFirestormResult } from '../../extension';
 
 suite('Extension Test Suite', () => {
 	vscode.window.showInformationMessage('Start all tests.');
@@ -11,6 +11,27 @@ suite('Extension Test Suite', () => {
 	test('Sample test', () => {
 		assert.strictEqual(-1, [1, 2, 3].indexOf(5));
 		assert.strictEqual(-1, [1, 2, 3].indexOf(0));
+	});
+
+	test('finds declared variables for completion and ignores comments and strings', () => {
+		assert.deepStrictEqual(
+			getDeclaredVariables(
+				'float blablabla;\n' +
+				'integer count = 0;\n' +
+				'string message = "float notAVariable;";\n' +
+				'// key alsoNotAVariable;\n' +
+				'/* vector neitherIsThis; */\n' +
+				'list items;\n' +
+				'float getValue(integer parameter) { return parameter; }'
+			),
+			[
+				{ name: 'blablabla', type: 'float' },
+				{ name: 'count', type: 'integer' },
+				{ name: 'message', type: 'string' },
+				{ name: 'items', type: 'list' },
+				{ name: 'parameter', type: 'integer' }
+			]
+		);
 	});
 
 	test('parses Firestorm compile results', () => {

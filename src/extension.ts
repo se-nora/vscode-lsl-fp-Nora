@@ -45,6 +45,28 @@ export function parseFirestormDiagnosticLocation(
 	return { line: lineIsZeroBased ? line : line - 1, character: column - 1 };
 }
 
+export interface DeclaredVariable {
+	name: string;
+	type: string;
+}
+
+export function getDeclaredVariables(text: string): DeclaredVariable[] {
+	const code = text.replace(/\/\*[\s\S]*?\*\/|\/\/[^\r\n]*|"(?:\\.|[^"\\])*"/g, match =>
+		match.replace(/[^\r\n]/g, ' ')
+	);
+	const variables = new Map<string, DeclaredVariable>();
+	const declarationPattern = /\b(integer|float|string|key|vector|rotation|list)\s+([A-Za-z_]\w*)\b/g;
+	let match: RegExpExecArray | null;
+	while ((match = declarationPattern.exec(code)) !== null) {
+		if (/^\s*\(/.test(code.slice(declarationPattern.lastIndex))) {
+			continue;
+		}
+		variables.set(match[2], { name: match[2], type: match[1] });
+	}
+
+	return [...variables.values()];
+}
+
 function decodeXmlText(value: string): string {
 	return value
 		.replace(/&#x([0-9a-f]+);/gi, (entity, hex: string) => {
@@ -322,6 +344,16 @@ class SnippetHoverProvider implements vscode.HoverProvider {
 	}
 }
 
+class VariableCompletionProvider implements vscode.CompletionItemProvider {
+	provideCompletionItems(document: vscode.TextDocument): vscode.CompletionItem[] {
+		return getDeclaredVariables(document.getText()).map(variable => {
+			const item = new vscode.CompletionItem(variable.name, vscode.CompletionItemKind.Variable);
+			item.detail = variable.type;
+			return item;
+		});
+	}
+}
+
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
@@ -341,6 +373,12 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.languages.registerHoverProvider(
 			{ scheme: 'file', language: 'lsl' },
 			hoverProvider
+		)
+	);
+	context.subscriptions.push(
+		vscode.languages.registerCompletionItemProvider(
+			{ scheme: 'file', language: 'lsl' },
+			new VariableCompletionProvider()
 		)
 	);
 
