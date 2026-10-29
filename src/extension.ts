@@ -54,6 +54,7 @@ export interface DeclaredSymbol {
 	name: string;
 	kind: 'variable' | 'function' | 'define';
 	type?: string;
+	parameters?: string;
 }
 
 function stripCommentsAndStrings(text: string): string {
@@ -85,15 +86,24 @@ export function getDeclaredSymbols(text: string): DeclaredSymbol[] {
 			{ name: variable.name, kind: 'variable', type: variable.type }
 		])
 	);
-	const functionPattern = /\b(integer|float|string|key|vector|rotation|list|void)\s+([A-Za-z_]\w*)\s*\(/g;
+	const functionPattern = /\b(integer|float|string|key|vector|rotation|list|void)\s+([A-Za-z_]\w*)\s*\(([^)]*)\)/g;
 	let match: RegExpExecArray | null;
 	while ((match = functionPattern.exec(code)) !== null) {
-		symbols.set(match[2], { name: match[2], kind: 'function', type: match[1] });
+		symbols.set(match[2], {
+			name: match[2],
+			kind: 'function',
+			type: match[1],
+			parameters: match[3].trim()
+		});
 	}
 
-	const definePattern = /^\s*#\s*define\s+([A-Za-z_]\w*)/gm;
+	const definePattern = /^\s*#\s*define\s+([A-Za-z_]\w*)(?:\(([^)]*)\))?/gm;
 	while ((match = definePattern.exec(code)) !== null) {
-		symbols.set(match[1], { name: match[1], kind: 'define' });
+		symbols.set(match[1], {
+			name: match[1],
+			kind: 'define',
+			...(match[2] !== undefined ? { parameters: match[2].trim() } : {})
+		});
 	}
 
 	return [...symbols.values()];
@@ -462,7 +472,11 @@ class VariableCompletionProvider implements vscode.CompletionItemProvider {
 				: symbol.kind === 'define'
 					? vscode.CompletionItemKind.Constant
 					: vscode.CompletionItemKind.Variable;
-			const item = new vscode.CompletionItem(symbol.name, kind);
+			const label = symbol.kind === 'function' ||
+				(symbol.kind === 'define' && symbol.parameters !== undefined)
+				? { label: symbol.name, detail: `(${symbol.parameters ?? ''})` }
+				: symbol.name;
+			const item = new vscode.CompletionItem(label, kind);
 			item.detail = symbol.kind === 'define' ? '#define' : symbol.type;
 			return item;
 		});

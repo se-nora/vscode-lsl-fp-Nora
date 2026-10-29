@@ -4,7 +4,7 @@ This extension adds syntaxes Highlighting and Code Snippets for Firestorm LSL Pr
 
 ## Features
 
-Support for Firestorm LSL Preprocessor syntax highlighting, code snippets, and completion suggestions for variables, functions, and `#define` names declared in the current script and its included files.
+Support for Firestorm LSL Preprocessor syntax highlighting, code snippets, and completion suggestions for variables, functions and function-like `#define` macros (including their parameters), and object-like `#define` names declared in the current script and its included files.
 
 Image Sample:
 

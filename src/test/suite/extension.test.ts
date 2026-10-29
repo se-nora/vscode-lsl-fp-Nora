@@ -54,11 +54,37 @@ suite('Extension Test Suite', () => {
 			[
 				{ name: 'input', kind: 'variable', type: 'float' },
 				{ name: 'message', kind: 'variable', type: 'string' },
-				{ name: 'getCount', kind: 'function', type: 'integer' },
-				{ name: 'calculate', kind: 'function', type: 'float' },
+				{ name: 'getCount', kind: 'function', type: 'integer', parameters: '' },
+				{ name: 'calculate', kind: 'function', type: 'float', parameters: 'float input' },
 				{ name: 'MAX_COUNT', kind: 'define' },
-				{ name: 'FORMAT', kind: 'define' }
+				{ name: 'FORMAT', kind: 'define', parameters: 'value' }
 			]
+		);
+	});
+
+	test('preserves function-like define parameters without mistaking replacements for parameters', () => {
+		assert.deepStrictEqual(
+			getDeclaredSymbols(
+				'#define WRAP(value, ...) ((value) + __VA_ARGS__)\n' +
+				'#define CONSTANT (1 + 2)'
+			).filter(symbol => symbol.kind === 'define'),
+			[
+				{ name: 'WRAP', kind: 'define', parameters: 'value, ...' },
+				{ name: 'CONSTANT', kind: 'define' }
+			]
+		);
+	});
+
+	test('preserves all function parameters for completion labels', () => {
+		assert.deepStrictEqual(
+			getDeclaredSymbols('list makeVector(vector start, vector end, float amount) { }')
+				.find(symbol => symbol.name === 'makeVector'),
+			{
+				name: 'makeVector',
+				kind: 'function',
+				type: 'list',
+				parameters: 'vector start, vector end, float amount'
+			}
 		);
 	});
 
