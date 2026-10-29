@@ -34,42 +34,9 @@ The Firestorm bridge change is in `indra/newview/llpreviewscript.cpp`; rebuild F
 - Code Snippets for LSL All Constants Description.
 
 
-## Release Notes
+## Changelog
 
-
-### 1.2.1 (2019-04-29)
-- Fixed switch scope in Code Snippets
-
-### 1.2.0 (2019-04-29)
-- Added Code Snippets for "pragma once" implement
-
-### 1.1.3 (2019-04-19)
-- Added Code Snippets for Missing Constants
-
-### 1.1.2 (2019-04-19)
-- Fixed listen parameter in Code Snippets
-
-### 1.1.1 (2019-04-10)
-- Added Syntax Highlight for 'state' keyword
-- Remove Syntax Highlight for junk keywords
-
-### 1.1.0 (2019-04-10)
-- Added Code Snippets for LSL Event
-- Added Code Snippets for XP Constants
-- Added Code Snippets for llTransfer* Function Error Tag Constants
-
-### 1.0.0 (2019-04-10)
-
-- Initial release
-- Added syntax Highlighting for LSL Flow Control.
-- Added syntax Highlighting for LSL Types.
-- Added syntax Highlighting for Firestorm LSL Preprocesser.
-- Added Code Snippets for LSL Flow Control.
-- Added Code Snippets for switch of Firestorm LSL Preprocesser.
-- Added Code Snippets for LSL All Function.
-- Added Code Snippets for LSL All Constants except Description.
-
------------------------------------------------------------------------------------------------------------
+See [CHANGELOG.md](CHANGELOG.md) for the release history.
 
 ### For more information
 
