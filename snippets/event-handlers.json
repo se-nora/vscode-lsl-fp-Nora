@@ -117,7 +117,27 @@
             "\t$0",
             "}"
         ],
-        "description": "Event ID The agent has denied experience permission. \n* key agent_id – avatar UUID that denied permission. \n* integer reason – Reason for denial; one of the Experience Tools XP_ERROR_* errors flags.\nThis event may be generated in many cases:\n In response to a call to llRequestExperiencePermissions if any of the following is true:\n  The agent does not respond to the experience permission dialog. This will happen after a long delay if the agent is running a viewer which doesn't understand the request or if the agent has blocked the object.\n  The agent selects \"Block Experience\" in the experience permission dialog.\n  The agent has previously blocked the experience through another experience permission dialog or through the experience profile.\n  An attachment is asking for permission from an agent other than its owner.\n  The experience cannot run on the region because it is blocked or exceeds the maturity rating of the region.\n The experience can no longer run:\n  The script has moved to a region where the experience cannot run because it is blocked or it exceeds the maturity rating of the region.\n  The script has moved to a parcel where it is blocked or not allowed.\n  The agent has blocked the experience from the experience profile."
+        "description": "Triggered when an agent denies an experience permission request or the experience can no longer run for the agent.\n* key agent_id – UUID of the agent who denied permission\n* integer reason – XP_ERROR_* code explaining the denial."
+    },
+    "final_damage Event": {
+        "prefix": "final_damage",
+        "body": [
+            "final_damage(integer ${1:num_detected})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Triggered after all on_damage events have run and damage has been applied to the avatar or distributed to seated avatars.\n* integer num_detected – number of damage events applied."
+    },
+    "game_control Event": {
+        "prefix": "game_control",
+        "body": [
+            "game_control(key ${1:id}, integer ${2:button_levels}, list ${3:axes})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Triggered when a script with PERMISSION_GAME_CONTROL receives game-controller input.\n* key id – UUID of the agent providing input\n* integer button_levels – bitfield of currently pressed GAME_CONTROL_BUTTON_* buttons\n* list axes – current game-controller axis values."
     },
     "http_request Event": {
         "prefix": "http_request",
@@ -168,6 +188,16 @@
             "}"
         ],
         "description": "Triggered in the root when a physical object or attached avatar starts colliding with land\n* vector pos – position of collision with the ground"
+    },
+    "linkset_data Event": {
+        "prefix": "linkset_data",
+        "body": [
+            "linkset_data(integer ${1:action}, string ${2:name}, string ${3:value})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Triggered in every script in a linkset when its datastore is modified by an llLinksetData function.\n* integer action – operation performed on the datastore\n* string name – key of the name-value pair\n* string value – new value, or an empty string if the pair was deleted or is protected."
     },
     "link_message Event": {
         "prefix": "link_message",
@@ -259,6 +289,26 @@
         ],
         "description": "Triggered when the object rezzes an object.\n* key id – UUID of object rezzed."
     },
+    "on_damage Event": {
+        "prefix": "on_damage",
+        "body": [
+            "on_damage(integer ${1:num_detected})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Triggered when damage is inflicted on an avatar or object, before it is applied or distributed. Collision-style llDetected* functions, llDetectedDamage, and llAdjustDamage are available in this event.\n* integer num_detected – number of pending damage events."
+    },
+    "on_death Event": {
+        "prefix": "on_death",
+        "body": [
+            "on_death()",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Triggered in all attachments worn by an avatar when the avatar's health reaches zero."
+    },
     "on_rez Event": {
         "prefix": "on_rez",
         "body": [
@@ -277,7 +327,7 @@
             "\t$0",
             "}"
         ],
-        "description": "Event description goes here.\n* integer type – A PU_*, it's the path event type\n* list reserved – Reserved; not currently used."
+        "description": "Triggered when a pathfinding character's path status changes.\n* integer type – PU_* pathfinding event code\n* list reserved – reserved for future use."
     },
     "remote_data Event": {
         "prefix": "remote_data",
@@ -367,7 +417,7 @@
             "\t$0",
             "}"
         ],
-        "description": "Triggered by the start of agent clicking on task\b* integer num_detected – Number of agents detected touching during the last clock cycle"
+        "description": "Triggered when an agent begins clicking or touching the object.\n* integer num_detected – number of agents detected touching during the last clock cycle."
     },
     "transaction_result Event": {
         "prefix": "transaction_result",
