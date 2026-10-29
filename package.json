@@ -1,6 +1,6 @@
 {
   "name": "noras-lsl-fp",
-  "publisher": "Nora",
+  "publisher": "se-nora",
   "displayName": "Noras LSL-FP",
   "description": "Support for Linden Scripting Language(LSL) with Firestorm Preprocessor and Code Snippeis",
   "version": "1.10.2",
