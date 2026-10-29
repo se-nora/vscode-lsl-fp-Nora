@@ -6,6 +6,10 @@ All notable changes to the "lsl" extension will be documented in this file.
 ## [Unreleased]
 - Added Code Snippets for LSL All Constants Description.
 
+## [1.10.0] - 2026-10-29
+### Added
+- Highlight keyword aliases defined via #define
+
 ## [1.9.1] - 2026-10-29
 ### Changed
 - Update LSL constant descriptions

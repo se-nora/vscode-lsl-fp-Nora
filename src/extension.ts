@@ -55,6 +55,33 @@ export interface DeclaredSymbol {
 	kind: 'variable' | 'function' | 'define';
 	type?: string;
 	parameters?: string;
+	aliasOf?: string;
+}
+
+interface KeywordToken { type: string; modifiers?: string[] }
+
+const KEYWORD_TOKEN_TYPES = new Map<string, KeywordToken>();
+for (const name of ['break', 'case', 'continue', 'default', 'state', 'do', 'else', 'for', 'goto', 'if', 'return', 'switch', 'while']) {
+	KEYWORD_TOKEN_TYPES.set(name, { type: 'keyword' });
+}
+for (const name of ['integer', 'float', 'string', 'key', 'vector', 'rotation', 'list']) {
+	KEYWORD_TOKEN_TYPES.set(name, { type: 'type' });
+}
+for (const name of ['TRUE', 'FALSE']) {
+	KEYWORD_TOKEN_TYPES.set(name, { type: 'variable', modifiers: ['readonly'] });
+}
+
+const SEMANTIC_TOKEN_LEGEND = new vscode.SemanticTokensLegend(['keyword', 'type', 'variable'], ['readonly']);
+
+export function getKeywordAliases(symbols: readonly DeclaredSymbol[]): Map<string, KeywordToken> {
+	const aliases = new Map<string, KeywordToken>();
+	for (const symbol of symbols) {
+		const target = symbol.kind === 'define' && symbol.aliasOf ? KEYWORD_TOKEN_TYPES.get(symbol.aliasOf) : undefined;
+		if (target && !KEYWORD_TOKEN_TYPES.has(symbol.name)) {
+			aliases.set(symbol.name, target);
+		}
+	}
+	return aliases;
 }
 
 function stripCommentsAndStrings(text: string): string {
@@ -97,12 +124,14 @@ export function getDeclaredSymbols(text: string): DeclaredSymbol[] {
 		});
 	}
 
-	const definePattern = /^\s*#\s*define\s+([A-Za-z_]\w*)(?:\(([^)]*)\))?/gm;
+	const definePattern = /^[ \t]*#[ \t]*define[ \t]+([A-Za-z_]\w*)(?:\(([^)]*)\))?([^\r\n]*)/gm;
 	while ((match = definePattern.exec(code)) !== null) {
+		const alias = match[2] === undefined ? /^[ \t]+([A-Za-z_]\w*)[ \t]*$/.exec(match[3])?.[1] : undefined;
 		symbols.set(match[1], {
 			name: match[1],
 			kind: 'define',
-			...(match[2] !== undefined ? { parameters: match[2].trim() } : {})
+			...(match[2] !== undefined ? { parameters: match[2].trim() } : {}),
+			...(alias ? { aliasOf: alias } : {})
 		});
 	}
 
@@ -483,6 +512,44 @@ class VariableCompletionProvider implements vscode.CompletionItemProvider {
 	}
 }
 
+class KeywordAliasSemanticTokensProvider implements vscode.DocumentSemanticTokensProvider {
+	async provideDocumentSemanticTokens(document: vscode.TextDocument): Promise<vscode.SemanticTokens> {
+		const symbols = await collectDeclaredSymbols(
+			document.uri,
+			document.getText(),
+			async uri => {
+				const openDocument = vscode.workspace.textDocuments.find(
+					candidate => candidate.uri.toString() === uri.toString()
+				);
+				if (openDocument) {
+					return openDocument.getText();
+				}
+				return new TextDecoder().decode(await vscode.workspace.fs.readFile(uri));
+			}
+		);
+		const aliases = getKeywordAliases(symbols);
+		const builder = new vscode.SemanticTokensBuilder(SEMANTIC_TOKEN_LEGEND);
+		if (aliases.size === 0) {
+			return builder.build();
+		}
+
+		const lines = stripCommentsAndStrings(document.getText()).split(/\r\n|\r|\n/);
+		lines.forEach((line, lineNumber) => {
+			if (/^\s*#/.test(line)) {
+				return;
+			}
+			for (const match of line.matchAll(/[A-Za-z_]\w*/g)) {
+				const token = aliases.get(match[0]);
+				if (token) {
+					builder.push(lineNumber, match.index ?? 0, match[0].length, SEMANTIC_TOKEN_LEGEND.tokenTypes.indexOf(token.type),
+						token.modifiers ? token.modifiers.reduce((mask, modifier) => mask | (1 << SEMANTIC_TOKEN_LEGEND.tokenModifiers.indexOf(modifier)), 0) : 0);
+				}
+			}
+		});
+		return builder.build();
+	}
+}
+
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
@@ -508,6 +575,14 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.languages.registerCompletionItemProvider(
 			{ scheme: 'file', language: 'lsl' },
 			new VariableCompletionProvider()
+		)
+	);
+
+	context.subscriptions.push(
+		vscode.languages.registerDocumentSemanticTokensProvider(
+			{ scheme: 'file', language: 'lsl' },
+			new KeywordAliasSemanticTokensProvider(),
+			SEMANTIC_TOKEN_LEGEND
 		)
 	);
 
