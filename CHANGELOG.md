@@ -8,67 +8,67 @@ All notable changes to the "lsl" extension will be documented in this file.
 
 ## [1.10.2] - 2026-10-29
 ### Changed
-- Update LSL function snippets
+- Refreshed LSL function snippets.
 
 ## [1.10.1] - 2026-10-29
 ### Changed
-- Update LSL event handler snippets
+- Refreshed LSL event handler snippets.
 
 ## [1.10.0] - 2026-10-29
 ### Added
-- Highlight keyword aliases defined via #define
+- Added syntax highlighting for keyword aliases defined with `#define`.
 
 ## [1.9.1] - 2026-10-29
 ### Changed
-- Update LSL constant descriptions
+- Updated descriptions for LSL constants.
 
 ## [1.9.0] - 2026-10-29
 ### Changed
-- Split LSL snippets into categories
+- Organized LSL snippets into separate categories.
 
 ## [1.8.0] - 2026-10-29
 ### Added
-- Show define parameters in completions
+- Included `#define` parameters in completion suggestions.
 
 ## [1.7.0] - 2026-10-29
 ### Added
-- Add include-aware symbol completions
+- Added include-aware symbol completion suggestions.
 
 ## [1.6.0] - 2026-10-29
 ### Added
-- Add variable IntelliSense completions
+- Added IntelliSense completions for variables.
 
 ## [1.5.1] - 2026-10-25
 ### Fixed
-- fix: preprocessed diagnostic line mapping
+- Corrected diagnostic line mapping for preprocessed source.
 
 ## [1.5.0] - 2026-10-25
 ### Added
-- Accept viewer-resolved diagnostics
+- Added support for diagnostics resolved by the viewer.
 
 ## [1.4.4] - 2026-10-24
 ### Fixed
-- fix: correct snippet placeholder syntax
+- Corrected snippet placeholder syntax.
 
 ## [1.4.3] - 2026-10-24
 ### Fixed
-- fix: clear diagnostics after successful Firestorm compile
+- Cleared diagnostics after a successful Firestorm compile.
 
 ## [1.4.2] - 2026-10-24
 ### Fixed
-- fix: map Firestorm diagnostics to source files
+- Mapped Firestorm diagnostics to their source files.
 
 ## [1.4.1] - 2026-10-24
 ### Fixed
-- fix: improve Firestorm diagnostics and bridge logging
+- Improved Firestorm diagnostics and bridge logging.
 
 ## [1.4.0] - 2026-10-23
 ### Added
-- feat: add LSL extension support with syntax, snippets, and docs
+- Added LSL language support, syntax highlighting, snippets, and documentation.
 
 ## [1.3.1] - 2023-08-13
 ### Changed
-- - modified snippets so its better formatted - snippets dont have spaces between brackets now
+- Formatted LSL snippets consistently without spaces inside brackets.
 
 ## [1.3.0] - 2023-08-13
 ### Added
