@@ -6,6 +6,10 @@ All notable changes to the "lsl" extension will be documented in this file.
 ## [Unreleased]
 - Added Code Snippets for LSL All Constants Description.
 
+## [1.9.0] - 2026-10-29
+### Changed
+- Split LSL snippets into categories
+
 ## [1.8.0] - 2026-10-29
 ### Added
 - Show define parameters in completions

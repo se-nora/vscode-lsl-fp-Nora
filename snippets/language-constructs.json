@@ -1,0 +1,444 @@
+{
+    "Pragma Onse": {
+        "prefix": "pragma once",
+        "body": [
+            "#ifndef ${1:FILE_INDENTIFIER}",
+            "#define ${1:FILE_INDENTIFIER}",
+            "",
+            "",
+            "$0",
+            "",
+            "",
+            "#endif // ${1:FILE_INDENTIFIER}",
+            ""
+        ],
+        "description": "pragma once implement"
+    },
+    "Float Casting Preprocessor": {
+        "prefix": "float()",
+        "body": [
+            "float(${1:value})$0"
+        ],
+        "description": "Float Casting Preprocessor"
+    },
+    "Integer Casting Preprocessor": {
+        "prefix": "integer()",
+        "body": [
+            "integer(${1:value})$0"
+        ],
+        "description": "Integer Casting Preprocessor"
+    },
+    "Key Casting Preprocessor": {
+        "prefix": "key()",
+        "body": [
+            "key(${1:value})$0"
+        ],
+        "description": "Key Casting Preprocessor"
+    },
+    "List Casting Preprocessor": {
+        "prefix": "list()",
+        "body": [
+            "list(${1:value})$0"
+        ],
+        "description": "List Casting Preprocessor"
+    },
+    "Rotation Casting Preprocessor": {
+        "prefix": "rotation()",
+        "body": [
+            "rotation(${1:value})$0"
+        ],
+        "description": "Rotation Casting Preprocessor"
+    },
+    "String Casting Preprocessor": {
+        "prefix": "string()",
+        "body": [
+            "string(${1:value})$0"
+        ],
+        "description": "String Casting Preprocessor"
+    },
+    "Vector Casting Preprocessor": {
+        "prefix": "vector()",
+        "body": [
+            "vector(${1:value})$0"
+        ],
+        "description": "Vector Casting Preprocessor"
+    },
+    "Define USE_LAZY_LISTS Preprocessor": {
+        "prefix": "#define USE_LAZY_LISTS",
+        "body": [
+            "#define USE_LAZY_LISTS",
+            "$0"
+        ],
+        "description": "Define USE_LAZY_LISTS Preprocessor"
+    },
+    "Define USE_SWITCHES Preprocessor": {
+        "prefix": "#define USE_SWITCHES",
+        "body": [
+            "#define USE_SWITCHES",
+            "$0"
+        ],
+        "description": "Define USE_SWITCHES Preprocessor"
+    },
+    "Define Preprocessor": {
+        "prefix": "#define",
+        "body": [
+            "#define ${1:identifier}",
+            "$0"
+        ],
+        "description": "Define Preprocessor"
+    },
+    "Undef Preprocessor": {
+        "prefix": "#undef",
+        "body": [
+            "#undef ${1:identifier}",
+            "$0"
+        ],
+        "description": "Undef Preprocessor"
+    },
+    "Ifdef Preprocessor": {
+        "prefix": "#ifdef",
+        "body": [
+            "#ifdef ${1:identifier}",
+            "$0"
+        ],
+        "description": "Ifdef Preprocessor"
+    },
+    "Ifndef Preprocessor": {
+        "prefix": "#ifndef",
+        "body": [
+            "#ifndef ${1:identifier}",
+            "$0"
+        ],
+        "description": "Ifndef Preprocessor"
+    },
+    "If Preprocessor": {
+        "prefix": "#if",
+        "body": [
+            "#if ${1:constant-expression}",
+            "$0"
+        ],
+        "description": "If Preprocessor"
+    },
+    "Elif Preprocessor": {
+        "prefix": "#elif",
+        "body": [
+            "#elif ${1:constant-expression}",
+            "$0"
+        ],
+        "description": "Elif Preprocessor"
+    },
+    "Else Preprocessor": {
+        "prefix": "#else",
+        "body": [
+            "#else",
+            "$0"
+        ],
+        "description": "Else Preprocessor"
+    },
+    "Endif Preprocessor": {
+        "prefix": "#endif",
+        "body": [
+            "#endif",
+            "$0"
+        ],
+        "description": "Endif Preprocessor"
+    },
+    "Warning Preprocessor": {
+        "prefix": "#warning",
+        "body": [
+            "#warning ${1:warningtoken-string}",
+            "$0"
+        ],
+        "description": "Warning Preprocessor"
+    },
+    "Error Preprocessor": {
+        "prefix": "#error",
+        "body": [
+            "#error ${1:errortoken-string}",
+            "$0"
+        ],
+        "description": "Error Preprocessor"
+    },
+    "Include Preprocessor": {
+        "prefix": "#include",
+        "body": [
+            "#include \"${1:path-spec}\"",
+            "$0"
+        ],
+        "description": "Include Preprocessor"
+    },
+    "__FILE__ Preprocessor": {
+        "prefix": "__FILE__",
+        "body": [
+            "__FILE__$0"
+        ],
+        "description": "the full path to the script as it would appear in the include cache. The top script only uses its name."
+    },
+    "__LINE__ Preprocessor": {
+        "prefix": "__LINE__",
+        "body": [
+            "__LINE__$0"
+        ],
+        "description": "the line of the current script where it is expanded; this starts at line 0"
+    },
+    "__SHORTFILE__ Preprocessor": {
+        "prefix": "__SHORTFILE__",
+        "body": [
+            "__SHORTFILE__$0"
+        ],
+        "description": "the name of the current script without full file path"
+    },
+    "__AGENTID__ Preprocessor": {
+        "prefix": "__AGENTID__",
+        "body": [
+            "__AGENTID__$0"
+        ],
+        "description": "a string-encapsulated version of the agent's key who compiles the script"
+    },
+    "__AGENTKEY__ Preprocessor": {
+        "prefix": "__AGENTKEY__",
+        "body": [
+            "__AGENTKEY__$0"
+        ],
+        "description": "same as above, legacy version"
+    },
+    "__AGENTIDRAW__ Preprocessor": {
+        "prefix": "__AGENTIDRAW__",
+        "body": [
+            "__AGENTIDRAW__$0"
+        ],
+        "description": "a nonstring-encapsulated version of the agent's key who compiles the script"
+    },
+    "__AGENTNAME__ Preprocessor": {
+        "prefix": "__AGENTNAME__",
+        "body": [
+            "__AGENTNAME__$0"
+        ],
+        "description": "a string-encapsulated version of the agent's full name who compiles the script"
+    },
+    "__ASSETID__ Preprocessor": {
+        "prefix": "__AGENTNAME__",
+        "body": [
+            "__AGENTNAME__$0"
+        ],
+        "description": "a string-encapsulated version of the assetid of the current script; may return “NOT IN WORLD” or a nonstring-encapsulated null key in rare circumstances"
+    },
+    "Float Type": {
+        "prefix": "float",
+        "body": [
+            "float"
+        ],
+        "description": "Float Type"
+    },
+    "Integer Type": {
+        "prefix": "integer",
+        "body": [
+            "integer"
+        ],
+        "description": "Integer Type"
+    },
+    "Key Type": {
+        "prefix": "key",
+        "body": [
+            "key"
+        ],
+        "description": "Key Type"
+    },
+    "List Type": {
+        "prefix": "list",
+        "body": [
+            "list"
+        ],
+        "description": "List Type"
+    },
+    "Rotation Type": {
+        "prefix": "rotation",
+        "body": [
+            "rotation"
+        ],
+        "description": "Rotation Type"
+    },
+    "String Type": {
+        "prefix": "string Type",
+        "body": [
+            "string"
+        ],
+        "description": "String"
+    },
+    "Vector Type": {
+        "prefix": "vector",
+        "body": [
+            "vector"
+        ],
+        "description": "Vector Type"
+    },
+    "Rotation Value": {
+        "prefix": "rv",
+        "body": [
+            "<${1:x}, ${2:y}, ${3:z}, ${4:w}>"
+        ],
+        "description": "Rotation Value"
+    },
+    "Vector Value": {
+        "prefix": "vv",
+        "body": [
+            "<${1:x}, ${2:y}, ${3:z}>"
+        ],
+        "description": "Vector Value"
+    },
+    "Label": {
+        "prefix": "label",
+        "body": [
+            "@$0;"
+        ],
+        "description": "Label"
+    },
+    "Jump": {
+        "prefix": "jump",
+        "body": [
+            "jump $0;"
+        ],
+        "description": "Jump"
+    },
+    "For Loop": {
+        "prefix": "for",
+        "body": [
+            "for (${1:initial}; ${2:compare}; ${3:increase})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "For Loop"
+    },
+    "While Loop": {
+        "prefix": "while",
+        "body": [
+            "while (${1:compare})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "While Loop"
+    },
+    "Do-While Loop": {
+        "prefix": "dowhile",
+        "body": [
+            "do",
+            "{",
+            "\t$0",
+            "}",
+            "while (${1:compare})"
+        ],
+        "description": "Do-While Loop"
+    },
+    "If Statement": {
+        "prefix": "if",
+        "body": [
+            "if (${1:compare})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "If Statement"
+    },
+    "If-Else Statement": {
+        "prefix": "ifelse",
+        "body": [
+            "if (${1:compare})",
+            "{",
+            "\t$0",
+            "}",
+            "else",
+            "{",
+            "\t",
+            "}"
+        ],
+        "description": "If-Else Statement"
+    },
+    "Switch Statement": {
+        "prefix": "switch",
+        "body": [
+            "switch (${1:value})",
+            "{",
+            "\tcase (${2:case}):",
+            "\t{",
+            "\t\t$0",
+            "\t\tbreak;",
+            "\t}",
+            "\tdefault:",
+            "\t{",
+            "\t\tbreak;",
+            "\t}",
+            "}"
+        ],
+        "description": "Switch Statement"
+    },
+    "Continue": {
+        "prefix": "continue",
+        "body": [
+            "continue;"
+        ],
+        "description": "Continue"
+    },
+    "Break": {
+        "prefix": "break",
+        "body": [
+            "break;"
+        ],
+        "description": "Break"
+    },
+    "Return": {
+        "prefix": "return",
+        "body": [
+            "return $0;"
+        ],
+        "description": "Return"
+    },
+    "Function-Void": {
+        "prefix": "voidfunction",
+        "body": [
+            "${1:name} (${2:agments})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Function Void"
+    },
+    "Function": {
+        "prefix": "function",
+        "body": [
+            "${1:datatype} ${2:name} (${3:agments})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Function"
+    },
+    "State-Change": {
+        "prefix": "statechange",
+        "body": [
+            "state $0;"
+        ],
+        "description": "State Change"
+    },
+    "State": {
+        "prefix": "state",
+        "body": [
+            "state ${1:name}",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "State"
+    },
+    "Default": {
+        "prefix": "default",
+        "body": [
+            "default",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Default"
+    }
+}
