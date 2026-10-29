@@ -1,6 +1,8 @@
-# LSL-FP
+# Noras-LSL-FP
 
 This extension adds syntaxes Highlighting and Code Snippets for Firestorm LSL Preprocessor
+It is a fork of https://github.com/dalghost/vscode-lsl-fp / https://marketplace.visualstudio.com/itemdetails?itemName=DalGhost.lsl-fp
+With additional functionalities and updated consts/functions/events
 
 ## Features
 
