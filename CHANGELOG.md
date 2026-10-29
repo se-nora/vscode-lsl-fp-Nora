@@ -6,6 +6,10 @@ All notable changes to the "lsl" extension will be documented in this file.
 ## [Unreleased]
 - Added Code Snippets for LSL All Constants Description.
 
+## [1.10.2] - 2026-10-29
+### Changed
+- Update LSL function snippets
+
 ## [1.10.1] - 2026-10-29
 ### Changed
 - Update LSL event handler snippets
