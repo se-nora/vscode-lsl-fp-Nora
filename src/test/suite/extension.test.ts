@@ -3,7 +3,13 @@ import * as assert from 'assert';
 // You can import and use all API from the 'vscode' module
 // as well as import your extension to test it
 import * as vscode from 'vscode';
-import { getDeclaredVariables, parseFirestormDiagnosticLocation, parseFirestormResult } from '../../extension';
+import {
+	collectDeclaredSymbols,
+	getDeclaredSymbols,
+	getDeclaredVariables,
+	parseFirestormDiagnosticLocation,
+	parseFirestormResult
+} from '../../extension';
 
 suite('Extension Test Suite', () => {
 	vscode.window.showInformationMessage('Start all tests.');
@@ -32,6 +38,60 @@ suite('Extension Test Suite', () => {
 				{ name: 'parameter', type: 'integer' }
 			]
 		);
+	});
+
+	test('finds declared functions and preprocessor defines for completion', () => {
+		assert.deepStrictEqual(
+			getDeclaredSymbols(
+				'#define MAX_COUNT 10\n' +
+				'# define FORMAT(value) value\n' +
+				'// #define COMMENTED_OUT 1\n' +
+				'/* integer hiddenFunction() { } */\n' +
+				'integer getCount() { return MAX_COUNT; }\n' +
+				'float calculate(float input);\n' +
+				'string message = "integer fakeFunction()";'
+			),
+			[
+				{ name: 'input', kind: 'variable', type: 'float' },
+				{ name: 'message', kind: 'variable', type: 'string' },
+				{ name: 'getCount', kind: 'function', type: 'integer' },
+				{ name: 'calculate', kind: 'function', type: 'float' },
+				{ name: 'MAX_COUNT', kind: 'define' },
+				{ name: 'FORMAT', kind: 'define' }
+			]
+		);
+	});
+
+	test('collects symbols recursively from included files and avoids include cycles', async () => {
+		const mainUri = vscode.Uri.file('C:\\lsl-project\\scripts\\main.lsl');
+		const workspaceUri = vscode.Uri.file('C:\\lsl-project');
+		const headerUri = vscode.Uri.file('C:\\lsl-project\\includes\\common.lsl');
+		const nestedUri = vscode.Uri.file('C:\\lsl-project\\includes\\nested.lsl');
+		const files = new Map<string, string>([
+			[mainUri.toString(), '#include "includes/common.lsl"\nfloat localValue;'],
+			[headerUri.toString(), '#include "nested.lsl"\ninteger localValue;\nfloat sharedValue;'],
+			[nestedUri.toString(), '#include "../scripts/main.lsl"\n#define SHARED_LIMIT 5\ninteger sharedFunction() { }']
+		]);
+
+		const symbols = await collectDeclaredSymbols(
+			mainUri,
+			'#include "includes/common.lsl"\nfloat localValue;',
+			async uri => {
+				const content = files.get(uri.toString());
+				if (content === undefined) {
+					throw vscode.FileSystemError.FileNotFound(uri);
+				}
+				return content;
+			},
+			[{ uri: workspaceUri, name: 'lsl-project', index: 0 }]
+		);
+
+		assert.deepStrictEqual(symbols, [
+			{ name: 'localValue', kind: 'variable', type: 'float' },
+			{ name: 'sharedValue', kind: 'variable', type: 'float' },
+			{ name: 'sharedFunction', kind: 'function', type: 'integer' },
+			{ name: 'SHARED_LIMIT', kind: 'define' }
+		]);
 	});
 
 	test('parses Firestorm compile results', () => {

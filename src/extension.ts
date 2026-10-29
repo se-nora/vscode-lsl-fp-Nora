@@ -50,10 +50,20 @@ export interface DeclaredVariable {
 	type: string;
 }
 
-export function getDeclaredVariables(text: string): DeclaredVariable[] {
-	const code = text.replace(/\/\*[\s\S]*?\*\/|\/\/[^\r\n]*|"(?:\\.|[^"\\])*"/g, match =>
+export interface DeclaredSymbol {
+	name: string;
+	kind: 'variable' | 'function' | 'define';
+	type?: string;
+}
+
+function stripCommentsAndStrings(text: string): string {
+	return text.replace(/\/\*[\s\S]*?\*\/|\/\/[^\r\n]*|"(?:\\.|[^"\\])*"/g, match =>
 		match.replace(/[^\r\n]/g, ' ')
 	);
+}
+
+export function getDeclaredVariables(text: string): DeclaredVariable[] {
+	const code = stripCommentsAndStrings(text);
 	const variables = new Map<string, DeclaredVariable>();
 	const declarationPattern = /\b(integer|float|string|key|vector|rotation|list)\s+([A-Za-z_]\w*)\b/g;
 	let match: RegExpExecArray | null;
@@ -65,6 +75,93 @@ export function getDeclaredVariables(text: string): DeclaredVariable[] {
 	}
 
 	return [...variables.values()];
+}
+
+export function getDeclaredSymbols(text: string): DeclaredSymbol[] {
+	const code = stripCommentsAndStrings(text);
+	const symbols = new Map<string, DeclaredSymbol>(
+		getDeclaredVariables(text).map(variable => [
+			variable.name,
+			{ name: variable.name, kind: 'variable', type: variable.type }
+		])
+	);
+	const functionPattern = /\b(integer|float|string|key|vector|rotation|list|void)\s+([A-Za-z_]\w*)\s*\(/g;
+	let match: RegExpExecArray | null;
+	while ((match = functionPattern.exec(code)) !== null) {
+		symbols.set(match[2], { name: match[2], kind: 'function', type: match[1] });
+	}
+
+	const definePattern = /^\s*#\s*define\s+([A-Za-z_]\w*)/gm;
+	while ((match = definePattern.exec(code)) !== null) {
+		symbols.set(match[1], { name: match[1], kind: 'define' });
+	}
+
+	return [...symbols.values()];
+}
+
+function getIncludedFiles(text: string): string[] {
+	const code = text.replace(/"(?:\\.|[^"\\])*"|\/\*[\s\S]*?\*\/|\/\/[^\r\n]*/g, match =>
+		match.startsWith('"') ? match : match.replace(/[^\r\n]/g, ' ')
+	);
+	const includes: string[] = [];
+	const includePattern = /^\s*#\s*(?:include|include_next|import)\s*(?:"([^"\r\n]+)"|<([^>\r\n]+)>)/gm;
+	let match: RegExpExecArray | null;
+	while ((match = includePattern.exec(code)) !== null) {
+		includes.push(match[1] ?? match[2]);
+	}
+
+	return includes;
+}
+
+export async function collectDeclaredSymbols(
+	uri: vscode.Uri,
+	text: string,
+	readDocument: (uri: vscode.Uri) => Promise<string>,
+	workspaceFolders: readonly vscode.WorkspaceFolder[] = vscode.workspace.workspaceFolders ?? []
+): Promise<DeclaredSymbol[]> {
+	const symbols = new Map<string, DeclaredSymbol>();
+	const visited = new Set<string>();
+
+	const visit = async (documentUri: vscode.Uri, documentText: string): Promise<void> => {
+		const documentKey = documentUri.toString();
+		if (visited.has(documentKey)) {
+			return;
+		}
+		visited.add(documentKey);
+
+		for (const symbol of getDeclaredSymbols(documentText)) {
+			if (!symbols.has(symbol.name)) {
+				symbols.set(symbol.name, symbol);
+			}
+		}
+
+		for (const includePath of getIncludedFiles(documentText)) {
+			const candidates = [
+				vscode.Uri.joinPath(documentUri, '..', includePath),
+				...workspaceFolders.map(folder => vscode.Uri.joinPath(folder.uri, includePath))
+			];
+			const checkedCandidates = new Set<string>();
+			for (const candidate of candidates) {
+				const candidateKey = candidate.toString();
+				if (checkedCandidates.has(candidateKey)) {
+					continue;
+				}
+				checkedCandidates.add(candidateKey);
+				try {
+					await visit(candidate, await readDocument(candidate));
+					break;
+				} catch (error) {
+					if (error instanceof vscode.FileSystemError && error.code === 'FileNotFound') {
+						continue;
+					}
+					throw error;
+				}
+			}
+		}
+	};
+
+	await visit(uri, text);
+	return [...symbols.values()];
 }
 
 function decodeXmlText(value: string): string {
@@ -345,10 +442,28 @@ class SnippetHoverProvider implements vscode.HoverProvider {
 }
 
 class VariableCompletionProvider implements vscode.CompletionItemProvider {
-	provideCompletionItems(document: vscode.TextDocument): vscode.CompletionItem[] {
-		return getDeclaredVariables(document.getText()).map(variable => {
-			const item = new vscode.CompletionItem(variable.name, vscode.CompletionItemKind.Variable);
-			item.detail = variable.type;
+	async provideCompletionItems(document: vscode.TextDocument): Promise<vscode.CompletionItem[]> {
+		const symbols = await collectDeclaredSymbols(
+			document.uri,
+			document.getText(),
+			async uri => {
+				const openDocument = vscode.workspace.textDocuments.find(
+					candidate => candidate.uri.toString() === uri.toString()
+				);
+				if (openDocument) {
+					return openDocument.getText();
+				}
+				return new TextDecoder().decode(await vscode.workspace.fs.readFile(uri));
+			}
+		);
+		return symbols.map(symbol => {
+			const kind = symbol.kind === 'function'
+				? vscode.CompletionItemKind.Function
+				: symbol.kind === 'define'
+					? vscode.CompletionItemKind.Constant
+					: vscode.CompletionItemKind.Variable;
+			const item = new vscode.CompletionItem(symbol.name, kind);
+			item.detail = symbol.kind === 'define' ? '#define' : symbol.type;
 			return item;
 		});
 	}
