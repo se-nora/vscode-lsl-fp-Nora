@@ -41,7 +41,7 @@ See [CHANGELOG.md](CHANGELOG.md) for the release history.
 ### For more information
 
 * [Firestorm Viewer](https://www.firestormviewer.org/)
-* [Firestorm LSL Preprocessor Reference](https://wiki.phoenixviewer.com/fs_preprocessor)
+* [Firestorm LSL Preprocessor Reference](https://wiki.firestormviewer.org/fs_preprocessor)
 * [LSL Potal](http://wiki.secondlife.com/wiki/LSL_Portal)
 * [Github Repository](https://github.com/dalghost/vscode-lsl-fp)
 
